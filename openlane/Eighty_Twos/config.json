@@ -1,0 +1,43 @@
+{
+    "DESIGN_NAME": "Eighty_Twos",
+    "VERILOG_FILES": ["dir::src/JumpFlagController.sv",
+                      "dir::src/FSM.sv",
+                      "dir::src/MemControl.sv", 
+                      "dir::src/ByteBuffer.sv",
+                      "dir::src/PC.sv",
+                      "dir::src/ByteDecoder.sv",
+                      "dir::src/RegFile.sv",
+                      "dir::src/Eighty_Twos.sv",
+                      "dir::src/ALU.sv",
+                      "dir::src/InstructionDecoder.sv",
+                      "dir::src/Control.sv"],
+    "CLOCK_PERIOD": 100,
+    "CLOCK_PORT": "clk",
+    "pdk::sky130*": {
+        "FP_CORE_UTIL": 40,
+        "PL_TARGET_DENSITY": 0.5,
+        "scl::sky130_fd_sc_hd": {
+            "CLOCK_PERIOD": 100,
+	    "SYNTH_MAX_FANOUT" : 20
+        },
+        "scl::sky130_fd_sc_hdll": {
+            "CLOCK_PERIOD": 10
+        },
+        "scl::sky130_fd_sc_hs": {
+            "CLOCK_PERIOD": 8
+        },
+        "scl::sky130_fd_sc_ls": {
+            "CLOCK_PERIOD": 10,
+            "SYNTH_MAX_FANOUT": 5
+        },
+        "scl::sky130_fd_sc_ms": {
+            "CLOCK_PERIOD": 10
+        }
+    },
+    "pdk::gf180mcu*": {
+        "CLOCK_PERIOD": 24.0,
+        "FP_CORE_UTIL": 40,
+        "SYNTH_MAX_FANOUT": 4,
+        "PL_TARGET_DENSITY": 0.5
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "DESIGN_NAME": "top_asic",
+    "VERILOG_FILES": "dir::src/*.sv",
+    "CLOCK_PERIOD": 100,
+    "CLOCK_PORT": "clk",
+    "pdk::sky130*": {
+        "FP_CORE_UTIL": 50,
+        "scl::sky130_fd_sc_hd": {
+        "CLOCK_PERIOD": 100,
+	    "GRT_MAX_DIODE_INS_ITERS": 30,
+        "RUN_HEURISTIC_DIODE_INSERTION": 1
+
+        },
+        "scl::sky130_fd_sc_hdll": {
+            "CLOCK_PERIOD": 10
+        },
+        "scl::sky130_fd_sc_hs": {
+            "CLOCK_PERIOD": 8
+        },
+        "scl::sky130_fd_sc_ls": {
+            "CLOCK_PERIOD": 10,
+            "SYNTH_MAX_FANOUT": 5
+        },
+        "scl::sky130_fd_sc_ms": {
+            "CLOCK_PERIOD": 10
+        }
+    },
+    "pdk::gf180mcu*": {
+        "CLOCK_PERIOD": 24.0,
+        "FP_CORE_UTIL": 40,
+        "SYNTH_MAX_FANOUT": 4,
+        "PL_TARGET_DENSITY": 0.5
+    }
+}
