@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1690472549
+timestamp 1691528705
 << obsli1 >>
 rect 1104 2159 45172 46257
 << obsm1 >>
@@ -140,7 +140,7 @@ string FIXED_BBOX 0 0 46337 48481
 string LEFclass BLOCK
 string LEFview TRUE
 string GDS_END 5302120
-string GDS_FILE /home/designer-25/CUP/openlane/silly-sythensizer/runs/23_07_27_08_38/results/signoff/silly_synthesizer.magic.gds
+string GDS_FILE /home/designer-25/CUP/openlane/silly-sythensizer/runs/23_08_08_14_01/results/signoff/silly_synthesizer.magic.gds
 string GDS_START 757944
 << end >>
 

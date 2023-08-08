@@ -1,0 +1,55 @@
+{
+    "DESIGN_NAME": "z23",
+    "VERILOG_FILES": [
+	    "dir::src/z23.sv",
+	    "dir::src/control_unit.sv",
+	    "dir::src/alu.sv",
+	    "dir::src/memory_controller.sv",
+	    "dir::src/interrupt_handler.sv",
+	    "dir::src/edge_detector.sv",
+	    "dir::src/alu/alu_pkg.sv",
+	    "dir::src/control_unit/instruction_decoder.sv",
+	    "dir::src/control_unit/instruction_register.sv",
+	    "dir::src/control_unit/register_file.sv",
+	    "dir::src/control_unit/program_counter.sv",
+	    "dir::src/control_unit/cu_pkg.sv",
+	    "dir::src/memory_controller/completion_control.sv",
+	    "dir::src/memory_controller/completion_logic.sv",
+	    "dir::src/memory_controller/read_write.sv",
+	    "dir::src/interrupt_handler/timer.sv",
+	    "dir::src/interrupt_handler/ih_pkg.sv",
+	    "dir::src/interrupt_handler/input_handler.sv"
+    ],
+    "CLOCK_PERIOD": 100,
+    "CLOCK_PORT": "clk",
+    "pdk::sky130*": {
+        "FP_CORE_UTIL": 50,
+	"RUN_HEURISTIC_DIODE_INSERTION": 1,
+	"HEURISTIC_ANTENNA_INSERTION_MODE": "balanced",
+	"GRT_ANT_ITERS": 1000,
+	"GRT_ANT_MARGIN": 50,
+	"GRT_MAX_DIODE_INS_ITERS": 1000,
+        "scl::sky130_fd_sc_hd": {
+            "CLOCK_PERIOD": 100
+        },
+        "scl::sky130_fd_sc_hdll": {
+            "CLOCK_PERIOD": 10
+        },
+        "scl::sky130_fd_sc_hs": {
+            "CLOCK_PERIOD": 8
+        },
+        "scl::sky130_fd_sc_ls": {
+            "CLOCK_PERIOD": 10,
+            "SYNTH_MAX_FANOUT": 5
+        },
+        "scl::sky130_fd_sc_ms": {
+            "CLOCK_PERIOD": 10
+        }
+    },
+    "pdk::gf180mcu*": {
+        "CLOCK_PERIOD": 24.0,
+        "FP_CORE_UTIL": 40,
+        "SYNTH_MAX_FANOUT": 4,
+        "PL_TARGET_DENSITY": 0.5
+    }
+}
