@@ -1,0 +1,548 @@
+library (sass_synth) {
+  comment                        : "";
+  delay_model                    : table_lookup;
+  simulation                     : false;
+  capacitive_load_unit (1,pF);
+  leakage_power_unit             : 1pW;
+  current_unit                   : "1A";
+  pulling_resistance_unit        : "1kohm";
+  time_unit                      : "1ns";
+  voltage_unit                   : "1v";
+  library_features(report_delay_calculation);
+
+  input_threshold_pct_rise : 50;
+  input_threshold_pct_fall : 50;
+  output_threshold_pct_rise : 50;
+  output_threshold_pct_fall : 50;
+  slew_lower_threshold_pct_rise : 20;
+  slew_lower_threshold_pct_fall : 20;
+  slew_upper_threshold_pct_rise : 80;
+  slew_upper_threshold_pct_fall : 80;
+  slew_derate_from_library : 1.0;
+
+
+  nom_process                    : 1.0;
+  nom_temperature                : 25.0;
+  nom_voltage                    : 1.80;
+
+  lu_table_template(template_1) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00050,  0.00159,  0.00506,  0.01608,  0.05115,  0.16265,  0.51728");
+  }
+  type ("beat_led") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 8;
+    bit_from : 7;
+    bit_to : 0;
+  }
+  type ("mode_out") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 2;
+    bit_from : 1;
+    bit_to : 0;
+  }
+  type ("multi") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 4;
+    bit_from : 3;
+    bit_to : 0;
+  }
+  type ("note1") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 4;
+    bit_from : 3;
+    bit_to : 0;
+  }
+  type ("note2") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 4;
+    bit_from : 3;
+    bit_to : 0;
+  }
+  type ("note3") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 4;
+    bit_from : 3;
+    bit_to : 0;
+  }
+  type ("note4") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 4;
+    bit_from : 3;
+    bit_to : 0;
+  }
+  type ("piano_keys") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 15;
+    bit_from : 14;
+    bit_to : 0;
+  }
+
+  cell ("sass_synth") {
+    pin("cs") {
+      direction : input;
+      capacitance : 0.0089;
+    }
+    pin("hwclk") {
+      direction : input;
+      capacitance : 0.0054;
+    }
+    pin("n_rst") {
+      direction : input;
+      capacitance : 0.0054;
+    }
+    pin("pwm_o") {
+      direction : output;
+      capacitance : 0.0009;
+      timing() {
+        related_pin : "cs";
+        timing_sense : negative_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          values("0.57131,0.57567,0.58695,0.61441,0.68747,0.91178,1.62226");
+	}
+	rise_transition(template_1) {
+          values("0.02222,0.02550,0.03526,0.06459,0.16174,0.48310,1.50728");
+	}
+	cell_fall(template_1) {
+          values("0.64480,0.64873,0.65885,0.68202,0.73626,0.88830,1.36746");
+	}
+	fall_transition(template_1) {
+          values("0.02058,0.02323,0.03048,0.05007,0.10923,0.30692,0.95477");
+	}
+      }
+    }
+    pin("seq_led_on") {
+      direction : output;
+      capacitance : 0.0015;
+      timing() {
+        related_pin : "cs";
+        timing_sense : negative_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          values("0.64604,0.65089,0.66321,0.69157,0.76510,0.98816,1.70346");
+	}
+	rise_transition(template_1) {
+          values("0.02763,0.03054,0.03967,0.06737,0.16228,0.48215,1.50597");
+	}
+	cell_fall(template_1) {
+          values("0.51507,0.51902,0.52930,0.55241,0.60644,0.75887,1.23914");
+	}
+	fall_transition(template_1) {
+          values("0.02072,0.02327,0.03049,0.04990,0.10897,0.30672,0.94761");
+	}
+      }
+    }
+    pin("seq_play") {
+      direction : input;
+      capacitance : 0.0031;
+    }
+    pin("seq_power") {
+      direction : input;
+      capacitance : 0.0029;
+    }
+    pin("tempo_select") {
+      direction : input;
+      capacitance : 0.0031;
+    }
+    bus("beat_led") {
+      bus_type : beat_led;
+      direction : output;
+      capacitance : 0.0000;
+    pin("beat_led[7]") {
+      direction : output;
+      capacitance : 0.0008;
+      timing() {
+        related_pin : "cs";
+        timing_sense : negative_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          values("1.17023,1.17545,1.18846,1.21780,1.29183,1.51486,2.22916");
+	}
+	rise_transition(template_1) {
+          values("0.03019,0.03318,0.04238,0.06962,0.16321,0.48197,1.50577");
+	}
+	cell_fall(template_1) {
+          values("0.84882,0.85279,0.86317,0.88626,0.94024,1.09272,1.57306");
+	}
+	fall_transition(template_1) {
+          values("0.02071,0.02323,0.03050,0.04990,0.10892,0.30674,0.94777");
+	}
+      }
+    }
+    pin("beat_led[6]") {
+      direction : output;
+      capacitance : 0.0011;
+      timing() {
+        related_pin : "cs";
+        timing_sense : negative_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          values("0.90521,0.90952,0.92075,0.94817,1.02122,1.24498,1.95404");
+	}
+	rise_transition(template_1) {
+          values("0.02225,0.02557,0.03531,0.06467,0.16188,0.48244,1.50596");
+	}
+	cell_fall(template_1) {
+          values("0.75695,0.76086,0.77095,0.79410,0.84826,1.00052,1.48043");
+	}
+	fall_transition(template_1) {
+          values("0.02069,0.02332,0.03049,0.04993,0.10910,0.30675,0.94902");
+	}
+      }
+    }
+    pin("beat_led[5]") {
+      direction : output;
+      capacitance : 0.0012;
+      timing() {
+        related_pin : "cs";
+        timing_sense : negative_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          values("0.92226,0.92656,0.93778,0.96518,1.03822,1.26181,1.97044");
+	}
+	rise_transition(template_1) {
+          values("0.02224,0.02559,0.03531,0.06471,0.16191,0.48222,1.50551");
+	}
+	cell_fall(template_1) {
+          values("0.76833,0.77224,0.78235,0.80549,0.85961,1.01195,1.49210");
+	}
+	fall_transition(template_1) {
+          values("0.02072,0.02334,0.03049,0.04989,0.10905,0.30670,0.94735");
+	}
+      }
+    }
+    pin("beat_led[4]") {
+      direction : output;
+      capacitance : 0.0005;
+      timing() {
+        related_pin : "cs";
+        timing_sense : negative_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          values("1.13294,1.13915,1.15319,1.18410,1.26446,1.49853,2.17766");
+	}
+	rise_transition(template_1) {
+          values("0.02527,0.02938,0.04071,0.07506,0.18533,0.52215,1.50619");
+	}
+	cell_fall(template_1) {
+          values("0.84994,0.85458,0.86483,0.88591,0.93135,1.04754,1.38252");
+	}
+	fall_transition(template_1) {
+          values("0.01776,0.02070,0.02792,0.04566,0.09385,0.24230,0.69752");
+	}
+      }
+    }
+    pin("beat_led[3]") {
+      direction : output;
+      capacitance : 0.0009;
+      timing() {
+        related_pin : "cs";
+        timing_sense : negative_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          values("1.25585,1.26161,1.27562,1.30644,1.38123,1.60424,2.31618");
+	}
+	rise_transition(template_1) {
+          values("0.03379,0.03697,0.04633,0.07299,0.16467,0.48165,1.50533");
+	}
+	cell_fall(template_1) {
+          values("0.84636,0.85036,0.86084,0.88391,0.93787,1.09039,1.57087");
+	}
+	fall_transition(template_1) {
+          values("0.02079,0.02327,0.03057,0.04996,0.10890,0.30677,0.94803");
+	}
+      }
+    }
+    pin("beat_led[2]") {
+      direction : output;
+      capacitance : 0.0010;
+      timing() {
+        related_pin : "cs";
+        timing_sense : negative_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          values("1.18609,1.19143,1.20468,1.23435,1.30856,1.53159,2.24534");
+	}
+	rise_transition(template_1) {
+          values("0.03103,0.03406,0.04330,0.07040,0.16354,0.48190,1.50567");
+	}
+	cell_fall(template_1) {
+          values("0.80190,0.80586,0.81618,0.83928,0.89330,1.04574,1.52604");
+	}
+	fall_transition(template_1) {
+          values("0.02071,0.02325,0.03050,0.04990,0.10895,0.30673,0.94767");
+	}
+      }
+    }
+    pin("beat_led[1]") {
+      direction : output;
+      capacitance : 0.0007;
+      timing() {
+        related_pin : "cs";
+        timing_sense : negative_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          values("1.02944,1.03412,1.04612,1.07420,1.14758,1.37072,2.08394");
+	}
+	rise_transition(template_1) {
+          values("0.02608,0.02912,0.03842,0.06662,0.16218,0.48208,1.50566");
+	}
+	cell_fall(template_1) {
+          values("0.77819,0.78214,0.79241,0.81552,0.86956,1.02197,1.50224");
+	}
+	fall_transition(template_1) {
+          values("0.02072,0.02327,0.03049,0.04989,0.10897,0.30672,0.94760");
+	}
+      }
+    }
+    pin("beat_led[0]") {
+      direction : output;
+      capacitance : 0.0014;
+      timing() {
+        related_pin : "cs";
+        timing_sense : negative_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          values("0.86596,0.87027,0.88150,0.90891,0.98196,1.20573,1.91478");
+	}
+	rise_transition(template_1) {
+          values("0.02225,0.02557,0.03531,0.06467,0.16188,0.48244,1.50596");
+	}
+	cell_fall(template_1) {
+          values("0.71799,0.72190,0.73199,0.75513,0.80926,0.96159,1.44172");
+	}
+	fall_transition(template_1) {
+          values("0.02073,0.02335,0.03049,0.04988,0.10906,0.30670,0.94732");
+	}
+      }
+    }
+    }
+    bus("mode_out") {
+      bus_type : mode_out;
+      direction : output;
+      capacitance : 0.0000;
+    pin("mode_out[1]") {
+      direction : output;
+      capacitance : 0.0005;
+      timing() {
+        related_pin : "cs";
+        timing_sense : negative_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          values("0.78639,0.79187,0.80467,0.83461,0.91495,1.14812,1.83597");
+	}
+	rise_transition(template_1) {
+          values("0.02110,0.02527,0.03707,0.07284,0.18503,0.52193,1.50681");
+	}
+	cell_fall(template_1) {
+          values("0.81568,0.82037,0.83063,0.85171,0.89713,1.01330,1.34818");
+	}
+	fall_transition(template_1) {
+          values("0.01777,0.02068,0.02792,0.04567,0.09385,0.24227,0.69703");
+	}
+      }
+    }
+    pin("mode_out[0]") {
+      direction : output;
+      capacitance : 0.0013;
+      timing() {
+        related_pin : "cs";
+        timing_sense : negative_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          values("0.72285,0.72799,0.74020,0.76969,0.85010,1.08240,1.77740");
+	}
+	rise_transition(template_1) {
+          values("0.01885,0.02314,0.03528,0.07185,0.18500,0.52137,1.50787");
+	}
+	cell_fall(template_1) {
+          values("0.78598,0.79067,0.80092,0.82201,0.86743,0.98360,1.31848");
+	}
+	fall_transition(template_1) {
+          values("0.01777,0.02068,0.02792,0.04567,0.09385,0.24227,0.69705");
+	}
+      }
+    }
+    }
+    bus("multi") {
+      bus_type : multi;
+      direction : output;
+      capacitance : 0.0000;
+    pin("multi[3]") {
+      direction : output;
+      capacitance : 0.0012;
+    }
+    pin("multi[2]") {
+      direction : output;
+      capacitance : 0.0015;
+    }
+    pin("multi[1]") {
+      direction : output;
+      capacitance : 0.0011;
+    }
+    pin("multi[0]") {
+      direction : output;
+      capacitance : 0.0015;
+    }
+    }
+    bus("note1") {
+      bus_type : note1;
+      direction : output;
+      capacitance : 0.0000;
+    pin("note1[3]") {
+      direction : output;
+      capacitance : 0.0009;
+    }
+    pin("note1[2]") {
+      direction : output;
+      capacitance : 0.0008;
+    }
+    pin("note1[1]") {
+      direction : output;
+      capacitance : 0.0007;
+    }
+    pin("note1[0]") {
+      direction : output;
+      capacitance : 0.0011;
+    }
+    }
+    bus("note2") {
+      bus_type : note2;
+      direction : output;
+      capacitance : 0.0000;
+    pin("note2[3]") {
+      direction : output;
+      capacitance : 0.0007;
+    }
+    pin("note2[2]") {
+      direction : output;
+      capacitance : 0.0008;
+    }
+    pin("note2[1]") {
+      direction : output;
+      capacitance : 0.0008;
+    }
+    pin("note2[0]") {
+      direction : output;
+      capacitance : 0.0008;
+    }
+    }
+    bus("note3") {
+      bus_type : note3;
+      direction : output;
+      capacitance : 0.0000;
+    pin("note3[3]") {
+      direction : output;
+      capacitance : 0.0013;
+    }
+    pin("note3[2]") {
+      direction : output;
+      capacitance : 0.0006;
+    }
+    pin("note3[1]") {
+      direction : output;
+      capacitance : 0.0008;
+    }
+    pin("note3[0]") {
+      direction : output;
+      capacitance : 0.0010;
+    }
+    }
+    bus("note4") {
+      bus_type : note4;
+      direction : output;
+      capacitance : 0.0000;
+    pin("note4[3]") {
+      direction : output;
+      capacitance : 0.0016;
+    }
+    pin("note4[2]") {
+      direction : output;
+      capacitance : 0.0012;
+    }
+    pin("note4[1]") {
+      direction : output;
+      capacitance : 0.0014;
+    }
+    pin("note4[0]") {
+      direction : output;
+      capacitance : 0.0005;
+    }
+    }
+    bus("piano_keys") {
+      bus_type : piano_keys;
+      direction : input;
+      capacitance : 0.0000;
+    pin("piano_keys[14]") {
+      direction : input;
+      capacitance : 0.0032;
+    }
+    pin("piano_keys[13]") {
+      direction : input;
+      capacitance : 0.0032;
+    }
+    pin("piano_keys[12]") {
+      direction : input;
+      capacitance : 0.0030;
+    }
+    pin("piano_keys[11]") {
+      direction : input;
+      capacitance : 0.0032;
+    }
+    pin("piano_keys[10]") {
+      direction : input;
+      capacitance : 0.0030;
+    }
+    pin("piano_keys[9]") {
+      direction : input;
+      capacitance : 0.0033;
+    }
+    pin("piano_keys[8]") {
+      direction : input;
+      capacitance : 0.0032;
+    }
+    pin("piano_keys[7]") {
+      direction : input;
+      capacitance : 0.0032;
+    }
+    pin("piano_keys[6]") {
+      direction : input;
+      capacitance : 0.0030;
+    }
+    pin("piano_keys[5]") {
+      direction : input;
+      capacitance : 0.0029;
+    }
+    pin("piano_keys[4]") {
+      direction : input;
+      capacitance : 0.0031;
+    }
+    pin("piano_keys[3]") {
+      direction : input;
+      capacitance : 0.0032;
+    }
+    pin("piano_keys[2]") {
+      direction : input;
+      capacitance : 0.0030;
+    }
+    pin("piano_keys[1]") {
+      direction : input;
+      capacitance : 0.0028;
+    }
+    pin("piano_keys[0]") {
+      direction : input;
+      capacitance : 0.0031;
+    }
+    }
+  }
+
+}
