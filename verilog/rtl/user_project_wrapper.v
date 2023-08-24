@@ -82,6 +82,16 @@ module user_project_wrapper #(
 /* User project is instantiated  here   */
 /*--------------------------------------*/
 
+intergrated_designs mprj (
+    .clk(wb_clk_i),
+    .n_rst(wb_rst_i),
+    .design_select(io_in[37:34]),
+    .gpio_in(io_in[33:0]),
+    .gpio_oeb(io_oeb[33:0]),
+    .gpio_out(io_out[33:0])
+);
+
+/*
 user_proj_example mprj (
 `ifdef USE_POWER_PINS
 	.vccd1(vccd1),	// User area 1 1.8V power
@@ -117,7 +127,7 @@ user_proj_example mprj (
     // IRQ
     .irq(user_irq)
 );
-
+*/
 endmodule	// user_project_wrapper
 
 `default_nettype wire
