@@ -6,7 +6,7 @@ module Eighty_Twos (
     // Wrapper
     input logic cs, // Chip Select (Active Low)
     input logic [33:0] gpi, // Breakout Board Pins
-    output logic [33:0] gpo // Breakout Board Pins
+    output logic [33:0] gpo, // Breakout Board Pins
     output logic store_en  // Direction for data bus
 );
 

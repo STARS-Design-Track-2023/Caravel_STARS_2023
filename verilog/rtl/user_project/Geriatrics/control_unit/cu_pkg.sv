@@ -1,7 +1,7 @@
 `ifndef CONTROL_UNIT_PKG
 `define CONTROL_UNIT_PKG
 
-`include "source/alu/alu_pkg.sv"
+`include "Geriatrics/alu/alu_pkg.sv"
 
 `default_nettype none
 package cu_pkg;

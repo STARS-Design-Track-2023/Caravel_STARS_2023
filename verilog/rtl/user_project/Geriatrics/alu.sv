@@ -1,6 +1,6 @@
 `default_nettype none
-`include "source/alu/alu_pkg.sv"
-`include "source/control_unit/cu_pkg.sv"
+`include "Geriatrics/alu/alu_pkg.sv"
+`include "Geriatrics/control_unit/cu_pkg.sv"
 
 module alu (input logic Cin,
             input alu_pkg::alu_op alu_op,

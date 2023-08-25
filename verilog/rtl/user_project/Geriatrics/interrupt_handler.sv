@@ -1,6 +1,6 @@
 `default_nettype none
 
-`include "source/interrupt_handler/ih_pkg.sv"
+`include "Geriatrics/interrupt_handler/ih_pkg.sv"
 
 module interrupt_handler(
     input logic clk, nrst,

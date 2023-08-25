@@ -82,7 +82,7 @@ module user_project_wrapper #(
 /* User project is instantiated  here   */
 /*--------------------------------------*/
 
-intergrated_designs mprj (
+integrated_designs mprj (
     .clk(wb_clk_i),
     .n_rst(wb_rst_i),
     .design_select(io_in[37:34]),

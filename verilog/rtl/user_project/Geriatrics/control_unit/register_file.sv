@@ -1,5 +1,5 @@
 `default_nettype none
-`include "source/control_unit/cu_pkg.sv"
+`include "Geriatrics/control_unit/cu_pkg.sv"
 
 `define MAP_TO_REG(SEL, TO)                                     \
     case ((SEL))                                                \

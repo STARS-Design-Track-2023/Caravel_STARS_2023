@@ -1,7 +1,7 @@
 `default_nettype none
-`include "source/control_unit/cu_pkg.sv"
-`include "source/interrupt_handler/ih_pkg.sv"
-`include "source/alu/alu_pkg.sv"
+`include "Geriatrics/control_unit/cu_pkg.sv"
+`include "Geriatrics/interrupt_handler/ih_pkg.sv"
+`include "Geriatrics/alu/alu_pkg.sv"
 
 module z23(
     input logic clk, nrst,
