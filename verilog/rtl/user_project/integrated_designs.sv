@@ -74,7 +74,7 @@ always @ (*) begin
     designs_cs = {12{1'b1}}; // default is off 
 
     if(design_select > 4'd0 && design_select < 4'd13) begin
-        design_cs[design_select] = 1'b0; // turn on the selected design
+        designs_cs[design_select] = 1'b0; // turn on the selected design
     end 
 end
 
@@ -102,7 +102,7 @@ Absentees_Wrapper design_1
 (
     .clk(clk),
     .n_rst(designs_n_rst[1]),
-    .ncs(design_cs[1]), 
+    .ncs(designs_cs[1]), 
 
     .gpio_in(gpio_in),
     .gpio_out(designs_gpio_out[1]), 
@@ -113,7 +113,7 @@ DigiDoggs_Wrapper design_2
 (
     .clk(clk),
     .n_rst(designs_n_rst[2]),
-    .ncs(design_cs[2]), 
+    .ncs(designs_cs[2]), 
 
     .gpio_in(gpio_in),
     .gpio_out(designs_gpio_out[2]), 
@@ -124,7 +124,7 @@ EightyTwos_Wrapper design_3
 (
     .clk(clk),
     .n_rst(designs_n_rst[3]),
-    .ncs(design_cs[3]), 
+    .ncs(designs_cs[3]), 
 
     .gpio_in(gpio_in),
     .gpio_out(designs_gpio_out[3]), 
@@ -135,7 +135,7 @@ Geriatrics_Wrapper design_4
 (
     .clk(clk),
     .n_rst(designs_n_rst[4]),
-    .ncs(design_cs[4]), 
+    .ncs(designs_cs[4]), 
 
     .gpio_in(gpio_in),
     .gpio_out(designs_gpio_out[4]), 
@@ -146,7 +146,7 @@ GuitarVillains_wrapper design_5
 (
     .clk(clk),
     .n_rst(designs_n_rst[5]),
-    .ncs(design_cs[5]), 
+    .ncs(designs_cs[5]), 
 
     .gpio_in(gpio_in),
     .gpio_out(designs_gpio_out[5]), 
@@ -157,7 +157,7 @@ MatrixMonSTARS_Wrapper design_6
 (
     .clk(clk),
     .n_rst(designs_n_rst[6]),
-    .ncs(design_cs[6]), 
+    .ncs(designs_cs[6]), 
 
     .gpio_in(gpio_in),
     .gpio_out(designs_gpio_out[6]), 
@@ -168,7 +168,7 @@ Outel_Wrapper design_7
 (
     .clk(clk),
     .n_rst(designs_n_rst[7]),
-    .ncs(design_cs[7]), 
+    .ncs(designs_cs[7]), 
 
     .gpio_in(gpio_in),
     .gpio_out(designs_gpio_out[7]), 
@@ -179,7 +179,7 @@ SaSS_wrapper design_8
 (
     .clk(clk),
     .n_rst(designs_n_rst[8]),
-    .ncs(design_cs[8]), 
+    .ncs(designs_cs[8]), 
 
     .gpio_in(gpio_in),
     .gpio_out(designs_gpio_out[8]), 
@@ -190,7 +190,7 @@ silly_synth_wrapper design_9
 (
     .clk(clk),
     .n_rst(designs_n_rst[9]),
-    .ncs(design_cs[9]),
+    .ncs(designs_cs[9]),
 
     .gpio_in(gpio_in),
     .gpio_out(designs_gpio_out[9]),
@@ -201,7 +201,7 @@ SyntheSTARS_Wrapper design_10
 (
     .clk(clk),
     .n_rst(designs_n_rst[10]),
-    .ncs(design_cs[10]), 
+    .ncs(designs_cs[10]), 
 
     .gpio_in(gpio_in),
     .gpio_out(designs_gpio_out[10]), 
@@ -212,7 +212,7 @@ SynthSurgeons_Wrapper design_11
 (
     .clk(clk),
     .n_rst(designs_n_rst[11]),
-    .ncs(design_cs[11]), 
+    .ncs(designs_cs[11]), 
 
     .gpio_in(gpio_in),
     .gpio_out(designs_gpio_out[11]), 
@@ -223,7 +223,7 @@ TMNT_Wrapper design_12
 (
     .clk(clk),
     .n_rst(designs_n_rst[12]),
-    .ncs(design_cs[12]), 
+    .ncs(designs_cs[12]), 
 
     .gpio_in(gpio_in),
     .gpio_out(designs_gpio_out[12]), 

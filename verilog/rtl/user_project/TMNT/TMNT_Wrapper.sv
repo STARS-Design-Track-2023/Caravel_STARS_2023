@@ -17,11 +17,12 @@ module TMNT_Wrapper (
         .pb(gpio_in[14:0])
     );
 
-    always @ (*) begin 
-        gpio_out[14:0] = 'b0;
-        gpio_out[18:33] = 'b0;
-        gpio_oeb = {{34{1'b1}}};
-        gpio_oeb[17:15] = 'b0;
-    end
+    assign gpio_out[14:0] = 'b0;
+    assign gpio_out[18:33] = 'b0;
+    
+    assign gpio_oeb[14:0] = 'b1;
+    assign gpio_oeb[17:15] = 'b0;
+    assign gpio_oeb[18:33] = 'b1;
+
     
 endmodule

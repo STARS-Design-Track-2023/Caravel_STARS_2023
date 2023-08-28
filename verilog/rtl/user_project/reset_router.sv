@@ -1,20 +1,3 @@
-// Async assert, sync deassert nrst
-module async_reset_sync (
-    input clk,
-    input asyncrst_n,
-    output reg n_rst
-);
-    reg rff;
-
-    always @(posedge clk, negedge asyncrst_n) begin
-        if(!asyncrst_n) begin
-            {n_rst, rff} <= 2'b0;
-        end else begin
-            {n_rst, rff} <= {rff, 1'b1};
-        end
-    end
-endmodule
-
 module reset_router (
     input clk,
     input n_rst,
@@ -37,3 +20,21 @@ module reset_router (
     endgenerate
 
 endmodule
+
+// Async assert, sync deassert nrst
+module async_reset_sync (
+    input clk,
+    input asyncrst_n,
+    output reg n_rst
+);
+    reg rff;
+
+    always @(posedge clk, negedge asyncrst_n) begin
+        if(!asyncrst_n) begin
+            {n_rst, rff} <= 2'b0;
+        end else begin
+            {n_rst, rff} <= {rff, 1'b1};
+        end
+    end
+endmodule
+
