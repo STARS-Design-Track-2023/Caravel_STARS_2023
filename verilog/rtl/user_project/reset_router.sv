@@ -6,7 +6,7 @@ module async_reset_sync (
 );
     logic rff;
 
-    always_ff @(posedge CLK, negedge asyncrst_n) begin
+    always_ff @(posedge clk, negedge asyncrst_n) begin
         if(!asyncrst_n) begin
             {n_rst, rff} <= 2'b0;
         end else begin

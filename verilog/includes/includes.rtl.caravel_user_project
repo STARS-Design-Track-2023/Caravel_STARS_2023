@@ -15,6 +15,94 @@
 
 # Caravel user project includes
 -v $(USER_PROJECT_VERILOG)/rtl/user_project_wrapper.v	     
--v $(USER_PROJECT_VERILOG)/rtl/user_proj_example.v
+# -v $(USER_PROJECT_VERILOG)/rtl/user_proj_example.v
+
+# Absentees
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/Absentees/Absentees_Wrapper.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/Absentees/clkdiv.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/Absentees/counter.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/Absentees/decoder.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/Absentees/edge_detect.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/Absentees/encode.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/Absentees/fsm.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/Absentees/memory.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/Absentees/output_sel.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/Absentees/stopwatch.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/Absentees/sync.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/Absentees/timer.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/Absentees/top.sv
+
+# DigiDoggs
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/DigiDoggs/color_converter.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/DigiDoggs/counter.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/DigiDoggs/DigiDoggs_Wrapper.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/DigiDoggs/edge_detector.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/DigiDoggs/mandelbrot.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/DigiDoggs/new_z.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/DigiDoggs/pushing_pixels.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/DigiDoggs/shift_register.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/DigiDoggs/spi_in.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/DigiDoggs/sync.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/DigiDoggs/top.sv
+
+# EightyTwos
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/EightyTwos/ALU.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/EightyTwos/ByteBuffer.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/EightyTwos/ByteDecoder.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/EightyTwos/Control.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/EightyTwos/Eighty_Twos.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/EightyTwos/EightyTwos_Wrapper.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/EightyTwos/FSM.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/EightyTwos/InstructionDecoder.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/EightyTwos/JumpFlagController.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/EightyTwos/MemControl.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/EightyTwos/PC.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/EightyTwos/RegFile.sv
+
+# Geriatrics
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/Geriatrics/*.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/Geriatrics/alu/*.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/Geriatrics/control_unit/*.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/Geriatrics/interrupt_controller/*.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/Geriatrics/memory_controller/*.sv
+
+# GuitarVillains
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/GuitarVillains/*.sv
+
+# MatrixMonSTARS
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/alu.sv
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/calculator.sv
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/keyencoder_binary.sv
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/MatrixMonSTARS_Wrapper.sv
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/neg_input.sv
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/new_operand_buffer.sv
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/opcode_encoder.sv
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/read_fsm.sv
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/reg_file.sv
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/register_decoder.sv
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/ssdec.sv
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/sync_edge_detector.sv
+
+# Outel
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/Outel/*.sv
+
+# SaSS
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/SaSS/*.sv
+
+# SyntheSTARS
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/SyntheSTARS/*.sv
+
+# SynthSurgeons
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/SynthSurgeons/*.sv
+
+# TMNT
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/TMNT/*.sv
+
+# Triple-SSS
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/Triple-SSS/*.sv
+
+# integrated designs
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/integrated_designs.sv
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/reset_router.sv
 
  
