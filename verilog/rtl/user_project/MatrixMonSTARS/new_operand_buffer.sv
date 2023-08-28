@@ -12,7 +12,7 @@ module new_operand_buffer(
     logic [7:0] next_ssdec;
     logic next_sign, next_o_flag;
 
-    always_ff @( posedge clk, negedge nrst ) begin
+    always @( posedge clk, negedge nrst ) begin
         if (~nrst) begin
             op1 <= 0;
             ssdec <= 0;
@@ -27,7 +27,7 @@ module new_operand_buffer(
         end
     end
 
-    always_comb begin
+    always @(*) begin
         next_op1 = op1;
         if(store_digit) begin
             next_op1 = digit_con;
@@ -36,7 +36,7 @@ module new_operand_buffer(
             next_op1 = 0;
     end
 
-  always_comb begin
+  always @(*) begin
     next_sign = sign;
     next_o_flag = o_flag;
     if(store_digit) begin

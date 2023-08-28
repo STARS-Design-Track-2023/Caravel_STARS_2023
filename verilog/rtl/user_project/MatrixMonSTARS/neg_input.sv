@@ -5,7 +5,7 @@ module neg_input(
 
   logic max_logic_lsd, max_logic_msd, carry_lsd;
   logic [3:0] correction_lsd, correction_msd;
-  always_comb begin
+  always @(*) begin
     {max_logic_lsd, max_logic_msd, carry_lsd, correction_lsd, correction_msd} = 0;
     digit_con = digit;
     if(digit == 9'b100000000) begin

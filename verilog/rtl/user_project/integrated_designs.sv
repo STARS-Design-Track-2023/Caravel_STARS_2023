@@ -70,7 +70,6 @@ wire [12:1] designs_n_rst;  // active low reset for each design
 
 /* chip select logic */
 
-assign designs_cs[0] = (design_select == 0);
 assign designs_cs[1] = (design_select == 1);
 assign designs_cs[2] = (design_select == 2);
 assign designs_cs[3] = (design_select == 3);

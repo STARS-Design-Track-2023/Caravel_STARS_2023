@@ -25,7 +25,7 @@ module alu (
 
     assign next_buff_opcode = opcode;
 
-    always_ff @( posedge clk, negedge nrst) begin
+    always @( posedge clk, negedge nrst) begin
         if (nrst == 0) begin
             op1 <= 0;
             op2 <= 0;
@@ -42,7 +42,7 @@ module alu (
         end
     end
 
-    always_comb begin : FFassign_values
+    always @(*) begin : FFassign_values
         next_op1 = op1;
         next_op2 = op2;
         n_b_assign_op1 = assign_op1;
@@ -55,7 +55,7 @@ module alu (
         end
     end
 
-    always_comb begin : ALUCOMPUTATION
+    always @(*) begin : ALUCOMPUTATION
     new_op1 = op1;
     new_op2 = op2;
     

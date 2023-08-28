@@ -181,7 +181,7 @@ module keyencoder_binary
     end
 
     //Shift register logic. It shifts each input to create the code
-    always_comb begin
+    always @(*) begin
         partial_code = keycode;
         if(use_code && strobe && (state != s10 || state != s11 || state != s12)) begin
             partial_code = {keycode[7:0], code_choice};
