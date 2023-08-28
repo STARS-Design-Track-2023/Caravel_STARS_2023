@@ -1,7 +1,14 @@
 module integrated_designs (
-    input logic clk, n_rst,
 
-    input logic[3:0] design_select, 
+`ifdef USE_POWER_PINS
+    inout vccd1,	// User area 1 1.8V supply
+    inout vssd1,	// User area 1 digital ground
+`endif
+
+    input wire clk, 
+    input wire n_rst,
+
+    input wire [3:0] design_select, 
     /* 
     if design select == 0, no design is selected.
     If design_select == 1, design_1 is selected 
@@ -10,18 +17,18 @@ module integrated_designs (
     Up to design_12  
     */
 
-    input logic [33:0] gpio_in, 
+    input wire [33:0] gpio_in, 
     
-    output logic [33:0] gpio_oeb,
-    output logic [33:0] gpio_out
+    output wire [33:0] gpio_oeb,
+    output wire [33:0] gpio_out
 );
 
-logic[33:0] designs_gpio_out[1:12]; // start counting from 1 b/c of the design_select behavior
-logic[33:0] designs_gpio_oeb[1:12]; 
+wire [33:0] designs_gpio_out[1:12]; // start counting from 1 b/c of the design_select behavior
+wire [33:0] designs_gpio_oeb[1:12]; 
 
-logic[12:1] designs_cs; // active low chip select input for the designs.
+reg [12:1] designs_cs; // active low chip select input for the designs.
 
-logic [12:1] designs_n_rst;  // active low reset for each design
+wire [12:1] designs_n_rst;  // active low reset for each design
 
 /* 
     gpio_in signal multiplexing:
@@ -63,7 +70,7 @@ logic [12:1] designs_n_rst;  // active low reset for each design
 
 /* chip select logic */
 
-always_comb begin
+always @ (*) begin
     designs_cs = {12{1'b1}}; // default is off 
 
     if(design_select > 4'd0 && design_select < 4'd13) begin
