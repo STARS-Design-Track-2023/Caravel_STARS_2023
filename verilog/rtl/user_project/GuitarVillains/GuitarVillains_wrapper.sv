@@ -16,7 +16,7 @@ module GuitarVillains_wrapper (
         
         .button(gpio_in[3:0]),
         .top_row(gpio_out[10:4]),
-        .buttom_row(gpio_out[17:11]), 
+        .bottom_row(gpio_out[17:11]), 
         .red_disp(gpio_out[32]),
         .green_disp(gpio_out[33]),
         .ss0(gpio_out[24:18]),
