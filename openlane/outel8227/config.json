@@ -1,5 +1,5 @@
 {
-    "DESIGN_NAME": "top8227",
+    "DESIGN_NAME": "outel8227",
     "VERILOG_FILES": ["dir::src/*.sv",
 	"dir::src/control_logic/*.sv",
 	"dir::src/dataflow/*.sv"

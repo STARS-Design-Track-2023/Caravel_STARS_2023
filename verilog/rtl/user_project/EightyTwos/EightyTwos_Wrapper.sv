@@ -1,18 +1,18 @@
 module EightyTwos_Wrapper (
-    input logic clk, nrst,
+    input wire clk, n_rst,
     
     // Wrapper
-    input logic ncs, // Chip Select (Active Low)
-    input logic [33:0] gpio_in, // Breakout Board Pins
-    output logic [33:0] gpio_out, // Breakout Board Pins
-    output logic [33:0] gpio_oeb // Active Low Output Enable
+    input wire ncs, // Chip Select (Active Low)
+    input wire [33:0] gpio_in, // Breakout Board Pins
+    output wire [33:0] gpio_out, // Breakout Board Pins
+    output wire [33:0] gpio_oeb // Active Low Output Enable
 );
 
-    logic store_en;
+    wire store_en;
 
     Eighty_Twos DESIGN (
         .clk(clk),
-        .nrst(nrst),
+        .nrst(n_rst),
         .cs(ncs),
         .gpi(gpio_in),  // CHECK gpi[23] function
         .gpo(gpio_out),

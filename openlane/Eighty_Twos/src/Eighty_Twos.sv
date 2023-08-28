@@ -6,13 +6,14 @@ module Eighty_Twos (
     // Wrapper
     input logic cs, // Chip Select (Active Low)
     input logic [33:0] gpi, // Breakout Board Pins
-    output logic [33:0] gpo // Breakout Board Pins
+    output logic [33:0] gpo, // Breakout Board Pins
+    output logic store_en  // Direction for data bus
 );
 
 
 
 // Declarations
-logic n_rst, halt, load_en, store_en, imm_pass_thru, rp_en, reg_write_en, 
+logic n_rst, halt, load_en, imm_pass_thru, rp_en, reg_write_en, 
   flag_write_en, pchl, jump_en, shift_en, instr_ready, instr_read_en, jump;
 logic [1:0] alu_source, num_bytes, state;
 logic [2:0] jump_flag, read_addr_1, read_addr_2, write_addr;

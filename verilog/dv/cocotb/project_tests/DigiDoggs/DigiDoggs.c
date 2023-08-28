@@ -1,5 +1,5 @@
 #include <firmware_apis.h> 
-void main(){
+void main() {
   ManagmentGpio_outputEnable();
   ManagmentGpio_write(0);
   enableHkSpi(0); 

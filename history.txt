@@ -1,0 +1,356 @@
+    1  cd ~/OpenLane
+    2  ls
+    3  pwd
+    4  ./init_design.py silly-sythensizer
+    5  cd designs/silly-sythensizer/
+    6  ls
+    7  ll
+    8  ll src
+    9  nano makefile
+   10  code .
+   11  nano makefile
+   12  cd ../..
+   13  make mount
+   14  cd designs/silly-sythensizer/
+   15  make sim_time
+   16  cd ../..
+   17  make mount
+   18  cd designs/silly-sythensizer/
+   19  make sim_time
+   20  cd ../..
+   21  make mount
+   22  cd designs/silly-sythensizer/
+   23  make sim_time
+   24  cd ../.
+   25  make mount
+   26  cd designs/silly-sythensizer/
+   27  make sim_time
+   28  cd ../..
+   29  make mount
+   30  cd designs/silly-sythensizer/
+   31  make sim_time
+   32  cd ../..
+   33  make mount
+   34  cd designs/silly-sythensizer/
+   35  make sim_time
+   36  cd ../..
+   37  make mount
+   38  cd designs/silly-sythensizer/
+   39  make sim_time
+   40  cd ../..
+   41  make mount
+   42  cd designs/silly-sythensizer/
+   43  make sim_time
+   44  cd OpenLane/designs/silly-sythensizer/
+   45  code .
+   46  gedit
+   47  cd OpenLane/designs/silly-sythensizer/
+   48  make sim_time
+   49  nano makefile 
+   50  ls
+   51  nano includes_gl_sdf 
+   52  gedit includes_gl_sdf 
+   53  make sim_time
+   54  nano src/tb_silly_synthesizer.v 
+   55  vim src/tb_silly_synthesizer.v 
+   56  cd ..
+   57  make mount
+   58  cd designs/silly-sythensizer/
+   59  make sim_time
+   60  cvc
+   61  cvc64
+   62  ls
+   63  gedit verilog.log 
+   64  make sim_time
+   65  gedit verilog.log 
+   66  vim src/tb_silly_synthesizer.v 
+   67  cd ../test
+   68  make sim_time
+   69  ls
+   70  vim time.log
+   71  cd ../silly-sythensizer/
+   72  vim includes_gl_sdf 
+   73  cd ../test
+   74  vim includes_gl_sdf 
+   75  cd ../silly-sythensizer/
+   76  ls
+   77  ls ma
+   78  ls mapped/
+   79  vim src/tb_silly_synthesizer.v 
+   80  vim src/tb_silly_synthesizer.v 
+   81  iverilog src/tb_silly_synthesizer.v mapped/synth.v
+   82  vim src/tb_silly_synthesizer.v 
+   83  make sim_time
+   84  gedit time.log
+   85  vim src/tb_silly_synthesizer.v 
+   86  make sim_time
+   87  vim src/tb_silly_synthesizer.v 
+   88  make sim_time
+   89  vim src/tb_silly_synthesizer.v 
+   90  make sim_time
+   91  vim src/tb_silly_synthesizer.v 
+   92  make sim_time
+   93  cd ../..
+   94  make mount
+   95  cd designs/silly-sythensizer/
+   96  make sim_time
+   97  top
+   98  cd OpenLane/designs/silly-sythensizer/
+   99  ll
+  100  cd runs/RUN_2023.07.03_16.00.32/
+  101  ls
+  102  cd results/final
+  103  ll
+  104  cd ..
+  105  ls
+  106  vim makefile 
+  107  make view_gds
+  108  ls
+  109  pwd
+  110  code .
+  111  pwd
+  112  ll
+  113  git clone https://github.com:STARS-Design-Track-2023/Caravel_STARS_2023.git CUP
+  114  git clone https://github.com/STARS-Design-Track-2023/Caravel_STARS_2023.git CUP
+  115  cd CUP/
+  116  export PDK=sky130A
+  117  make setup
+  118  export PDK_ROOT=./dependencies/pdks
+  119  export OPENLANE_ROOT=./dependencies/openlane_src
+  120  echo PDK_ROOT
+  121  echo $PDK_ROOT
+  122  echo $OPENLANE_ROOT
+  123  make setup
+  124  cd openlane/
+  125  ls
+  126  ll
+  127  ll ../dependencies/
+  128  ll dependencies/
+  129  cd ..
+  130  make user_proj_example
+  131  make clean
+  132  git checkout mpw-9d
+  133  make clean
+  134  echo $OPENLANE_ROOT
+  135  export PDK_ROOT=$(pwd)/dependencies/pdks
+  136  echo $PDK_ROOT
+  137  export OPENLANE_ROOT=$(pwd)/dependencies/openlane_src
+  138  make setup
+  139  h
+  140  export PDK_ROOT=$(pwd)/dependencies/pdks
+  141  export OPENLANE_ROOT=$(pwd)/dependencies/openlane_src
+  142  make silly-sythensizer
+  143  k silly_synthesizer.gds 
+  144  klayout silly_synthesizer.gds 
+  145  k silly_synthesizer.gds 
+  146  alias k
+  147  make user_proj_example
+  148  make user_project_wrapper
+  149  make user_proj_example
+  150  git add *
+  151  git commit -m "Add dilly synth"
+  152  git config --global user.name SPencer
+  153  git config --global user.email bowles7@purdue.edu
+  154  git push
+  155  ssh-keygen
+  156  cat ~/.ssh/id_rsa.pub 
+  157  git push
+  158  git commit -m "Add dilly synth"
+  159  cd ..
+  160  git info
+  161  git log
+  162  code .
+  163  git add *
+  164  git commit -m "Add silly synth"
+  165  git push
+  166  git remote set-url origin git@github.com:STARS-Design-Track-2023/Caravel_STARS_2023.git
+  167  git remote set-url origin google.com
+  168  git remote set-url origin git@github.com:STARS-Design-Track-2023/Caravel_STARS_2023.git
+  169  git push
+  170  grep tb
+  171  find -r tb
+  172  man find
+  173  find tb
+  174  find tb*
+  175  find testbench
+  176  find testbench*
+  177  find *testbench*
+  178  git status
+  179  git log
+  180  git pull
+  181  git push
+  182  git log
+  183  mkdir openlane/outel8227
+  184  cd openlane/outel8227/
+  185  cp `timescale 1ns/100ps
+  186  module tb_silly_synthesizer ();
+  187      // VARIABLES
+  188      localparam time CLK_PERIOD = 100;
+  189      integer TESTS_FAILED = 0;
+  190      integer TESTS_PASSED = 0;
+  191      integer TEST_NUMBER = 0;
+  192      // SIGNALS
+  193      reg tb_clk, tb_nrst, tb_cs;
+  194      reg [16:0] tb_gpio;
+  195      wire tb_pwm;
+  196      // TASKS
+  197      task RESET;
+  198          begin
+  199              @(negedge tb_clk);
+  200              tb_nrst = 0;
+  201              @(negedge tb_clk);
+  202              tb_nrst = 1;
+  203          end
+  204      endtask
+  205      task SET_CS;
+  206          begin
+  207              tb_cs = 0;
+  208          end
+  209      endtask
+  210      
+  211      task RESET_CS;
+  212          begin
+  213              tb_cs = 1;
+  214          end
+  215      endtask
+  216      task WAIT (
+  217          input integer cycles
+  218      );
+  219      integer i;
+  220          begin
+  221              for (i = 0; i < cycles; i = i + 1) begin
+  222                  @(posedge tb_clk);
+  223              end
+  224          end
+  225      endtask
+  226      task FEED_INPUTS (
+  227          input [16:0] gpio
+  228      );
+  229          begin
+  230              @(negedge tb_clk);
+  231              tb_gpio = gpio;
+  232          end
+  233      endtask
+  234      task ASSERT_OUTPUTS (
+  235          input pwm
+  236      );
+  237          begin
+  238              TEST_NUMBER = TEST_NUMBER + 1;
+  239              @(negedge tb_clk);
+  240              if (tb_pwm != pwm) begin
+  241                  $error("Test %d Failed", TEST_NUMBER);
+  242                  $error("Expected: %b", pwm);
+  243                  $error("Actual: %b", tb_pwm);
+  244                  TESTS_FAILED = TESTS_FAILED + 1;
+  245              end else begin
+  246                  $info("Test %d Passed", TEST_NUMBER);
+  247                  TESTS_PASSED = TESTS_PASSED + 1;
+  248              end
+  249          end
+  250      endtask
+  251      // DUTs
+  252      `ifdef USE_POWER_PINS
+  253  .nrst(tb_nrst),
+  254  .cs(tb_cs),
+  255  .gpio(tb_gpio),
+  256  .pwm(tb_pwm)
+  257  cp /home/designer-05/OpenLane/designs/outel8227/config.json .
+  258  cp -r /home/designer-05/OpenLane/designs/outel8227/src .
+  259  make outel8227
+  260  make silly-synthesizer
+  261  make user_proj_examples
+  262  make user_proj_example
+  263  cd ../..
+  264  make outel8227
+  265  make silly-synthesizer
+  266  make silly-synthensizer
+  267  make silly-sythensizer
+  268  echo $PDK_ROOT
+  269  pwd
+  270  make outel8227
+  271  history
+  272  export PDK_ROOT=$(pwd)/dependencies/pdks
+  273  export OPENLANE_ROOT=$(pwd)/dependencies/openlane_src
+  274  make outel8227
+  275  history > ~/cmd_hist.txt
+  276  cat ~/cmd_hist.txt 
+  277  make setup
+  278  make silly-sythensizer
+  279  make outel8227
+  280  cd openlane/
+  281  mkdir Synthia
+  282  cd Synthia/
+  283  cp /home/designer-24/OpenLane/designs/Synthia/
+  284  cp /home/designer-24/OpenLane/designs/Synthia/config.json .
+  285  cp -r /home/designer-24/OpenLane/designs/Synthia/src .
+  286  cp -r /home/designer-44/OpenLane/designs/z23/config.json ../z23
+  287  mkdir ../z23
+  288  cd ../23
+  289  cd ../z23
+  290  cp -r /home/designer-44/OpenLane/designs/z23/config.json .
+  291  cp -r /home/designer-44/OpenLane/designs/z23/src .
+  292  ls /home/designer-44/OpenLane/designs/z23/
+  293  cp -r /home/designer-44/OpenLane/designs/z23/src/ .
+  294  ls
+  295  cd src 
+  296  rm src
+  297  cp -r /home/designer-44/OpenLane/designs/z23/src/ .
+  298  ls
+  299  rm -f src
+  300  ls
+  301  cp -r /home/designer-44/OpenLane/designs/z23/src/ .
+  302  make Synthia
+  303  git add *
+  304  make z23
+  305  git add *
+  306  git commit -m "Add Synthia, z23, outel"
+  307  git pull
+  308  git push
+  309  git pull
+  310  echo $PDK_ROOT
+  311  make calculator
+  312  git add *
+  313  git commit -m "Calculator openlane"
+  314  make DigiDoggs
+  315  make Eighty_Twos
+  316  make GuitarVillans
+  317  make SaSS
+  318  make stopwatch
+  319  make tmnt
+  320  cd ..
+  321  find .py
+  322  grep cocotb
+  323  make DigiDoggs
+  324  git add *
+  325  git commit -m "Run Openlane on TA instance projects" 
+  326  git pull
+  327  git push
+  328  caravel_cocotb -t hello_world_uart -tag hello_world
+  329  make user_project_wrapper
+  330  find caravel_interfaces
+  331  find -r caravel_interfaces
+  332  find caravel_interfaces
+  333  find caravel_cocotb
+  334  make synth
+  335  git add *
+  336  git commit -m "Add Aidan's second synth"
+  337  echo $PDK_ROOT
+  338  make user_proj_wrapper
+  339  make caravel
+  340  make user_project_wrapper
+  341  make integrated designs
+  342  make integrated_designs
+  343  make user_project_wrapper
+  344  git add *
+  345  git commit -m "Change integrated designs from sv to v"
+  346  git pull
+  347  git add *
+  348  git commit "Update config.json"
+  349  git commit -m "Update config.json"
+  350  make user_project_wrapper
+  351  echo $PDK_ROOT
+  352  make user_project_wrapper
+  353  echo $OPENLANE_ROOT
+  354  make user_project_wrapper
+  355  export $DIR
+  356  history > history.txt

@@ -1,22 +1,22 @@
 module GuitarVillains_wrapper (
 
-    input logic clk, nrst,
+    input wire clk, n_rst,
     
     // Wrapper
-    input logic ncs, // Chip Select (Active Low)
-    input logic [33:0] gpio_in, // Breakout Board Pins
-    output logic [33:0] gpio_out, // Breakout Board Pins
-    output logic [33:0] gpio_oeb // Active Low Output Enable
+    input wire ncs, // Chip Select (Active Low)
+    input wire [33:0] gpio_in, // Breakout Board Pins
+    output wire [33:0] gpio_out, // Breakout Board Pins
+    output wire [33:0] gpio_oeb // Active Low Output Enable
 );
 
     Guitar_Villains DESIGN (
         .clk(clk),
-        .n_rst(nrst),
+        .n_rst(n_rst),
         .chip_select(ncs), 
         
         .button(gpio_in[3:0]),
         .top_row(gpio_out[10:4]),
-        .buttom_row(gpio_out[17:11]), 
+        .bottom_row(gpio_out[17:11]), 
         .red_disp(gpio_out[32]),
         .green_disp(gpio_out[33]),
         .ss0(gpio_out[24:18]),

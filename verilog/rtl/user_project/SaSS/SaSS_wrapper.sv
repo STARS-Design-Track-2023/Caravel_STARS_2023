@@ -1,17 +1,17 @@
 module SaSS_wrapper (
 
-    input logic clk, nrst,
+    input wire clk, n_rst,
     
     // Wrapper
-    input logic ncs, // Chip Select (Active Low)
-    input logic [33:0] gpio_in, // Breakout Board Pins
-    output logic [33:0] gpio_out, // Breakout Board Pins
-    output logic [33:0] gpio_oeb // Active Low Output Enable
+    input wire ncs, // Chip Select (Active Low)
+    input wire [33:0] gpio_in, // Breakout Board Pins
+    output wire [33:0] gpio_out, // Breakout Board Pins
+    output wire [33:0] gpio_oeb // Active Low Output Enable
 );
 
     sass_synth DESIGN (
-        .clk(clk),
-        .n_rst(nrst),
+        .hwclk(clk),
+        .n_rst(n_rst),
         .cs(ncs),
 
         .piano_keys(gpio_in[14:0]),

@@ -1,19 +1,19 @@
 module Outel_Wrapper (
-    input logic clk, nrst,
+    input wire clk, n_rst,
     
     // Wrapper
-    input logic ncs, // Chip Select (Active Low)
-    input logic [33:0] gpio_in, // Breakout Board Pins
-    output logic [33:0] gpio_out, // Breakout Board Pins
-    output logic [33:0] gpio_oeb // Active Low Output Enable
+    input wire ncs, // Chip Select (Active Low)
+    input wire [33:0] gpio_in, // Breakout Board Pins
+    output wire [33:0] gpio_out, // Breakout Board Pins
+    output wire [33:0] gpio_oeb // Active Low Output Enable
 );
 
-    logic dataBusSelect;
+    wire dataBusSelect;
     wire [25:0] gpio;
 
     outel8227 DESIGN (
         .clk(clk),
-        .nrst(nrst),
+        .nrst(n_rst),
         .cs(ncs),
         .dataBusIn(gpio_in[33:26]),
         .dataBusOut(gpio_out[33:26]),
@@ -30,7 +30,7 @@ module Outel_Wrapper (
     assign gpio_oeb = {{8{~dataBusSelect}}, {5{1'b0}}, {5{1'b1}}, {16{1'b0}}};
 
     // assign 0s to unused gpio_out
-    assign gpio[20:16] = 5'b0;
+    assign gpio_out[20:16] = 5'b0;
     assign gpio_out[25] = 1'b0;
 
 endmodule

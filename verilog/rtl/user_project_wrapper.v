@@ -83,6 +83,12 @@ module user_project_wrapper #(
 /*--------------------------------------*/
 
 integrated_designs mprj (
+
+`ifdef USE_POWER_PINS
+	.vccd1(vccd1),	// User area 1 1.8V power
+	.vssd1(vssd1),	// User area 1 digital ground
+`endif
+
     .clk(wb_clk_i),
     .n_rst(wb_rst_i),
     .design_select(io_in[37:34]),

@@ -1,17 +1,17 @@
 module MatrixMonSTARS_Wrapper (
 
-    input logic clk, nrst,
+    input wire clk, n_rst,
     
     // Wrapper
-    input logic ncs, // Chip Select (Active Low)
-    input logic [33:0] gpio_in, // Breakout Board Pins
-    output logic [33:0] gpio_out, // Breakout Board Pins
-    output logic [33:0] gpio_oeb // Active Low Output Enable
+    input wire ncs, // Chip Select (Active Low)
+    input wire [33:0] gpio_in, // Breakout Board Pins
+    output wire [33:0] gpio_out, // Breakout Board Pins
+    output wire [33:0] gpio_oeb // Active Low Output Enable
 );
 
     calculator DESIGN (
         .clk(clk),
-        .nrst(nrst),
+        .nrst(n_rst),
         .pb(gpio_in[9:0]),
         .ss(gpio_out[23:10]),
         .red(gpio_out[24]),

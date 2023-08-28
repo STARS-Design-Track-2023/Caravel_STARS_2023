@@ -1,7 +1,14 @@
 module integrated_designs (
-    input logic clk, n_rst,
 
-    input logic[3:0] design_select, 
+`ifdef USE_POWER_PINS
+    inout vccd1,	// User area 1 1.8V supply
+    inout vssd1,	// User area 1 digital ground
+`endif
+
+    input wire clk, 
+    input wire n_rst,
+
+    input wire [3:0] design_select, 
     /* 
     if design select == 0, no design is selected.
     If design_select == 1, design_1 is selected 
@@ -10,18 +17,18 @@ module integrated_designs (
     Up to design_12  
     */
 
-    input logic [33:0] gpio_in, 
+    input wire [33:0] gpio_in, 
     
-    output logic [33:0] gpio_oeb,
-    output logic [33:0] gpio_out
+    output wire [33:0] gpio_oeb,
+    output wire [33:0] gpio_out
 );
 
-logic[33:0] designs_gpio_out[1:12]; // start counting from 1 b/c of the design_select behavior
-logic[33:0] designs_gpio_oeb[1:12]; 
+wire [33:0] designs_gpio_out[1:12]; // start counting from 1 b/c of the design_select behavior
+wire [33:0] designs_gpio_oeb[1:12]; 
 
-logic[12:1] designs_cs; // active low chip select input for the designs.
+reg [12:1] designs_cs; // active low chip select input for the designs.
 
-logic [12:1] designs_n_rst;  // active low reset for each design
+wire [12:1] designs_n_rst;  // active low reset for each design
 
 /* 
     gpio_in signal multiplexing:
@@ -63,13 +70,27 @@ logic [12:1] designs_n_rst;  // active low reset for each design
 
 /* chip select logic */
 
-always_comb begin
-    designs_cs = {12{1'b1}}; // default is off 
+assign designs_cs[0] = (design_select == 0);
+assign designs_cs[1] = (design_select == 1);
+assign designs_cs[2] = (design_select == 2);
+assign designs_cs[3] = (design_select == 3);
+assign designs_cs[4] = (design_select == 4);
+assign designs_cs[5] = (design_select == 5);
+assign designs_cs[6] = (design_select == 6);
+assign designs_cs[7] = (design_select == 7);
+assign designs_cs[8] = (design_select == 8);
+assign designs_cs[9] = (design_select == 9);
+assign designs_cs[10] = (design_select == 10);
+assign designs_cs[11] = (design_select == 11);
+assign designs_cs[12] = (design_select == 12);
 
-    if(design_select > 4'd0 && design_select < 4'd13) begin
-        designs_cs[design_select] = 1'b0; // turn on the selected design
-    end 
-end
+// always @ (*) begin
+//     designs_cs = {12{1'b1}}; // default is off 
+
+//     if(design_select > 4'd0 && design_select < 4'd13) begin
+//         designs_cs[design_select] = 1'b0; // turn on the selected design
+//     end 
+// end
 
 
 /* design reset logic */
@@ -94,7 +115,7 @@ Then you can uncomment and make sure the module name matches
 Absentees_Wrapper design_1
 (
     .clk(clk),
-    .nrst(designs_n_rst[1]),
+    .n_rst(designs_n_rst[1]),
     .ncs(designs_cs[1]), 
 
     .gpio_in(gpio_in),
@@ -105,7 +126,7 @@ Absentees_Wrapper design_1
 DigiDoggs_Wrapper design_2
 (
     .clk(clk),
-    .nrst(designs_n_rst[2]),
+    .n_rst(designs_n_rst[2]),
     .ncs(designs_cs[2]), 
 
     .gpio_in(gpio_in),
@@ -116,7 +137,7 @@ DigiDoggs_Wrapper design_2
 EightyTwos_Wrapper design_3
 (
     .clk(clk),
-    .nrst(designs_n_rst[3]),
+    .n_rst(designs_n_rst[3]),
     .ncs(designs_cs[3]), 
 
     .gpio_in(gpio_in),
@@ -127,7 +148,7 @@ EightyTwos_Wrapper design_3
 Geriatrics_Wrapper design_4
 (
     .clk(clk),
-    .nrst(designs_n_rst[4]),
+    .n_rst(designs_n_rst[4]),
     .ncs(designs_cs[4]), 
 
     .gpio_in(gpio_in),
@@ -138,7 +159,7 @@ Geriatrics_Wrapper design_4
 GuitarVillains_wrapper design_5
 (
     .clk(clk),
-    .nrst(designs_n_rst[5]),
+    .n_rst(designs_n_rst[5]),
     .ncs(designs_cs[5]), 
 
     .gpio_in(gpio_in),
@@ -149,7 +170,7 @@ GuitarVillains_wrapper design_5
 MatrixMonSTARS_Wrapper design_6
 (
     .clk(clk),
-    .nrst(designs_n_rst[6]),
+    .n_rst(designs_n_rst[6]),
     .ncs(designs_cs[6]), 
 
     .gpio_in(gpio_in),
@@ -160,7 +181,7 @@ MatrixMonSTARS_Wrapper design_6
 Outel_Wrapper design_7
 (
     .clk(clk),
-    .nrst(designs_n_rst[7]),
+    .n_rst(designs_n_rst[7]),
     .ncs(designs_cs[7]), 
 
     .gpio_in(gpio_in),
@@ -171,7 +192,7 @@ Outel_Wrapper design_7
 SaSS_wrapper design_8
 (
     .clk(clk),
-    .nrst(designs_n_rst[8]),
+    .n_rst(designs_n_rst[8]),
     .ncs(designs_cs[8]), 
 
     .gpio_in(gpio_in),
@@ -182,7 +203,7 @@ SaSS_wrapper design_8
 silly_synth_wrapper design_9
 (
     .clk(clk),
-    .nrst(designs_n_rst[9]),
+    .n_rst(designs_n_rst[9]),
     .ncs(designs_cs[9]),
 
     .gpio_in(gpio_in),
@@ -193,7 +214,7 @@ silly_synth_wrapper design_9
 SyntheSTARS_Wrapper design_10
 (
     .clk(clk),
-    .nrst(designs_n_rst[10]),
+    .n_rst(designs_n_rst[10]),
     .ncs(designs_cs[10]), 
 
     .gpio_in(gpio_in),
@@ -204,7 +225,7 @@ SyntheSTARS_Wrapper design_10
 SynthSurgeons_Wrapper design_11
 (
     .clk(clk),
-    .nrst(designs_n_rst[11]),
+    .n_rst(designs_n_rst[11]),
     .ncs(designs_cs[11]), 
 
     .gpio_in(gpio_in),
@@ -215,7 +236,7 @@ SynthSurgeons_Wrapper design_11
 TMNT_Wrapper design_12
 (
     .clk(clk),
-    .nrst(designs_n_rst[12]),
+    .n_rst(designs_n_rst[12]),
     .ncs(designs_cs[12]), 
 
     .gpio_in(gpio_in),

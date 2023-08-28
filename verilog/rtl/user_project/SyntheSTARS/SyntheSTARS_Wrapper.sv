@@ -1,16 +1,16 @@
 module SyntheSTARS_Wrapper (
-    input logic clk, nrst,
+    input wire clk, n_rst,
     
     // Wrapper
-    input logic ncs, // Chip Select (Active Low)
-    input logic [33:0] gpio_in, // Breakout Board Pins
-    output logic [33:0] gpio_out, // Breakout Board Pins
-    output logic [33:0] gpio_oeb // Active Low Output Enable
+    input wire ncs, // Chip Select (Active Low)
+    input wire [33:0] gpio_in, // Breakout Board Pins
+    output wire [33:0] gpio_out, // Breakout Board Pins
+    output wire [33:0] gpio_oeb // Active Low Output Enable
 );
 
     Synthia DESIGN (
         .clk(clk),
-        .reset(nrst),
+        .reset(n_rst),
         .pb(gpio_in[12:0]),
         .modes(gpio_in[13]),
         .octaves(gpio_in[14]),
