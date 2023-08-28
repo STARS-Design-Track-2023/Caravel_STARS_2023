@@ -70,13 +70,27 @@ wire [12:1] designs_n_rst;  // active low reset for each design
 
 /* chip select logic */
 
-always @ (*) begin
-    designs_cs = {12{1'b1}}; // default is off 
+assign designs_cs[0] = (design_select == 0);
+assign designs_cs[1] = (design_select == 1);
+assign designs_cs[2] = (design_select == 2);
+assign designs_cs[3] = (design_select == 3);
+assign designs_cs[4] = (design_select == 4);
+assign designs_cs[5] = (design_select == 5);
+assign designs_cs[6] = (design_select == 6);
+assign designs_cs[7] = (design_select == 7);
+assign designs_cs[8] = (design_select == 8);
+assign designs_cs[9] = (design_select == 9);
+assign designs_cs[10] = (design_select == 10);
+assign designs_cs[11] = (design_select == 11);
+assign designs_cs[12] = (design_select == 12);
 
-    if(design_select > 4'd0 && design_select < 4'd13) begin
-        designs_cs[design_select] = 1'b0; // turn on the selected design
-    end 
-end
+// always @ (*) begin
+//     designs_cs = {12{1'b1}}; // default is off 
+
+//     if(design_select > 4'd0 && design_select < 4'd13) begin
+//         designs_cs[design_select] = 1'b0; // turn on the selected design
+//     end 
+// end
 
 
 /* design reset logic */

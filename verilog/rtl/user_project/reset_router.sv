@@ -1,3 +1,4 @@
+`default_nettype none
 module reset_router (
     input clk,
     input n_rst,
@@ -7,17 +8,101 @@ module reset_router (
 
     wire [12:1] cs_n_rst;
 
-    genvar i;
-    generate
-        for (i = 1; i <= 12; i = i + 1) begin
-            assign cs_n_rst[i] = n_rst & ~designs_cs[i];
-            async_reset_sync designs_sync_rst (
-                .clk,
-                .asyncrst_n(cs_n_rst[i]),
-                .n_rst(designs_n_rst[i])
-            );
-        end
-    endgenerate
+    assign cs_n_rst[1] = n_rst & ~designs_cs[1];
+    async_reset_sync designs_sync_rst_1 (
+        .clk,
+        .asyncrst_n(cs_n_rst[1]),
+        .n_rst(designs_n_rst[1])
+    );
+
+    assign cs_n_rst[2] = n_rst & ~designs_cs[2];
+    async_reset_sync designs_sync_rst_2 (
+        .clk,
+        .asyncrst_n(cs_n_rst[2]),
+        .n_rst(designs_n_rst[2])
+    );
+
+    assign cs_n_rst[3] = n_rst & ~designs_cs[3];
+    async_reset_sync designs_sync_rst_3 (
+        .clk,
+        .asyncrst_n(cs_n_rst[3]),
+        .n_rst(designs_n_rst[3])
+    );
+
+    assign cs_n_rst[4] = n_rst & ~designs_cs[4];
+    async_reset_sync designs_sync_rst_4 (
+        .clk,
+        .asyncrst_n(cs_n_rst[4]),
+        .n_rst(designs_n_rst[4])
+    );
+
+    assign cs_n_rst[5] = n_rst & ~designs_cs[5];
+    async_reset_sync designs_sync_rst_5 (
+        .clk,
+        .asyncrst_n(cs_n_rst[5]),
+        .n_rst(designs_n_rst[5])
+    );
+
+    assign cs_n_rst[6] = n_rst & ~designs_cs[6];
+    async_reset_sync designs_sync_rst_6 (
+        .clk,
+        .asyncrst_n(cs_n_rst[6]),
+        .n_rst(designs_n_rst[6])
+    );
+
+    assign cs_n_rst[7] = n_rst & ~designs_cs[7];
+    async_reset_sync designs_sync_rst_7 (
+        .clk,
+        .asyncrst_n(cs_n_rst[7]),
+        .n_rst(designs_n_rst[7])
+    );
+
+    assign cs_n_rst[8] = n_rst & ~designs_cs[8];
+    async_reset_sync designs_sync_rst_8 (
+        .clk,
+        .asyncrst_n(cs_n_rst[8]),
+        .n_rst(designs_n_rst[8])
+    );
+
+    assign cs_n_rst[9] = n_rst & ~designs_cs[9];
+    async_reset_sync designs_sync_rst_9 (
+        .clk,
+        .asyncrst_n(cs_n_rst[9]),
+        .n_rst(designs_n_rst[9])
+    );
+
+    assign cs_n_rst[10] = n_rst & ~designs_cs[10];
+    async_reset_sync designs_sync_rst_10 (
+        .clk,
+        .asyncrst_n(cs_n_rst[10]),
+        .n_rst(designs_n_rst[10])
+    );
+
+    assign cs_n_rst[11] = n_rst & ~designs_cs[11];
+    async_reset_sync designs_sync_rst_11 (
+        .clk,
+        .asyncrst_n(cs_n_rst[11]),
+        .n_rst(designs_n_rst[11])
+    );
+
+    assign cs_n_rst[12] = n_rst & ~designs_cs[12];
+    async_reset_sync designs_sync_rst_12 (
+        .clk,
+        .asyncrst_n(cs_n_rst[12]),
+        .n_rst(designs_n_rst[12])
+    );
+
+    // genvar i;
+    // generate
+    //     for (i = 1; i <= 12; i = i + 1) begin
+    //         assign cs_n_rst[i] = n_rst & ~designs_cs[i];
+    //         async_reset_sync designs_sync_rst (
+    //             .clk,
+    //             .asyncrst_n(cs_n_rst[i]),
+    //             .n_rst(designs_n_rst[i])
+    //         );
+    //     end
+    // endgenerate
 
 endmodule
 
@@ -28,12 +113,17 @@ module async_reset_sync (
     output reg n_rst
 );
     reg rff;
+    wire next_n_rst;
+    assign next_n_rst = rff;
 
-    always @(posedge clk, negedge asyncrst_n) begin
+    always @ (posedge clk, negedge asyncrst_n) begin
         if(!asyncrst_n) begin
-            {n_rst, rff} <= 2'b0;
-        end else begin
-            {n_rst, rff} <= {rff, 1'b1};
+            n_rst <= 1'b0;
+            rff <= 1'b0;
+        end 
+        else begin
+            n_rst <= next_n_rst;
+            rff <= 1'b1;
         end
     end
 endmodule

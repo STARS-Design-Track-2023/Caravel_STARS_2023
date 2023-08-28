@@ -30,7 +30,7 @@ module Outel_Wrapper (
     assign gpio_oeb = {{8{~dataBusSelect}}, {5{1'b0}}, {5{1'b1}}, {16{1'b0}}};
 
     // assign 0s to unused gpio_out
-    assign gpio[20:16] = 5'b0;
+    assign gpio_out[20:16] = 5'b0;
     assign gpio_out[25] = 1'b0;
 
 endmodule
