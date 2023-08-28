@@ -1,5 +1,5 @@
 module EightyTwos_Wrapper (
-    input wire clk, nrst,
+    input wire clk, n_rst,
     
     // Wrapper
     input wire ncs, // Chip Select (Active Low)
@@ -12,7 +12,7 @@ module EightyTwos_Wrapper (
 
     Eighty_Twos DESIGN (
         .clk(clk),
-        .nrst(nrst),
+        .nrst(n_rst),
         .cs(ncs),
         .gpi(gpio_in),  // CHECK gpi[23] function
         .gpo(gpio_out),

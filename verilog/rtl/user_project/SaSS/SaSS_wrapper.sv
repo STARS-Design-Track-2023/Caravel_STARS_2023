@@ -1,6 +1,6 @@
 module SaSS_wrapper (
 
-    input wire clk, nrst,
+    input wire clk, n_rst,
     
     // Wrapper
     input wire ncs, // Chip Select (Active Low)
@@ -11,7 +11,7 @@ module SaSS_wrapper (
 
     sass_synth DESIGN (
         .clk(clk),
-        .n_rst(nrst),
+        .n_rst(n_rst),
         .cs(ncs),
 
         .piano_keys(gpio_in[14:0]),

@@ -1,6 +1,6 @@
 ###############################################################################
 # Created by write_sdc
-# Wed Aug  9 01:41:03 2023
+# Mon Aug 28 01:51:16 2023
 ###############################################################################
 current_design Eighty_Twos
 ###############################################################################
@@ -80,9 +80,11 @@ set_output_delay 20.0000 -clock [get_clocks {clk}] -add_delay [get_ports {gpo[6]
 set_output_delay 20.0000 -clock [get_clocks {clk}] -add_delay [get_ports {gpo[7]}]
 set_output_delay 20.0000 -clock [get_clocks {clk}] -add_delay [get_ports {gpo[8]}]
 set_output_delay 20.0000 -clock [get_clocks {clk}] -add_delay [get_ports {gpo[9]}]
+set_output_delay 20.0000 -clock [get_clocks {clk}] -add_delay [get_ports {store_en}]
 ###############################################################################
 # Environment
 ###############################################################################
+set_load -pin_load 0.0334 [get_ports {store_en}]
 set_load -pin_load 0.0334 [get_ports {gpo[33]}]
 set_load -pin_load 0.0334 [get_ports {gpo[32]}]
 set_load -pin_load 0.0334 [get_ports {gpo[31]}]

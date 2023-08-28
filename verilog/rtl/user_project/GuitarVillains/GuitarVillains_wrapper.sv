@@ -1,6 +1,6 @@
 module GuitarVillains_wrapper (
 
-    input wire clk, nrst,
+    input wire clk, n_rst,
     
     // Wrapper
     input wire ncs, // Chip Select (Active Low)
@@ -11,7 +11,7 @@ module GuitarVillains_wrapper (
 
     Guitar_Villains DESIGN (
         .clk(clk),
-        .n_rst(nrst),
+        .n_rst(n_rst),
         .chip_select(ncs), 
         
         .button(gpio_in[3:0]),

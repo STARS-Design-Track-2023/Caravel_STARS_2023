@@ -1,5 +1,5 @@
 module DigiDoggs_Wrapper (
-    input wire clk, nrst,
+    input wire clk, n_rst,
     
     // Wrapper
     input wire ncs, // Chip Select (Active Low)
@@ -10,7 +10,7 @@ module DigiDoggs_Wrapper (
 
     pushing_pixels DESIGN (
         .clk(clk),
-        .nrst(nrst),
+        .nrst(n_rst),
         .cs(ncs),
         .spi_clk(gpio_in[0]),
         .spi_en(gpio_in[1]),

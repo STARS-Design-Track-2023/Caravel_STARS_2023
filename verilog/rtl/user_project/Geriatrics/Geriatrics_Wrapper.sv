@@ -1,5 +1,5 @@
 module Geriatrics_Wrapper (
-    input wire clk, nrst,
+    input wire clk, n_rst,
     
     // Wrapper
     input wire ncs, // Chip Select (Active Low)
@@ -17,7 +17,7 @@ module Geriatrics_Wrapper (
     // DESIGN
     z23 DESIGN (
         .clk(clk),
-        .nrst(nrst),
+        .nrst(n_rst),
         .memory_data_in(gpio_in[23:16]),
         .programmable_gpio_in(gpio_in[33:26]),
         .interrupt_gpio_in(gpio_in[25]),

@@ -1,5 +1,5 @@
 module Outel_Wrapper (
-    input wire clk, nrst,
+    input wire clk, n_rst,
     
     // Wrapper
     input wire ncs, // Chip Select (Active Low)
@@ -13,7 +13,7 @@ module Outel_Wrapper (
 
     outel8227 DESIGN (
         .clk(clk),
-        .nrst(nrst),
+        .nrst(n_rst),
         .cs(ncs),
         .dataBusIn(gpio_in[33:26]),
         .dataBusOut(gpio_out[33:26]),

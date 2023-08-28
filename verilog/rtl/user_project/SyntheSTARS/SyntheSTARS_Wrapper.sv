@@ -1,5 +1,5 @@
 module SyntheSTARS_Wrapper (
-    input wire clk, nrst,
+    input wire clk, n_rst,
     
     // Wrapper
     input wire ncs, // Chip Select (Active Low)
@@ -10,7 +10,7 @@ module SyntheSTARS_Wrapper (
 
     Synthia DESIGN (
         .clk(clk),
-        .reset(nrst),
+        .reset(n_rst),
         .pb(gpio_in[12:0]),
         .modes(gpio_in[13]),
         .octaves(gpio_in[14]),

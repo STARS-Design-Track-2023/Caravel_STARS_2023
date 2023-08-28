@@ -15,9 +15,8 @@
         "dir::../../verilog/rtl/user_project/SaSS/SaSS_wrapper.sv",
         "dir::../../verilog/rtl/user_project/SyntheSTARS/SyntheSTARS_Wrapper.sv",
         "dir::../../verilog/rtl/user_project/SynthSurgeons/SynthSurgeons_Wrapper.sv",
-        "dir::../../verilog/rtl/user_project/TMNT/TMNT_wrapper.sv",
-        "dir::../../verilog/rtl/user_project/Triple-SSS/silly_synth_wrapper.sv",
-
+        "dir::../../verilog/rtl/user_project/TMNT/TMNT_Wrapper.sv",
+        "dir::../../verilog/rtl/user_project/Triple-SSS/silly_synth_wrapper.sv"
     ],
     "ROUTING_CORES": 8,
     "CLOCK_PERIOD": 25,

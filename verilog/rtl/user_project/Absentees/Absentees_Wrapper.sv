@@ -1,5 +1,5 @@
 module Absentees_Wrapper (
-    input wire clk, nrst,
+    input wire clk, n_rst,
     
     // Wrapper
     input wire ncs, // Chip Select (Active Low)
@@ -10,7 +10,7 @@ module Absentees_Wrapper (
 
     stopwatch DESIGN (
         .clk(clk),
-        .nrst(nrst),
+        .nrst(n_rst),
         .pb_0(gpio_in[0]),
         .pb_1(gpio_in[1]),
         .out_0(gpio_out[8:2]),

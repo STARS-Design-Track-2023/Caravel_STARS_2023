@@ -1,7 +1,7 @@
 `default_nettype none
 module silly_synth_wrapper (
     // HW
-    input wire clk, nrst,
+    input wire clk, n_rst,
     
     // Wrapper
     input wire ncs, // Chip Select (Active Low)
@@ -15,7 +15,7 @@ module silly_synth_wrapper (
     silly_synthesizer synth (
         .clk(clk),
         // .nrst(ff2),
-        .nrst(nrst),
+        .nrst(n_rst),
         .cs(ncs),
         .gpio(gpio_in[16:0]),
         .pwm(gpio_out[33])

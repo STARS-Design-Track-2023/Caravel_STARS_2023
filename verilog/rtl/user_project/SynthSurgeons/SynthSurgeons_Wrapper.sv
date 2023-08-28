@@ -1,5 +1,5 @@
 module SynthSurgeons_Wrapper (
-    input wire clk, nrst,
+    input wire clk, n_rst,
     
     // Wrapper
     input wire ncs, // Chip Select (Active Low)
@@ -10,7 +10,7 @@ module SynthSurgeons_Wrapper (
 
     synth DESIGN (
         .clk(clk),
-        .n_rst(nrst),
+        .n_rst(n_rst),
         .en(~ncs),
         .keypad_i(gpio_in[14:0]),
         .pwm_o(gpio_out[15]),
