@@ -36,7 +36,7 @@
         "dir::../../verilog/gl/synth.v",
         "dir::../../verilog/gl/Synthia.v",
         "dir::../../verilog/gl/top_asic.v",
-        "dir::../../verilog/gl/top8227.v",
+        "dir::../../verilog/gl/outel8227.v",
         "dir::../../verilog/gl/z23.v"
 
     ],
@@ -51,7 +51,7 @@
         "dir::../../lef/synth.lef",
         "dir::../../lef/Synthia.lef",
         "dir::../../lef/top_asic.lef",
-        "dir::../../lef/top8227.lef",
+        "dir::../../lef/outel8227.lef",
         "dir::../../lef/z23.lef"
     ],
     "EXTRA_GDS_FILES": [
@@ -65,7 +65,7 @@
         "dir::../../gds/synth.gds",
         "dir::../../gds/Synthia.gds",
         "dir::../../gds/top_asic.gds",
-        "dir::../../gds/top8227.gds",
+        "dir::../../gds/outel8227.gds",
         "dir::../../gds/z23.gds"
     ],
     "EXTRA_LIBS": [
@@ -79,7 +79,7 @@
         "dir::../../lib/synth.lib",
         "dir::../../lib/Synthia.lib",
         "dir::../../lib/top_asic.lib",
-        "dir::../../lib/top8227.lib",
+        "dir::../../lib/outel8227.lib",
         "dir::../../lib/z23.lib"
     ],
     "EXTRA_SPEFS": [
@@ -123,10 +123,10 @@
         "dir::../../spef/multicorner/top_asic.min.spef", 
         "dir::../../spef/multicorner/top_asic.nom.spef", 
         "dir::../../spef/multicorner/top_asic.max.spef",
-        "top8227", 
-        "dir::../../spef/multicorner/top8227.min.spef", 
-        "dir::../../spef/multicorner/top8227.nom.spef", 
-        "dir::../../spef/multicorner/top8227.max.spef",
+        "outel8227", 
+        "dir::../../spef/multicorner/outel8227.min.spef", 
+        "dir::../../spef/multicorner/outel8227.nom.spef", 
+        "dir::../../spef/multicorner/outel8227.max.spef",
         "z23", 
         "dir::../../spef/multicorner/z23.min.spef", 
         "dir::../../spef/multicorner/z23.nom.spef", 

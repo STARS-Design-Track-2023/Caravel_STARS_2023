@@ -11,7 +11,7 @@ module TMNT_Wrapper (
     top_asic DUT
     (
         .clk(clk),
-        .nrst(n_rst),
+        .reset(n_rst),
         .sigout(gpio_out[15]),
         .mode_out(gpio_out[17:16]),
         .pb(gpio_in[14:0])

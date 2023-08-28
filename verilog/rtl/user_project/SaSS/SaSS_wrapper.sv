@@ -10,7 +10,7 @@ module SaSS_wrapper (
 );
 
     sass_synth DESIGN (
-        .clk(clk),
+        .hwclk(clk),
         .n_rst(n_rst),
         .cs(ncs),
 
