@@ -1,18 +1,18 @@
 module Geriatrics_Wrapper (
-    input logic clk, nrst,
+    input wire clk, nrst,
     
     // Wrapper
-    input logic ncs, // Chip Select (Active Low)
-    input logic [33:0] gpio_in, // Breakout Board Pins
-    output logic [33:0] gpio_out, // Breakout Board Pins
-    output logic [33:0] gpio_oeb // Active Low Output Enable
+    input wire ncs, // Chip Select (Active Low)
+    input wire [33:0] gpio_in, // Breakout Board Pins
+    output wire [33:0] gpio_out, // Breakout Board Pins
+    output wire [33:0] gpio_oeb // Active Low Output Enable
 );
 
-    logic memory_wr;
-    logic [7:0] programmable_gpio_wr;
+    wire memory_wr;
+    wire [7:0] programmable_gpio_wr;
     // unused signals
-    logic [15:0] keypad_input;  // CHECK
-    logic [7:0] ss7, ss6, ss5, ss4, ss3, ss2, ss1, ss0;
+    wire [15:0] keypad_input;  // CHECK
+    wire [7:0] ss7, ss6, ss5, ss4, ss3, ss2, ss1, ss0;
 
     // DESIGN
     z23 DESIGN (
