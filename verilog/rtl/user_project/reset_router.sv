@@ -116,14 +116,14 @@ module async_reset_sync (
     wire next_n_rst;
     assign next_n_rst = rff;
 
-    always @ (posedge clk, negedge asyncrst_n) begin
+    always @ (posedge clk or negedge asyncrst_n) begin
         if(!asyncrst_n) begin
             n_rst <= 1'b0;
             rff <= 1'b0;
         end 
         else begin
             n_rst <= next_n_rst;
-            rff <= 1'b1;
+            rff <= asyncrst_n;
         end
     end
 endmodule
