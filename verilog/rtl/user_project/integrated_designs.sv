@@ -26,7 +26,7 @@ module integrated_designs (
 wire [33:0] designs_gpio_out[1:12]; // start counting from 1 b/c of the design_select behavior
 wire [33:0] designs_gpio_oeb[1:12]; 
 
-reg [12:1] designs_cs; // active low chip select input for the designs.
+wire [12:1] designs_cs; // active low chip select input for the designs.
 
 wire [12:1] designs_n_rst;  // active low reset for each design
 
@@ -70,18 +70,19 @@ wire [12:1] designs_n_rst;  // active low reset for each design
 
 /* chip select logic */
 
-assign designs_cs[1] = (design_select == 1);
-assign designs_cs[2] = (design_select == 2);
-assign designs_cs[3] = (design_select == 3);
-assign designs_cs[4] = (design_select == 4);
-assign designs_cs[5] = (design_select == 5);
-assign designs_cs[6] = (design_select == 6);
-assign designs_cs[7] = (design_select == 7);
-assign designs_cs[8] = (design_select == 8);
-assign designs_cs[9] = (design_select == 9);
-assign designs_cs[10] = (design_select == 10);
-assign designs_cs[11] = (design_select == 11);
-assign designs_cs[12] = (design_select == 12);
+// assign designs_cs[0] = !(design_select == 0);
+assign designs_cs[1] = !(design_select == 4'd1);
+assign designs_cs[2] = !(design_select == 4'd2);
+assign designs_cs[3] = !(design_select == 4'd3);
+assign designs_cs[4] = !(design_select == 4'd4);
+assign designs_cs[5] = !(design_select == 4'd5);
+assign designs_cs[6] = !(design_select == 4'd6);
+assign designs_cs[7] = !(design_select == 4'd7);
+assign designs_cs[8] = !(design_select == 4'd8);
+assign designs_cs[9] = !(design_select == 4'd9);
+assign designs_cs[10] = !(design_select == 4'd10);
+assign designs_cs[11] = !(design_select == 4'd11);
+assign designs_cs[12] = !(design_select == 4'd12);
 
 // always @ (*) begin
 //     designs_cs = {12{1'b1}}; // default is off 
@@ -95,10 +96,10 @@ assign designs_cs[12] = (design_select == 12);
 /* design reset logic */
 
 reset_router design_reset (
-    .clk,
-    .n_rst,
-    .designs_cs,
-    .designs_n_rst
+    .clk(clk),
+    .n_rst(n_rst),
+    .designs_cs(designs_cs),
+    .designs_n_rst(designs_n_rst)
 );
 
 
@@ -122,16 +123,27 @@ Absentees_Wrapper design_1
     .gpio_oeb(designs_gpio_oeb[1])
 );
 
-DigiDoggs_Wrapper design_2
+Absentees_Wrapper design_2
 (
     .clk(clk),
-    .n_rst(designs_n_rst[2]),
-    .ncs(designs_cs[2]), 
+    .n_rst(designs_n_rst[1]),
+    .ncs(designs_cs[1]), 
 
     .gpio_in(gpio_in),
-    .gpio_out(designs_gpio_out[2]), 
-    .gpio_oeb(designs_gpio_oeb[2])
+    .gpio_out(designs_gpio_out[1]), 
+    .gpio_oeb(designs_gpio_oeb[1])
 );
+
+// DigiDoggs_Wrapper design_2
+// (
+//     .clk(clk),
+//     .n_rst(designs_n_rst[2]),
+//     .ncs(designs_cs[2]), 
+
+//     .gpio_in(gpio_in),
+//     .gpio_out(designs_gpio_out[2]), 
+//     .gpio_oeb(designs_gpio_oeb[2])
+// );
 
 EightyTwos_Wrapper design_3
 (

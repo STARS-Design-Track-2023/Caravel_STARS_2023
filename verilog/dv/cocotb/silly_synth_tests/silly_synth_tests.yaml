@@ -1,0 +1,4 @@
+---
+
+Tests:
+	- {name: stars_tests, sim: RTL}
