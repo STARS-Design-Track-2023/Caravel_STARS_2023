@@ -1,8 +1,8 @@
-CARAVEL_ROOT: /home/designer-25/CUP/caravel
-MCW_ROOT: /home/designer-25/CUP/mgmt_core_wrapper
-PDK: sky130A
-PDK_ROOT: /home/designer-25/CUP/dependencies/pdks
-USER_PROJECT_ROOT: /home/designer-25/CUP
+CARAVEL_ROOT: /home/designer-03/Caravel_STARS_2023/caravel
+MCW_ROOT: /home/designer-03/Caravel_STARS_2023/mgmt_core_wrapper
+PDK: sky130B
+PDK_ROOT: /home/designer-03/Caravel_STARS_2023/dependencies/pdk
+USER_PROJECT_ROOT: /home/designer-03/Caravel_STARS_2023
 caravan: false
 clk: 25
 emailto: [null]
