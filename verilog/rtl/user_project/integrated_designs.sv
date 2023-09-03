@@ -123,16 +123,27 @@ Absentees_Wrapper design_1
     .gpio_oeb(designs_gpio_oeb[1])
 );
 
-DigiDoggs_Wrapper design_2
+Absentees_Wrapper design_2
 (
     .clk(clk),
-    .n_rst(designs_n_rst[2]),
-    .ncs(designs_cs[2]), 
+    .n_rst(designs_n_rst[1]),
+    .ncs(designs_cs[1]), 
 
     .gpio_in(gpio_in),
-    .gpio_out(designs_gpio_out[2]), 
-    .gpio_oeb(designs_gpio_oeb[2])
+    .gpio_out(designs_gpio_out[1]), 
+    .gpio_oeb(designs_gpio_oeb[1])
 );
+
+// DigiDoggs_Wrapper design_2
+// (
+//     .clk(clk),
+//     .n_rst(designs_n_rst[2]),
+//     .ncs(designs_cs[2]), 
+
+//     .gpio_in(gpio_in),
+//     .gpio_out(designs_gpio_out[2]), 
+//     .gpio_oeb(designs_gpio_oeb[2])
+// );
 
 EightyTwos_Wrapper design_3
 (
