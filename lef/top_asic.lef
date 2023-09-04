@@ -12,27 +12,15 @@ MACRO top_asic
     USE GROUND ;
     PORT
       LAYER met4 ;
-        RECT 24.340 10.640 25.940 435.440 ;
+        RECT 97.840 10.640 99.440 435.440 ;
     END
     PORT
       LAYER met4 ;
-        RECT 177.940 10.640 179.540 435.440 ;
+        RECT 251.440 10.640 253.040 435.440 ;
     END
     PORT
       LAYER met4 ;
-        RECT 331.540 10.640 333.140 435.440 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 30.030 430.800 31.630 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 183.210 430.800 184.810 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 336.390 430.800 337.990 ;
+        RECT 405.040 10.640 406.640 435.440 ;
     END
   END VGND
   PIN VPWR
@@ -49,18 +37,6 @@ MACRO top_asic
     PORT
       LAYER met4 ;
         RECT 328.240 10.640 329.840 435.440 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 26.730 430.800 28.330 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 179.910 430.800 181.510 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 333.090 430.800 334.690 ;
     END
   END VPWR
   PIN clk
@@ -281,13 +257,13 @@ MACRO top_asic
         RECT 3.990 81.240 431.900 82.640 ;
         RECT 3.990 10.715 432.300 81.240 ;
       LAYER met4 ;
-        RECT 51.815 36.895 174.240 433.665 ;
-        RECT 176.640 36.895 177.540 433.665 ;
-        RECT 179.940 36.895 327.840 433.665 ;
-        RECT 330.240 36.895 331.140 433.665 ;
-        RECT 333.540 36.895 404.505 433.665 ;
+        RECT 50.895 37.575 97.440 428.225 ;
+        RECT 99.840 37.575 174.240 428.225 ;
+        RECT 176.640 37.575 251.040 428.225 ;
+        RECT 253.440 37.575 327.840 428.225 ;
+        RECT 330.240 37.575 402.665 428.225 ;
       LAYER met5 ;
-        RECT 122.940 249.100 278.180 308.500 ;
+        RECT 122.940 252.500 255.180 301.700 ;
   END
 END top_asic
 END LIBRARY

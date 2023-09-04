@@ -3841,32 +3841,22 @@ module Guitar_Villains (VGND,
  wire \pulseout.fin_pulse[4] ;
  wire \pulseout.fin_pulse[5] ;
 
- sky130_fd_sc_hd__diode_2 ANTENNA_1 (.DIODE(_1201_),
+ sky130_fd_sc_hd__diode_2 ANTENNA_1 (.DIODE(net16),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 ANTENNA_2 (.DIODE(_1209_),
+ sky130_fd_sc_hd__diode_2 ANTENNA_2 (.DIODE(net18),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 ANTENNA_3 (.DIODE(net16),
+ sky130_fd_sc_hd__diode_2 ANTENNA_3 (.DIODE(net22),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 ANTENNA_4 (.DIODE(net20),
-    .VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 ANTENNA_5 (.DIODE(net22),
-    .VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 ANTENNA_6 (.DIODE(net29),
+ sky130_fd_sc_hd__diode_2 ANTENNA_4 (.DIODE(net29),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -6071,15 +6061,11 @@ module Guitar_Villains (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_0_107_641 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_8 FILLER_0_107_641 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_0_107_645 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_0_107_648 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_0_107_649 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -6979,15 +6965,11 @@ module Guitar_Villains (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_0_110_548 (.VGND(VGND),
+ sky130_ef_sc_hd__decap_12 FILLER_0_110_548 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_0_110_556 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_0_110_559 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_0_110_560 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -7207,6 +7189,10 @@ module Guitar_Villains (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__decap_4 FILLER_0_111_41 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__decap_3 FILLER_0_111_413 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -7216,10 +7202,6 @@ module Guitar_Villains (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_ef_sc_hd__decap_12 FILLER_0_111_421 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_0_111_43 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -29399,6 +29381,10 @@ module Guitar_Villains (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__decap_4 FILLER_0_9_13 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_ef_sc_hd__decap_12 FILLER_0_9_137 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -29623,7 +29609,7 @@ module Guitar_Villains (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_0_9_9 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_0_9_9 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));

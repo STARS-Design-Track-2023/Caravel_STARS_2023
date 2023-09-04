@@ -5427,7 +5427,11 @@ module Eighty_Twos (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_0_34_167 (.VGND(VGND),
+ sky130_ef_sc_hd__decap_12 FILLER_0_34_158 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_1 FILLER_0_34_170 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -5575,11 +5579,7 @@ module Eighty_Twos (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_0_35_144 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_0_35_148 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_0_35_147 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -6559,15 +6559,11 @@ module Eighty_Twos (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_0_41_196 (.VGND(VGND),
+ sky130_ef_sc_hd__decap_12 FILLER_0_41_193 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_0_41_208 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_0_41_216 (.VGND(VGND),
+ sky130_ef_sc_hd__decap_12 FILLER_0_41_205 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -11011,11 +11007,7 @@ module Eighty_Twos (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_0_9_133 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_0_9_137 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_8 FILLER_0_9_133 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -14015,7 +14007,7 @@ module Eighty_Twos (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(_0787_));
- sky130_fd_sc_hd__and3_4 _1445_ (.A(_0783_),
+ sky130_fd_sc_hd__and3_2 _1445_ (.A(_0783_),
     .B(_0708_),
     .C(_0703_),
     .VGND(VGND),
@@ -20285,7 +20277,7 @@ module Eighty_Twos (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(_0412_));
- sky130_fd_sc_hd__or3_4 _2237_ (.A(_0410_),
+ sky130_fd_sc_hd__or3_2 _2237_ (.A(_0410_),
     .B(_0411_),
     .C(_0412_),
     .VGND(VGND),
@@ -20677,7 +20669,7 @@ module Eighty_Twos (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net38));
- sky130_fd_sc_hd__a21boi_4 _2291_ (.A1(_0262_),
+ sky130_fd_sc_hd__a21boi_2 _2291_ (.A1(_0262_),
     .A2(_0413_),
     .B1_N(_0445_),
     .VGND(VGND),

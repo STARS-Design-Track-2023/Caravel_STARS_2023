@@ -2481,7 +2481,8 @@ module Eighty_Twos (clk,
  sky130_ef_sc_hd__decap_12 FILLER_0_34_123 ();
  sky130_fd_sc_hd__decap_4 FILLER_0_34_135 ();
  sky130_fd_sc_hd__fill_1 FILLER_0_34_139 ();
- sky130_fd_sc_hd__decap_4 FILLER_0_34_167 ();
+ sky130_ef_sc_hd__decap_12 FILLER_0_34_158 ();
+ sky130_fd_sc_hd__fill_1 FILLER_0_34_170 ();
  sky130_fd_sc_hd__decap_8 FILLER_0_34_179 ();
  sky130_fd_sc_hd__fill_1 FILLER_0_34_187 ();
  sky130_fd_sc_hd__fill_1 FILLER_0_34_197 ();
@@ -2518,8 +2519,7 @@ module Eighty_Twos (clk,
  sky130_fd_sc_hd__decap_3 FILLER_0_35_109 ();
  sky130_fd_sc_hd__decap_6 FILLER_0_35_122 ();
  sky130_fd_sc_hd__fill_1 FILLER_0_35_128 ();
- sky130_fd_sc_hd__decap_4 FILLER_0_35_144 ();
- sky130_fd_sc_hd__fill_1 FILLER_0_35_148 ();
+ sky130_fd_sc_hd__fill_2 FILLER_0_35_147 ();
  sky130_fd_sc_hd__decap_8 FILLER_0_35_158 ();
  sky130_fd_sc_hd__fill_2 FILLER_0_35_166 ();
  sky130_fd_sc_hd__decap_6 FILLER_0_35_169 ();
@@ -2764,9 +2764,8 @@ module Eighty_Twos (clk,
  sky130_fd_sc_hd__fill_2 FILLER_0_41_140 ();
  sky130_fd_sc_hd__fill_2 FILLER_0_41_166 ();
  sky130_fd_sc_hd__decap_4 FILLER_0_41_183 ();
- sky130_ef_sc_hd__decap_12 FILLER_0_41_196 ();
- sky130_fd_sc_hd__decap_8 FILLER_0_41_208 ();
- sky130_fd_sc_hd__fill_1 FILLER_0_41_216 ();
+ sky130_ef_sc_hd__decap_12 FILLER_0_41_193 ();
+ sky130_ef_sc_hd__decap_12 FILLER_0_41_205 ();
  sky130_ef_sc_hd__decap_12 FILLER_0_41_225 ();
  sky130_fd_sc_hd__decap_4 FILLER_0_41_237 ();
  sky130_fd_sc_hd__decap_8 FILLER_0_41_24 ();
@@ -3877,8 +3876,7 @@ module Eighty_Twos (clk,
  sky130_fd_sc_hd__decap_6 FILLER_0_8_78 ();
  sky130_ef_sc_hd__decap_12 FILLER_0_8_88 ();
  sky130_fd_sc_hd__fill_2 FILLER_0_9_110 ();
- sky130_fd_sc_hd__decap_4 FILLER_0_9_133 ();
- sky130_fd_sc_hd__fill_1 FILLER_0_9_137 ();
+ sky130_fd_sc_hd__decap_8 FILLER_0_9_133 ();
  sky130_fd_sc_hd__fill_1 FILLER_0_9_15 ();
  sky130_fd_sc_hd__decap_4 FILLER_0_9_152 ();
  sky130_fd_sc_hd__decap_8 FILLER_0_9_159 ();
@@ -5201,7 +5199,7 @@ module Eighty_Twos (clk,
     .B1(_0786_),
     .B2(\RegFile.D[5] ),
     .X(_0787_));
- sky130_fd_sc_hd__and3_4 _1445_ (.A(_0783_),
+ sky130_fd_sc_hd__and3_2 _1445_ (.A(_0783_),
     .B(_0708_),
     .C(_0703_),
     .X(_0788_));
@@ -8303,7 +8301,7 @@ module Eighty_Twos (clk,
     .A2(\MemControl.state[1] ),
     .B1_N(\MemControl.state[0] ),
     .X(_0412_));
- sky130_fd_sc_hd__or3_4 _2237_ (.A(_0410_),
+ sky130_fd_sc_hd__or3_2 _2237_ (.A(_0410_),
     .B(_0411_),
     .C(_0412_),
     .X(_0413_));
@@ -8479,7 +8477,7 @@ module Eighty_Twos (clk,
     .X(_0453_));
  sky130_fd_sc_hd__clkbuf_1 _2290_ (.A(_0453_),
     .X(net38));
- sky130_fd_sc_hd__a21boi_4 _2291_ (.A1(_0262_),
+ sky130_fd_sc_hd__a21boi_2 _2291_ (.A1(_0262_),
     .A2(_0413_),
     .B1_N(_0445_),
     .Y(net28));

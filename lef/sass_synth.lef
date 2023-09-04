@@ -12,27 +12,11 @@ MACRO sass_synth
     USE GROUND ;
     PORT
       LAYER met4 ;
-        RECT 24.340 10.640 25.940 367.440 ;
+        RECT 97.840 10.640 99.440 367.440 ;
     END
     PORT
       LAYER met4 ;
-        RECT 177.940 10.640 179.540 367.440 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 331.540 10.640 333.140 367.440 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 30.030 362.260 31.630 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 183.210 362.260 184.810 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 336.390 362.260 337.990 ;
+        RECT 251.440 10.640 253.040 367.440 ;
     END
   END VGND
   PIN VPWR
@@ -49,18 +33,6 @@ MACRO sass_synth
     PORT
       LAYER met4 ;
         RECT 328.240 10.640 329.840 367.440 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 26.730 362.260 28.330 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 179.910 362.260 181.510 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 333.090 362.260 334.690 ;
     END
   END VPWR
   PIN beat_led[0]
@@ -628,12 +600,12 @@ MACRO sass_synth
         RECT 3.990 13.240 363.385 14.640 ;
         RECT 3.990 10.715 363.785 13.240 ;
       LAYER met4 ;
-        RECT 69.295 57.975 174.240 359.545 ;
-        RECT 176.640 57.975 177.540 359.545 ;
-        RECT 179.940 57.975 303.305 359.545 ;
+        RECT 77.575 51.175 97.440 359.545 ;
+        RECT 99.840 51.175 174.240 359.545 ;
+        RECT 176.640 51.175 251.040 359.545 ;
+        RECT 253.440 51.175 296.865 359.545 ;
       LAYER met5 ;
-        RECT 113.740 186.410 297.500 213.300 ;
-        RECT 113.740 133.500 297.500 178.310 ;
+        RECT 95.340 160.700 228.500 175.900 ;
   END
 END sass_synth
 END LIBRARY

@@ -45,22 +45,22 @@ library (Synthia) {
         related_pin : "clk";
         timing_type : rising_edge;
 	cell_rise(template_1) {
-          values("1.17905,1.18339,1.19465,1.22211,1.29518,1.51941,2.22954");
+          values("1.16609,1.17043,1.18169,1.20915,1.28222,1.50644,2.21658");
 	}
 	rise_transition(template_1) {
-          values("0.02227,0.02552,0.03530,0.06457,0.16183,0.48301,1.50709");
+          values("0.02227,0.02552,0.03530,0.06457,0.16183,0.48300,1.50709");
 	}
 	cell_fall(template_1) {
-          values("1.22277,1.22668,1.23678,1.25993,1.31409,1.46635,1.94630");
+          values("1.20978,1.21369,1.22379,1.24694,1.30109,1.45336,1.93331");
 	}
 	fall_transition(template_1) {
-          values("0.02070,0.02333,0.03049,0.04992,0.10909,0.30674,0.94877");
+          values("0.02070,0.02333,0.03049,0.04992,0.10909,0.30674,0.94876");
 	}
       }
     }
     pin("clk") {
       direction : input;
-      capacitance : 0.0382;
+      capacitance : 0.0351;
     }
     pin("modes") {
       direction : input;
@@ -69,44 +69,44 @@ library (Synthia) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("0.59437");
+          values("0.58156");
 	}
 	fall_constraint(scalar) {
-          values("0.58665");
+          values("0.57382");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("-0.57178");
+          values("-0.55897");
 	}
 	fall_constraint(scalar) {
-          values("-0.53013");
+          values("-0.51730");
 	}
       }
     }
     pin("octaves") {
       direction : input;
-      capacitance : 0.0032;
+      capacitance : 0.0033;
       timing() {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("0.64343");
+          values("0.63326");
 	}
 	fall_constraint(scalar) {
-          values("0.63734");
+          values("0.62652");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("-0.62080");
+          values("-0.61071");
 	}
 	fall_constraint(scalar) {
-          values("-0.58082");
+          values("-0.57004");
 	}
       }
     }
@@ -117,14 +117,14 @@ library (Synthia) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("0.80534");
+          values("0.79811");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("0.13166");
+          values("0.13250");
 	}
       }
     }
@@ -139,20 +139,20 @@ library (Synthia) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("-0.66881");
+          values("-0.70793");
 	}
 	fall_constraint(scalar) {
-          values("-0.58279");
+          values("-0.61377");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("5.41536");
+          values("5.42156");
 	}
 	fall_constraint(scalar) {
-          values("5.47854");
+          values("5.48785");
 	}
       }
     }
@@ -163,20 +163,20 @@ library (Synthia) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("-0.73839");
+          values("-0.75632");
 	}
 	fall_constraint(scalar) {
-          values("-0.53968");
+          values("-0.55810");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("5.47592");
+          values("5.43059");
 	}
 	fall_constraint(scalar) {
-          values("5.39442");
+          values("5.38805");
 	}
       }
     }
@@ -187,20 +187,20 @@ library (Synthia) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("-0.41752");
+          values("-0.44708");
 	}
 	fall_constraint(scalar) {
-          values("-0.29941");
+          values("-0.32552");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("5.25847");
+          values("5.26125");
 	}
 	fall_constraint(scalar) {
-          values("5.23453");
+          values("5.23979");
 	}
       }
     }
@@ -211,20 +211,20 @@ library (Synthia) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("-0.59716");
+          values("-0.61243");
 	}
 	fall_constraint(scalar) {
-          values("-0.44049");
+          values("-0.45566");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("5.31034");
+          values("5.31247");
 	}
 	fall_constraint(scalar) {
-          values("5.28317");
+          values("5.28505");
 	}
       }
     }
@@ -235,20 +235,20 @@ library (Synthia) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("-0.45966");
+          values("-0.48660");
 	}
 	fall_constraint(scalar) {
-          values("-0.31709");
+          values("-0.34065");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("5.10975");
+          values("5.11255");
 	}
 	fall_constraint(scalar) {
-          values("5.06142");
+          values("5.06856");
 	}
       }
     }
@@ -259,20 +259,20 @@ library (Synthia) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("-0.61584");
+          values("-0.63454");
 	}
 	fall_constraint(scalar) {
-          values("-0.49144");
+          values("-0.50986");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("5.34251");
+          values("5.37688");
 	}
 	fall_constraint(scalar) {
-          values("5.43357");
+          values("5.46872");
 	}
       }
     }
@@ -283,20 +283,20 @@ library (Synthia) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("-0.35336");
+          values("-0.37778");
 	}
 	fall_constraint(scalar) {
-          values("-0.25476");
+          values("-0.27301");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("5.06080");
+          values("5.06849");
 	}
 	fall_constraint(scalar) {
-          values("5.06887");
+          values("5.08414");
 	}
       }
     }
@@ -307,44 +307,44 @@ library (Synthia) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("-0.53348");
+          values("-0.55712");
 	}
 	fall_constraint(scalar) {
-          values("-0.57318");
+          values("-0.59257");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("5.01701");
+          values("5.03728");
 	}
 	fall_constraint(scalar) {
-          values("5.03372");
+          values("5.05252");
 	}
       }
     }
     pin("pb[4]") {
       direction : input;
-      capacitance : 0.0036;
+      capacitance : 0.0039;
       timing() {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("0.08636");
+          values("0.07574");
 	}
 	fall_constraint(scalar) {
-          values("0.15364");
+          values("0.14186");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("4.44041");
+          values("4.45448");
 	}
 	fall_constraint(scalar) {
-          values("4.73384");
+          values("4.74802");
 	}
       }
     }
@@ -355,20 +355,20 @@ library (Synthia) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("-0.68295");
+          values("-0.70299");
 	}
 	fall_constraint(scalar) {
-          values("-0.69332");
+          values("-0.70770");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("4.44901");
+          values("4.46630");
 	}
 	fall_constraint(scalar) {
-          values("4.77243");
+          values("4.79626");
 	}
       }
     }
@@ -379,20 +379,20 @@ library (Synthia) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("-0.61149");
+          values("-0.62631");
 	}
 	fall_constraint(scalar) {
-          values("-0.57472");
+          values("-0.59255");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("4.36986");
+          values("4.39046");
 	}
 	fall_constraint(scalar) {
-          values("4.56774");
+          values("4.58838");
 	}
       }
     }
@@ -403,20 +403,20 @@ library (Synthia) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("-0.45271");
+          values("-0.47557");
 	}
 	fall_constraint(scalar) {
-          values("-0.37670");
+          values("-0.39771");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("5.95378");
+          values("5.97451");
 	}
 	fall_constraint(scalar) {
-          values("5.49855");
+          values("5.53072");
 	}
       }
     }
@@ -427,20 +427,20 @@ library (Synthia) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("-0.46886");
+          values("-0.49477");
 	}
 	fall_constraint(scalar) {
-          values("-0.36131");
+          values("-0.38282");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("6.00064");
+          values("6.03156");
 	}
 	fall_constraint(scalar) {
-          values("5.59179");
+          values("5.62327");
 	}
       }
     }

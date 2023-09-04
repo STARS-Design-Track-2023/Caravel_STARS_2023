@@ -3,6 +3,10 @@
     "VERILOG_FILES": "dir::src/*.sv",
     "CLOCK_PERIOD": 100,
     "CLOCK_PORT": "clk",
+    "DESIGN_IS_CORE": 0,
+    "FP_PDN_CORE_RING": 0,
+    "GLB_RT_MAXLAYER": 5,
+
     "pdk::sky130*": {
         "scl::sky130_fd_sc_hd": {
             "CLOCK_PERIOD": 100,

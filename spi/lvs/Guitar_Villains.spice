@@ -176,10 +176,6 @@
 .subckt sky130_fd_sc_hd__o211a_1 A1 A2 B1 C1 VGND VNB VPB VPWR X
 .ends
 
-* Black-box entry subcircuit for sky130_fd_sc_hd__diode_2 abstract view
-.subckt sky130_fd_sc_hd__diode_2 DIODE VGND VNB VPB VPWR
-.ends
-
 * Black-box entry subcircuit for sky130_fd_sc_hd__and3b_1 abstract view
 .subckt sky130_fd_sc_hd__and3b_1 A_N B C VGND VNB VPB VPWR X
 .ends
@@ -600,6 +596,10 @@
 .subckt sky130_fd_sc_hd__o31a_4 A1 A2 A3 B1 VGND VNB VPB VPWR X
 .ends
 
+* Black-box entry subcircuit for sky130_fd_sc_hd__diode_2 abstract view
+.subckt sky130_fd_sc_hd__diode_2 DIODE VGND VNB VPB VPWR
+.ends
+
 * Black-box entry subcircuit for sky130_fd_sc_hd__o211a_4 abstract view
 .subckt sky130_fd_sc_hd__o211a_4 A1 A2 B1 C1 VGND VNB VPB VPWR X
 .ends
@@ -868,7 +868,6 @@ XFILLER_0_109_653 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
 XFILLER_0_108_141 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
 XFILLER_0_66_595 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
 XFILLER_0_81_554 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
-XANTENNA_5 net22 VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
 XFILLER_0_111_306 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
 XFILLER_0_22_643 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
 XFILLER_0_104_391 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
@@ -1211,7 +1210,6 @@ XFILLER_0_81_500 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
 XFILLER_0_66_585 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
 XFILLER_0_108_153 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
 XFILLER_0_108_197 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
-XANTENNA_6 net29 VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
 XFILLER_0_1_505 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
 XFILLER_0_6_29 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
 XFILLER_0_67_15 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
@@ -1861,7 +1859,6 @@ XFILLER_0_110_523 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
 XFILLER_0_97_69 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
 X_3452_ _0693_ VGND VGND VPWR VPWR _0815_ sky130_fd_sc_hd__inv_2
 XFILLER_0_40_657 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
-XFILLER_0_110_556 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
 X_6171_ clknet_leaf_43_clk disp_song.um.drum.next_d1\[3\] net65 VGND VGND VPWR VPWR
 + disp_song.display_note1\[3\] sky130_fd_sc_hd__dfrtp_1
 X_3383_ _0739_ _0745_ _0743_ VGND VGND VPWR VPWR _0746_ sky130_fd_sc_hd__a21oi_1
@@ -3000,10 +2997,9 @@ XFILLER_0_24_134 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
 XFILLER_0_52_443 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
 XFILLER_0_12_307 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
 XFILLER_0_97_39 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
-XFILLER_0_110_548 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XFILLER_0_110_548 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
 X_3380_ _0741_ _0742_ VGND VGND VPWR VPWR _0743_ sky130_fd_sc_hd__nor2_1
 XFILLER_0_20_340 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
-XFILLER_0_110_559 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
 XFILLER_0_20_384 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
 X_5050_ _2666_ _2085_ _1982_ _2679_ VGND VGND VPWR VPWR _2141_ sky130_fd_sc_hd__o2bb2a_2
 X_4001_ _1289_ _1310_ _1312_ _1314_ VGND VGND VPWR VPWR game.scoring_button_2.next_num_misses\[1\]
@@ -3907,7 +3903,7 @@ X_3628_ _0981_ _0985_ _0986_ _0949_ modetrans.mode\[3\] VGND VGND VPWR VPWR _098
 Xoutput17 net17 VGND VGND VPWR VPWR ss0[1] sky130_fd_sc_hd__clkbuf_4
 Xoutput28 net28 VGND VGND VPWR VPWR ss1[5] sky130_fd_sc_hd__clkbuf_4
 XFILLER_0_101_369 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
-XFILLER_0_9_9 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XFILLER_0_9_9 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
 X_3559_ _0897_ _0908_ _0920_ _0921_ VGND VGND VPWR VPWR _0922_ sky130_fd_sc_hd__a31o_1
 X_5229_ disp_song.um.drum.next_note1\[1\] _2312_ _2314_ disp_song.um.drum.next_note1\[0\]
 + VGND VGND VPWR VPWR _2315_ sky130_fd_sc_hd__a22o_1
@@ -8591,7 +8587,7 @@ XPHY_72 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
 XPHY_83 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
 XPHY_94 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
 XFILLER_0_49_591 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
-XFILLER_0_107_641 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XFILLER_0_107_641 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
 XFILLER_0_12_609 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
 XFILLER_0_106_195 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
 XFILLER_0_47_57 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
@@ -9137,6 +9133,7 @@ XFILLER_0_84_295 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
 X_5661_ game.flash_counter\[14\] game.flash_counter\[13\] _2623_ game.flash_counter\[15\]
 + VGND VGND VPWR VPWR _2630_ sky130_fd_sc_hd__a31o_1
 XFILLER_0_29_189 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
+XFILLER_0_111_41 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
 XFILLER_0_72_468 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
 X_4612_ _0219_ _1791_ _2656_ _1799_ VGND VGND VPWR VPWR game.scoring_button_1.next_good
 + sky130_fd_sc_hd__a31o_1
@@ -9876,7 +9873,6 @@ XFILLER_0_29_169 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
 X_4610_ _1794_ _1795_ _1796_ _1797_ VGND VGND VPWR VPWR _1798_ sky130_fd_sc_hd__or4b_1
 XFILLER_0_111_21 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
 X_5590_ _2585_ VGND VGND VPWR VPWR _0117_ sky130_fd_sc_hd__clkbuf_1
-XFILLER_0_111_43 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
 XFILLER_0_4_258 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
 X_4541_ game.addmisses.a\[7\] _1730_ VGND VGND VPWR VPWR _1738_ sky130_fd_sc_hd__or2_1
 XFILLER_0_52_161 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
@@ -10048,7 +10044,6 @@ XPHY_76 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
 XPHY_87 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
 XPHY_98 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
 XFILLER_0_36_245 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
-XFILLER_0_107_645 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
 XFILLER_0_64_587 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
 XFILLER_0_106_133 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
 XFILLER_0_106_177 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
@@ -10752,10 +10747,10 @@ X_2835_ modetrans.mode\[2\] _2658_ _2659_ VGND VGND VPWR VPWR _0263_ sky130_fd_s
 X_5623_ _0868_ _2595_ VGND VGND VPWR VPWR _2601_ sky130_fd_sc_hd__and2_1
 X_5554_ _2561_ VGND VGND VPWR VPWR _0105_ sky130_fd_sc_hd__clkbuf_1
 X_2766_ pulseout.fin_pulse\[5\] VGND VGND VPWR VPWR _0204_ sky130_fd_sc_hd__inv_2
-XFILLER_0_14_645 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
 XFILLER_0_13_111 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
 XFILLER_0_5_388 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
 XFILLER_0_5_366 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_0_14_645 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
 X_2697_ _2669_ VGND VGND VPWR VPWR _2670_ sky130_fd_sc_hd__inv_2
 X_5485_ _2520_ VGND VGND VPWR VPWR _0077_ sky130_fd_sc_hd__clkbuf_1
 XFILLER_0_41_486 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
@@ -11175,7 +11170,6 @@ XPHY_79 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
 XFILLER_0_49_554 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
 XFILLER_0_107_615 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
 XFILLER_0_91_332 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
-XFILLER_0_107_648 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
 XFILLER_0_17_473 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
 XFILLER_0_32_421 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
 XFILLER_0_44_270 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
@@ -11551,6 +11545,7 @@ XFILLER_0_76_363 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
 XFILLER_0_9_641 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
 X_5819_ clknet_leaf_50_clk game.scoring_button_2.next_flash_counter_2\[10\] net55
 + VGND VGND VPWR VPWR game.scoring_button_2.flash_counter_2\[10\] sky130_fd_sc_hd__dfrtp_1
+XFILLER_0_107_649 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
 XFILLER_0_32_400 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
 XFILLER_0_51_208 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
 XFILLER_0_17_485 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
@@ -12569,6 +12564,7 @@ XFILLER_0_31_105 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
 X_4577_ net248 _1767_ VGND VGND VPWR VPWR _1769_ sky130_fd_sc_hd__nand2_1
 XFILLER_0_31_138 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
 XFILLER_0_97_51 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XFILLER_0_110_560 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
 X_3528_ _0675_ _0890_ VGND VGND VPWR VPWR _0891_ sky130_fd_sc_hd__nor2_1
 X_3459_ _0752_ VGND VGND VPWR VPWR _0822_ sky130_fd_sc_hd__inv_2
 XFILLER_0_99_617 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
@@ -12601,9 +12597,9 @@ XFILLER_0_26_477 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
 X_4500_ game.addmisses.a\[1\] game.addmisses.a\[0\] game.addmisses.a\[2\] VGND VGND
 + VPWR VPWR _1702_ sky130_fd_sc_hd__a21oi_1
 XFILLER_0_53_263 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
-XANTENNA_1 _1201_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
 XFILLER_0_101_3 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
 XFILLER_0_13_149 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XANTENNA_1 net16 VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
 X_4431_ game.addhits.a\[7\] _1644_ VGND VGND VPWR VPWR _1645_ sky130_fd_sc_hd__nor2_1
 XFILLER_0_41_447 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
 X_4362_ game.scoring_button_2.flash_counter_1\[13\] game.scoring_button_2.flash_counter_1\[12\]
@@ -12853,6 +12849,7 @@ XFILLER_0_56_475 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
 X_4662_ game.scoring_button_1.flash_counter_2\[8\] game.scoring_button_1.flash_counter_2\[11\]
 + game.scoring_button_1.flash_counter_2\[10\] game.scoring_button_1.flash_counter_2\[9\]
 + VGND VGND VPWR VPWR _1826_ sky130_fd_sc_hd__or4b_1
+XFILLER_0_9_13 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
 XFILLER_0_16_328 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
 XFILLER_0_9_57 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
 XFILLER_0_9_46 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
@@ -12951,7 +12948,7 @@ X_2760_ modetrans.mode\[5\] _2658_ VGND VGND VPWR VPWR _0200_ sky130_fd_sc_hd__a
 X_2691_ _2654_ _2664_ VGND VGND VPWR VPWR _2665_ sky130_fd_sc_hd__and2_1
 XFILLER_0_26_467 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
 XFILLER_0_26_489 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
-XANTENNA_2 _1209_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_2 net18 VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
 X_4430_ _1642_ _1643_ _1638_ VGND VGND VPWR VPWR _1644_ sky130_fd_sc_hd__or3_1
 X_6100_ clknet_leaf_37_clk disp_song.um.drum.next_note1\[12\] net67 VGND VGND VPWR
 + VPWR disp_song.note1\[12\] sky130_fd_sc_hd__dfrtp_1
@@ -13299,7 +13296,7 @@ XFILLER_0_5_307 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
 X_2690_ disp_song.um.idx_note2\[1\] _2663_ VGND VGND VPWR VPWR _2664_ sky130_fd_sc_hd__xor2_2
 XFILLER_0_41_405 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
 XFILLER_0_53_276 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
-XANTENNA_3 net16 VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_3 net22 VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
 XFILLER_0_41_449 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
 XFILLER_0_6_15 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
 X_4360_ net173 _1586_ _1589_ VGND VGND VPWR VPWR game.scoring_button_2.next_flash_counter_1\[13\]
@@ -13649,7 +13646,7 @@ XFILLER_0_66_572 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
 XFILLER_0_26_447 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
 XFILLER_0_14_609 VGND VGND VPWR VPWR sky130_ef_sc_hd__decap_12
 XFILLER_0_108_195 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
-XANTENNA_4 net20 VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_4 net29 VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
 XFILLER_0_1_503 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
 XFILLER_0_6_27 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
 X_3310_ _0671_ _0667_ _0668_ VGND VGND VPWR VPWR _0673_ sky130_fd_sc_hd__or3_1

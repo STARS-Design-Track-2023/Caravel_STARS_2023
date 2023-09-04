@@ -21,19 +21,11 @@ MACRO Synthia
     USE GROUND ;
     PORT
       LAYER met4 ;
-        RECT 24.340 10.640 25.940 266.800 ;
+        RECT 97.840 10.640 99.440 266.800 ;
     END
     PORT
       LAYER met4 ;
-        RECT 177.940 10.640 179.540 266.800 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 30.030 262.900 31.630 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 183.210 262.900 184.810 ;
+        RECT 251.440 10.640 253.040 266.800 ;
     END
   END VGND
   PIN VPWR
@@ -46,14 +38,6 @@ MACRO Synthia
     PORT
       LAYER met4 ;
         RECT 174.640 10.640 176.240 266.800 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 26.730 262.900 28.330 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 179.910 262.900 181.510 ;
     END
   END VPWR
   PIN clk
@@ -245,7 +229,8 @@ MACRO Synthia
         RECT 4.000 26.840 264.000 28.240 ;
         RECT 4.000 10.715 264.400 26.840 ;
       LAYER met4 ;
-        RECT 49.975 32.135 79.745 241.905 ;
+        RECT 49.975 32.135 97.440 241.905 ;
+        RECT 99.840 32.135 100.905 241.905 ;
   END
 END Synthia
 END LIBRARY

@@ -3838,12 +3838,10 @@ module Guitar_Villains (chip_select,
  wire \pulseout.fin_pulse[4] ;
  wire \pulseout.fin_pulse[5] ;
 
- sky130_fd_sc_hd__diode_2 ANTENNA_1 (.DIODE(_1201_));
- sky130_fd_sc_hd__diode_2 ANTENNA_2 (.DIODE(_1209_));
- sky130_fd_sc_hd__diode_2 ANTENNA_3 (.DIODE(net16));
- sky130_fd_sc_hd__diode_2 ANTENNA_4 (.DIODE(net20));
- sky130_fd_sc_hd__diode_2 ANTENNA_5 (.DIODE(net22));
- sky130_fd_sc_hd__diode_2 ANTENNA_6 (.DIODE(net29));
+ sky130_fd_sc_hd__diode_2 ANTENNA_1 (.DIODE(net16));
+ sky130_fd_sc_hd__diode_2 ANTENNA_2 (.DIODE(net18));
+ sky130_fd_sc_hd__diode_2 ANTENNA_3 (.DIODE(net22));
+ sky130_fd_sc_hd__diode_2 ANTENNA_4 (.DIODE(net29));
  sky130_fd_sc_hd__decap_3 FILLER_0_0_109 ();
  sky130_ef_sc_hd__decap_12 FILLER_0_0_113 ();
  sky130_ef_sc_hd__decap_12 FILLER_0_0_125 ();
@@ -4394,9 +4392,8 @@ module Guitar_Villains (chip_select,
  sky130_fd_sc_hd__fill_1 FILLER_0_107_615 ();
  sky130_ef_sc_hd__decap_12 FILLER_0_107_617 ();
  sky130_ef_sc_hd__decap_12 FILLER_0_107_629 ();
- sky130_fd_sc_hd__decap_4 FILLER_0_107_641 ();
- sky130_fd_sc_hd__fill_1 FILLER_0_107_645 ();
- sky130_fd_sc_hd__fill_2 FILLER_0_107_648 ();
+ sky130_fd_sc_hd__decap_8 FILLER_0_107_641 ();
+ sky130_fd_sc_hd__fill_1 FILLER_0_107_649 ();
  sky130_fd_sc_hd__fill_2 FILLER_0_107_655 ();
  sky130_fd_sc_hd__decap_3 FILLER_0_107_660 ();
  sky130_ef_sc_hd__decap_12 FILLER_0_107_69 ();
@@ -4621,9 +4618,8 @@ module Guitar_Villains (chip_select,
  sky130_ef_sc_hd__decap_12 FILLER_0_110_53 ();
  sky130_fd_sc_hd__fill_1 FILLER_0_110_531 ();
  sky130_fd_sc_hd__fill_1 FILLER_0_110_539 ();
- sky130_fd_sc_hd__decap_8 FILLER_0_110_548 ();
- sky130_fd_sc_hd__fill_1 FILLER_0_110_556 ();
- sky130_fd_sc_hd__fill_2 FILLER_0_110_559 ();
+ sky130_ef_sc_hd__decap_12 FILLER_0_110_548 ();
+ sky130_fd_sc_hd__fill_1 FILLER_0_110_560 ();
  sky130_ef_sc_hd__decap_12 FILLER_0_110_569 ();
  sky130_fd_sc_hd__decap_6 FILLER_0_110_581 ();
  sky130_fd_sc_hd__fill_1 FILLER_0_110_587 ();
@@ -4678,10 +4674,10 @@ module Guitar_Villains (chip_select,
  sky130_fd_sc_hd__fill_2 FILLER_0_111_390 ();
  sky130_ef_sc_hd__decap_12 FILLER_0_111_393 ();
  sky130_fd_sc_hd__decap_8 FILLER_0_111_405 ();
+ sky130_fd_sc_hd__decap_4 FILLER_0_111_41 ();
  sky130_fd_sc_hd__decap_3 FILLER_0_111_413 ();
  sky130_fd_sc_hd__fill_1 FILLER_0_111_419 ();
  sky130_ef_sc_hd__decap_12 FILLER_0_111_421 ();
- sky130_fd_sc_hd__fill_2 FILLER_0_111_43 ();
  sky130_ef_sc_hd__decap_12 FILLER_0_111_433 ();
  sky130_fd_sc_hd__decap_3 FILLER_0_111_445 ();
  sky130_ef_sc_hd__decap_12 FILLER_0_111_449 ();
@@ -10226,6 +10222,7 @@ module Guitar_Villains (chip_select,
  sky130_fd_sc_hd__fill_2 FILLER_0_9_107 ();
  sky130_fd_sc_hd__fill_1 FILLER_0_9_118 ();
  sky130_ef_sc_hd__decap_12 FILLER_0_9_125 ();
+ sky130_fd_sc_hd__decap_4 FILLER_0_9_13 ();
  sky130_ef_sc_hd__decap_12 FILLER_0_9_137 ();
  sky130_fd_sc_hd__decap_8 FILLER_0_9_149 ();
  sky130_fd_sc_hd__decap_3 FILLER_0_9_157 ();
@@ -10282,7 +10279,7 @@ module Guitar_Villains (chip_select,
  sky130_fd_sc_hd__fill_1 FILLER_0_9_69 ();
  sky130_fd_sc_hd__decap_6 FILLER_0_9_79 ();
  sky130_fd_sc_hd__fill_1 FILLER_0_9_85 ();
- sky130_fd_sc_hd__decap_8 FILLER_0_9_9 ();
+ sky130_fd_sc_hd__fill_2 FILLER_0_9_9 ();
  sky130_fd_sc_hd__decap_8 FILLER_0_9_99 ();
  sky130_fd_sc_hd__decap_3 PHY_0 ();
  sky130_fd_sc_hd__decap_3 PHY_1 ();

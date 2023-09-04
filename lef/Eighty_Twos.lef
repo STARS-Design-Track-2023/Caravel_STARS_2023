@@ -12,19 +12,7 @@ MACRO Eighty_Twos
     USE GROUND ;
     PORT
       LAYER met4 ;
-        RECT 24.340 10.640 25.940 196.080 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 177.940 10.640 179.540 196.080 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 30.030 191.600 31.630 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 183.210 191.600 184.810 ;
+        RECT 97.840 10.640 99.440 196.080 ;
     END
   END VGND
   PIN VPWR
@@ -37,14 +25,6 @@ MACRO Eighty_Twos
     PORT
       LAYER met4 ;
         RECT 174.640 10.640 176.240 196.080 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 26.730 191.600 28.330 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 179.910 191.600 181.510 ;
     END
   END VPWR
   PIN clk
@@ -763,7 +743,8 @@ MACRO Eighty_Twos
         RECT 3.990 7.840 193.090 9.840 ;
         RECT 3.990 6.975 192.690 7.840 ;
       LAYER met4 ;
-        RECT 48.135 19.895 145.065 194.305 ;
+        RECT 48.135 19.895 97.440 194.985 ;
+        RECT 99.840 19.895 145.065 194.985 ;
   END
 END Eighty_Twos
 END LIBRARY

@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1693187647
+timestamp 1693854576
 << obsli1 >>
 rect 1104 2159 38272 39185
 << obsm1 >>
@@ -169,32 +169,17 @@ rect 798 1568 38618 1968
 rect 798 1395 38538 1568
 << metal4 >>
 rect 4208 2128 4528 39216
-rect 4868 2128 5188 39216
+rect 19568 2128 19888 39216
 rect 34928 2128 35248 39216
-rect 35588 2128 35908 39216
 << obsm4 >>
-rect 9627 3979 29013 38861
-<< metal5 >>
-rect 1056 36642 38320 36962
-rect 1056 35982 38320 36302
-rect 1056 6006 38320 6326
-rect 1056 5346 38320 5666
+rect 9627 3979 19488 38997
+rect 19968 3979 29013 38997
 << labels >>
-rlabel metal4 s 4868 2128 5188 39216 6 VGND
-port 1 nsew ground bidirectional
-rlabel metal4 s 35588 2128 35908 39216 6 VGND
-port 1 nsew ground bidirectional
-rlabel metal5 s 1056 6006 38320 6326 6 VGND
-port 1 nsew ground bidirectional
-rlabel metal5 s 1056 36642 38320 36962 6 VGND
+rlabel metal4 s 19568 2128 19888 39216 6 VGND
 port 1 nsew ground bidirectional
 rlabel metal4 s 4208 2128 4528 39216 6 VPWR
 port 2 nsew power bidirectional
 rlabel metal4 s 34928 2128 35248 39216 6 VPWR
-port 2 nsew power bidirectional
-rlabel metal5 s 1056 5346 38320 5666 6 VPWR
-port 2 nsew power bidirectional
-rlabel metal5 s 1056 35982 38320 36302 6 VPWR
 port 2 nsew power bidirectional
 rlabel metal3 s 0 27208 800 27328 6 clk
 port 3 nsew signal input
@@ -344,8 +329,8 @@ port 74 nsew signal output
 string FIXED_BBOX 0 0 39418 41562
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 5103934
-string GDS_FILE /home/designer-25/CUP/openlane/Eighty_Twos/runs/23_08_27_18_49/results/signoff/Eighty_Twos.magic.gds
-string GDS_START 1117224
+string GDS_END 5076304
+string GDS_FILE /home/designer-25/CUP/openlane/Eighty_Twos/runs/23_09_04_12_05/results/signoff/Eighty_Twos.magic.gds
+string GDS_START 1114424
 << end >>
 

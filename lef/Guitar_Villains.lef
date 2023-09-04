@@ -12,19 +12,11 @@ MACRO Guitar_Villains
     USE GROUND ;
     PORT
       LAYER met4 ;
-        RECT 24.340 10.640 25.940 315.760 ;
+        RECT 97.840 10.640 99.440 315.760 ;
     END
     PORT
       LAYER met4 ;
-        RECT 177.940 10.640 179.540 315.760 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 30.030 312.120 31.630 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 183.210 312.120 184.810 ;
+        RECT 251.440 10.640 253.040 315.760 ;
     END
   END VGND
   PIN VPWR
@@ -37,14 +29,6 @@ MACRO Guitar_Villains
     PORT
       LAYER met4 ;
         RECT 174.640 10.640 176.240 315.760 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 26.730 312.120 28.330 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 179.910 312.120 181.510 ;
     END
   END VPWR
   PIN bottom_row[0]
@@ -445,9 +429,10 @@ MACRO Guitar_Villains
         RECT 3.990 20.040 313.425 21.440 ;
         RECT 3.990 10.715 313.825 20.040 ;
       LAYER met4 ;
-        RECT 61.015 101.495 174.240 311.945 ;
-        RECT 176.640 101.495 177.540 311.945 ;
-        RECT 179.940 101.495 280.305 311.945 ;
+        RECT 61.015 11.735 97.440 311.265 ;
+        RECT 99.840 11.735 174.240 311.265 ;
+        RECT 176.640 11.735 251.040 311.265 ;
+        RECT 253.440 11.735 280.305 311.265 ;
   END
 END Guitar_Villains
 END LIBRARY

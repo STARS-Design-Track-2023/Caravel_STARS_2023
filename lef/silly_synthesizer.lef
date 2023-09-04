@@ -12,19 +12,7 @@ MACRO silly_synthesizer
     USE GROUND ;
     PORT
       LAYER met4 ;
-        RECT 24.340 10.640 25.940 231.440 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 177.940 10.640 179.540 231.440 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 30.030 226.100 31.630 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 183.210 226.100 184.810 ;
+        RECT 97.840 10.640 99.440 231.440 ;
     END
   END VGND
   PIN VPWR
@@ -37,14 +25,6 @@ MACRO silly_synthesizer
     PORT
       LAYER met4 ;
         RECT 174.640 10.640 176.240 231.440 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 26.730 226.100 28.330 ;
-    END
-    PORT
-      LAYER met5 ;
-        RECT 5.280 179.910 226.100 181.510 ;
     END
   END VPWR
   PIN clk
@@ -277,7 +257,8 @@ MACRO silly_synthesizer
         RECT 4.000 33.640 227.285 35.040 ;
         RECT 4.000 10.715 227.685 33.640 ;
       LAYER met4 ;
-        RECT 63.775 34.175 166.225 173.225 ;
+        RECT 61.935 34.175 97.440 173.225 ;
+        RECT 99.840 34.175 166.225 173.225 ;
   END
 END silly_synthesizer
 END LIBRARY
