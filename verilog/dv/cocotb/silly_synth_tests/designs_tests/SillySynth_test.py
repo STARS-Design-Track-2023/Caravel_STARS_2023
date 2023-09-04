@@ -168,6 +168,10 @@ async def getNoteShape():
 
 async def testIfNotePlaying():
 
+    currentOutput = caravelEnv.monitor_gpio(outputGPIO).integer
+    
+    await Timer(half_clk_period * 2, 'ns')
+
 async def SillySynth_test(caravelEnv_pass : Caravel_env):
     caravelEnv = caravelEnv_pass
     if (caravelEnv == None):
@@ -188,3 +192,7 @@ async def SillySynth_test(caravelEnv_pass : Caravel_env):
     #Hold the 6 key
     caravelEnv.drive_gpio_in(6, 0x1)
     cocotb.log.info(f"[<?>] Note: 6-2, wavelength[{int(await getNoteCycleCount())}/{int(27045)}], shape[{await getNoteShape()}/{int(1)}]")
+
+    assert testIfNotePlaying()
+    await getNoteCycleCount()
+    await getNoteShape()
