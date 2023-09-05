@@ -7,34 +7,6 @@ MACRO sass_synth
   FOREIGN sass_synth ;
   ORIGIN 0.000 0.000 ;
   SIZE 367.785 BY 378.505 ;
-  PIN VGND
-    DIRECTION INOUT ;
-    USE GROUND ;
-    PORT
-      LAYER met4 ;
-        RECT 97.840 10.640 99.440 367.440 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 251.440 10.640 253.040 367.440 ;
-    END
-  END VGND
-  PIN VPWR
-    DIRECTION INOUT ;
-    USE POWER ;
-    PORT
-      LAYER met4 ;
-        RECT 21.040 10.640 22.640 367.440 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 174.640 10.640 176.240 367.440 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 328.240 10.640 329.840 367.440 ;
-    END
-  END VPWR
   PIN beat_led[0]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
@@ -511,6 +483,34 @@ MACRO sass_synth
         RECT 363.785 159.840 367.785 160.440 ;
     END
   END tempo_select
+  PIN vccd1
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 21.040 10.640 22.640 367.440 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 174.640 10.640 176.240 367.440 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 328.240 10.640 329.840 367.440 ;
+    END
+  END vccd1
+  PIN vssd1
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 97.840 10.640 99.440 367.440 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 251.440 10.640 253.040 367.440 ;
+    END
+  END vssd1
   OBS
       LAYER li1 ;
         RECT 5.520 10.795 362.020 367.285 ;

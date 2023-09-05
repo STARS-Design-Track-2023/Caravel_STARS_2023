@@ -1,5 +1,5 @@
 `ifndef NUMFLAGS
-`include "source/param_file.sv"
+`include "../param_file.sv"
 `endif
 module state_machine(
     input logic clk, nrst, noAddressing, getInstruction, endAddressing,

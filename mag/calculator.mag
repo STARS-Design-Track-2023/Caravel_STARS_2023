@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1693853993
+timestamp 1693936919
 << viali >>
 rect 1685 27081 1719 27115
 rect 3893 27081 3927 27115
@@ -56904,80 +56904,80 @@ timestamp 1688980957
 transform 1 0 24288 0 -1 27200
 box -38 -48 130 592
 << labels >>
-flabel metal4 s 7246 2128 7566 27248 0 FreeSans 1920 90 0 0 VGND
-port 0 nsew ground bidirectional
-flabel metal4 s 13548 2128 13868 27248 0 FreeSans 1920 90 0 0 VGND
-port 0 nsew ground bidirectional
-flabel metal4 s 19850 2128 20170 27248 0 FreeSans 1920 90 0 0 VGND
-port 0 nsew ground bidirectional
-flabel metal4 s 26152 2128 26472 27248 0 FreeSans 1920 90 0 0 VGND
-port 0 nsew ground bidirectional
-flabel metal4 s 4095 2128 4415 27248 0 FreeSans 1920 90 0 0 VPWR
-port 1 nsew power bidirectional
-flabel metal4 s 10397 2128 10717 27248 0 FreeSans 1920 90 0 0 VPWR
-port 1 nsew power bidirectional
-flabel metal4 s 16699 2128 17019 27248 0 FreeSans 1920 90 0 0 VPWR
-port 1 nsew power bidirectional
-flabel metal4 s 23001 2128 23321 27248 0 FreeSans 1920 90 0 0 VPWR
-port 1 nsew power bidirectional
 flabel metal3 s 0 4088 800 4208 0 FreeSans 480 0 0 0 blue
-port 2 nsew signal tristate
+port 0 nsew signal tristate
 flabel metal2 s 27066 28809 27122 29609 0 FreeSans 224 90 0 0 clk
-port 3 nsew signal input
+port 1 nsew signal input
 flabel metal3 s 0 25168 800 25288 0 FreeSans 480 0 0 0 nrst
-port 4 nsew signal input
+port 2 nsew signal input
 flabel metal3 s 0 8168 800 8288 0 FreeSans 480 0 0 0 pb[0]
-port 5 nsew signal input
+port 3 nsew signal input
 flabel metal2 s 7102 28809 7158 29609 0 FreeSans 224 90 0 0 pb[1]
-port 6 nsew signal input
+port 4 nsew signal input
 flabel metal2 s 11610 28809 11666 29609 0 FreeSans 224 90 0 0 pb[2]
-port 7 nsew signal input
+port 5 nsew signal input
 flabel metal3 s 26665 8168 27465 8288 0 FreeSans 480 0 0 0 pb[3]
-port 8 nsew signal input
+port 6 nsew signal input
 flabel metal2 s 23202 28809 23258 29609 0 FreeSans 224 90 0 0 pb[4]
-port 9 nsew signal input
+port 7 nsew signal input
 flabel metal2 s 19982 0 20038 800 0 FreeSans 224 90 0 0 pb[5]
-port 10 nsew signal input
+port 8 nsew signal input
 flabel metal3 s 26665 17008 27465 17128 0 FreeSans 480 0 0 0 pb[6]
-port 11 nsew signal input
+port 9 nsew signal input
 flabel metal2 s 19338 28809 19394 29609 0 FreeSans 224 90 0 0 pb[7]
-port 12 nsew signal input
+port 10 nsew signal input
 flabel metal3 s 26665 8 27465 128 0 FreeSans 480 0 0 0 pb[8]
-port 13 nsew signal input
+port 11 nsew signal input
 flabel metal3 s 0 12248 800 12368 0 FreeSans 480 0 0 0 pb[9]
-port 14 nsew signal input
+port 12 nsew signal input
 flabel metal2 s 3238 28809 3294 29609 0 FreeSans 224 90 0 0 red
-port 15 nsew signal tristate
+port 13 nsew signal tristate
 flabel metal2 s 23846 0 23902 800 0 FreeSans 224 90 0 0 ss[0]
-port 16 nsew signal tristate
+port 14 nsew signal tristate
 flabel metal2 s 18 0 74 800 0 FreeSans 224 90 0 0 ss[10]
-port 17 nsew signal tristate
+port 15 nsew signal tristate
 flabel metal2 s 3882 0 3938 800 0 FreeSans 224 90 0 0 ss[11]
-port 18 nsew signal tristate
+port 16 nsew signal tristate
 flabel metal2 s 7746 0 7802 800 0 FreeSans 224 90 0 0 ss[12]
-port 19 nsew signal tristate
+port 17 nsew signal tristate
 flabel metal3 s 26665 4088 27465 4208 0 FreeSans 480 0 0 0 ss[13]
-port 20 nsew signal tristate
+port 18 nsew signal tristate
 flabel metal2 s 11610 0 11666 800 0 FreeSans 224 90 0 0 ss[1]
-port 21 nsew signal tristate
+port 19 nsew signal tristate
 flabel metal3 s 26665 21088 27465 21208 0 FreeSans 480 0 0 0 ss[2]
-port 22 nsew signal tristate
+port 20 nsew signal tristate
 flabel metal3 s 26665 25168 27465 25288 0 FreeSans 480 0 0 0 ss[3]
-port 23 nsew signal tristate
+port 21 nsew signal tristate
 flabel metal3 s 0 21088 800 21208 0 FreeSans 480 0 0 0 ss[4]
-port 24 nsew signal tristate
+port 22 nsew signal tristate
 flabel metal2 s 15474 28809 15530 29609 0 FreeSans 224 90 0 0 ss[5]
-port 25 nsew signal tristate
+port 23 nsew signal tristate
 flabel metal2 s 15474 0 15530 800 0 FreeSans 224 90 0 0 ss[6]
-port 26 nsew signal tristate
+port 24 nsew signal tristate
 flabel metal3 s 0 16328 800 16448 0 FreeSans 480 0 0 0 ss[7]
-port 27 nsew signal tristate
+port 25 nsew signal tristate
 flabel metal3 s 0 29248 800 29368 0 FreeSans 480 0 0 0 ss[8]
-port 28 nsew signal tristate
+port 26 nsew signal tristate
 flabel metal3 s 26665 12928 27465 13048 0 FreeSans 480 0 0 0 ss[9]
-port 29 nsew signal tristate
-rlabel via1 13788 27200 13788 27200 0 VGND
-rlabel metal1 13708 26656 13708 26656 0 VPWR
+port 27 nsew signal tristate
+flabel metal4 s 4095 2128 4415 27248 0 FreeSans 1920 90 0 0 vccd1
+port 28 nsew power bidirectional
+flabel metal4 s 10397 2128 10717 27248 0 FreeSans 1920 90 0 0 vccd1
+port 28 nsew power bidirectional
+flabel metal4 s 16699 2128 17019 27248 0 FreeSans 1920 90 0 0 vccd1
+port 28 nsew power bidirectional
+flabel metal4 s 23001 2128 23321 27248 0 FreeSans 1920 90 0 0 vccd1
+port 28 nsew power bidirectional
+flabel metal4 s 7246 2128 7566 27248 0 FreeSans 1920 90 0 0 vssd1
+port 29 nsew ground bidirectional
+flabel metal4 s 13548 2128 13868 27248 0 FreeSans 1920 90 0 0 vssd1
+port 29 nsew ground bidirectional
+flabel metal4 s 19850 2128 20170 27248 0 FreeSans 1920 90 0 0 vssd1
+port 29 nsew ground bidirectional
+flabel metal4 s 26152 2128 26472 27248 0 FreeSans 1920 90 0 0 vssd1
+port 29 nsew ground bidirectional
+rlabel metal1 13708 26656 13708 26656 0 vccd1
+rlabel via1 13788 27200 13788 27200 0 vssd1
 rlabel metal2 22126 16558 22126 16558 0 _0000_
 rlabel metal1 19734 21624 19734 21624 0 _0001_
 rlabel metal2 23506 16150 23506 16150 0 _0002_

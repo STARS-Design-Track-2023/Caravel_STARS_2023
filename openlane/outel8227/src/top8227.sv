@@ -1,5 +1,5 @@
 `ifndef NUMFLAGS
-`include "/home/designer-25/CUP/openlane/outel8227/src/param_file.sv"
+`include "param_file.sv"
 `endif
 
 module top8227 (

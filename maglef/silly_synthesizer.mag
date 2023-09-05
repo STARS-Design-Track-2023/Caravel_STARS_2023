@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1693855136
+timestamp 1693932460
 << obsli1 >>
 rect 1104 2159 45172 46257
 << obsm1 >>
@@ -72,60 +72,60 @@ rect 34928 2128 35248 46288
 rect 12387 6835 19488 34645
 rect 19968 6835 33245 34645
 << labels >>
-rlabel metal4 s 19568 2128 19888 46288 6 VGND
-port 1 nsew ground bidirectional
-rlabel metal4 s 4208 2128 4528 46288 6 VPWR
-port 2 nsew power bidirectional
-rlabel metal4 s 34928 2128 35248 46288 6 VPWR
-port 2 nsew power bidirectional
 rlabel metal2 s 34794 0 34850 800 6 clk
-port 3 nsew signal input
+port 1 nsew signal input
 rlabel metal3 s 45537 44208 46337 44328 6 cs
-port 4 nsew signal input
+port 2 nsew signal input
 rlabel metal2 s 41878 47681 41934 48481 6 gpio[0]
-port 5 nsew signal input
+port 3 nsew signal input
 rlabel metal2 s 23846 47681 23902 48481 6 gpio[10]
-port 6 nsew signal input
+port 4 nsew signal input
 rlabel metal3 s 0 8848 800 8968 6 gpio[11]
-port 7 nsew signal input
+port 5 nsew signal input
 rlabel metal3 s 0 18368 800 18488 6 gpio[12]
-port 8 nsew signal input
+port 6 nsew signal input
 rlabel metal3 s 45537 6808 46337 6928 6 gpio[13]
-port 9 nsew signal input
+port 7 nsew signal input
 rlabel metal3 s 0 36728 800 36848 6 gpio[14]
-port 10 nsew signal input
+port 8 nsew signal input
 rlabel metal3 s 45537 34688 46337 34808 6 gpio[15]
-port 11 nsew signal input
+port 9 nsew signal input
 rlabel metal2 s 18 0 74 800 6 gpio[16]
-port 12 nsew signal input
+port 10 nsew signal input
 rlabel metal2 s 8390 0 8446 800 6 gpio[1]
-port 13 nsew signal input
+port 11 nsew signal input
 rlabel metal2 s 43810 0 43866 800 6 gpio[2]
-port 14 nsew signal input
+port 12 nsew signal input
 rlabel metal2 s 17406 0 17462 800 6 gpio[3]
-port 15 nsew signal input
+port 13 nsew signal input
 rlabel metal2 s 14830 47681 14886 48481 6 gpio[4]
-port 16 nsew signal input
+port 14 nsew signal input
 rlabel metal3 s 45537 25168 46337 25288 6 gpio[5]
-port 17 nsew signal input
+port 15 nsew signal input
 rlabel metal3 s 0 46248 800 46368 6 gpio[6]
-port 18 nsew signal input
+port 16 nsew signal input
 rlabel metal2 s 32862 47681 32918 48481 6 gpio[7]
-port 19 nsew signal input
+port 17 nsew signal input
 rlabel metal2 s 26422 0 26478 800 6 gpio[8]
-port 20 nsew signal input
+port 18 nsew signal input
 rlabel metal3 s 0 27888 800 28008 6 gpio[9]
-port 21 nsew signal input
+port 19 nsew signal input
 rlabel metal2 s 6458 47681 6514 48481 6 nrst
-port 22 nsew signal input
+port 20 nsew signal input
 rlabel metal3 s 45537 16328 46337 16448 6 pwm
-port 23 nsew signal output
+port 21 nsew signal output
+rlabel metal4 s 4208 2128 4528 46288 6 vccd1
+port 22 nsew power bidirectional
+rlabel metal4 s 34928 2128 35248 46288 6 vccd1
+port 22 nsew power bidirectional
+rlabel metal4 s 19568 2128 19888 46288 6 vssd1
+port 23 nsew ground bidirectional
 << properties >>
 string FIXED_BBOX 0 0 46337 48481
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 5263132
-string GDS_FILE /home/designer-25/CUP/openlane/silly-sythensizer/runs/23_09_04_12_15/results/signoff/silly_synthesizer.magic.gds
+string GDS_END 5263142
+string GDS_FILE /home/designer-05/work/Caravel_STARS_2023/openlane/silly-sythensizer/runs/23_09_05_09_43/results/signoff/silly_synthesizer.magic.gds
 string GDS_START 757944
 << end >>
 

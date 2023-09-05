@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1693853995
+timestamp 1693936921
 << obsli1 >>
 rect 1104 2159 26312 27217
 << obsm1 >>
@@ -84,84 +84,84 @@ rect 26152 2128 26472 27248
 << obsm4 >>
 rect 6499 14859 6565 24717
 << labels >>
-rlabel metal4 s 7246 2128 7566 27248 6 VGND
-port 1 nsew ground bidirectional
-rlabel metal4 s 13548 2128 13868 27248 6 VGND
-port 1 nsew ground bidirectional
-rlabel metal4 s 19850 2128 20170 27248 6 VGND
-port 1 nsew ground bidirectional
-rlabel metal4 s 26152 2128 26472 27248 6 VGND
-port 1 nsew ground bidirectional
-rlabel metal4 s 4095 2128 4415 27248 6 VPWR
-port 2 nsew power bidirectional
-rlabel metal4 s 10397 2128 10717 27248 6 VPWR
-port 2 nsew power bidirectional
-rlabel metal4 s 16699 2128 17019 27248 6 VPWR
-port 2 nsew power bidirectional
-rlabel metal4 s 23001 2128 23321 27248 6 VPWR
-port 2 nsew power bidirectional
 rlabel metal3 s 0 4088 800 4208 6 blue
-port 3 nsew signal output
+port 1 nsew signal output
 rlabel metal2 s 27066 28809 27122 29609 6 clk
-port 4 nsew signal input
+port 2 nsew signal input
 rlabel metal3 s 0 25168 800 25288 6 nrst
-port 5 nsew signal input
+port 3 nsew signal input
 rlabel metal3 s 0 8168 800 8288 6 pb[0]
-port 6 nsew signal input
+port 4 nsew signal input
 rlabel metal2 s 7102 28809 7158 29609 6 pb[1]
-port 7 nsew signal input
+port 5 nsew signal input
 rlabel metal2 s 11610 28809 11666 29609 6 pb[2]
-port 8 nsew signal input
+port 6 nsew signal input
 rlabel metal3 s 26665 8168 27465 8288 6 pb[3]
-port 9 nsew signal input
+port 7 nsew signal input
 rlabel metal2 s 23202 28809 23258 29609 6 pb[4]
-port 10 nsew signal input
+port 8 nsew signal input
 rlabel metal2 s 19982 0 20038 800 6 pb[5]
-port 11 nsew signal input
+port 9 nsew signal input
 rlabel metal3 s 26665 17008 27465 17128 6 pb[6]
-port 12 nsew signal input
+port 10 nsew signal input
 rlabel metal2 s 19338 28809 19394 29609 6 pb[7]
-port 13 nsew signal input
+port 11 nsew signal input
 rlabel metal3 s 26665 8 27465 128 6 pb[8]
-port 14 nsew signal input
+port 12 nsew signal input
 rlabel metal3 s 0 12248 800 12368 6 pb[9]
-port 15 nsew signal input
+port 13 nsew signal input
 rlabel metal2 s 3238 28809 3294 29609 6 red
-port 16 nsew signal output
+port 14 nsew signal output
 rlabel metal2 s 23846 0 23902 800 6 ss[0]
-port 17 nsew signal output
+port 15 nsew signal output
 rlabel metal2 s 18 0 74 800 6 ss[10]
-port 18 nsew signal output
+port 16 nsew signal output
 rlabel metal2 s 3882 0 3938 800 6 ss[11]
-port 19 nsew signal output
+port 17 nsew signal output
 rlabel metal2 s 7746 0 7802 800 6 ss[12]
-port 20 nsew signal output
+port 18 nsew signal output
 rlabel metal3 s 26665 4088 27465 4208 6 ss[13]
-port 21 nsew signal output
+port 19 nsew signal output
 rlabel metal2 s 11610 0 11666 800 6 ss[1]
-port 22 nsew signal output
+port 20 nsew signal output
 rlabel metal3 s 26665 21088 27465 21208 6 ss[2]
-port 23 nsew signal output
+port 21 nsew signal output
 rlabel metal3 s 26665 25168 27465 25288 6 ss[3]
-port 24 nsew signal output
+port 22 nsew signal output
 rlabel metal3 s 0 21088 800 21208 6 ss[4]
-port 25 nsew signal output
+port 23 nsew signal output
 rlabel metal2 s 15474 28809 15530 29609 6 ss[5]
-port 26 nsew signal output
+port 24 nsew signal output
 rlabel metal2 s 15474 0 15530 800 6 ss[6]
-port 27 nsew signal output
+port 25 nsew signal output
 rlabel metal3 s 0 16328 800 16448 6 ss[7]
-port 28 nsew signal output
+port 26 nsew signal output
 rlabel metal3 s 0 29248 800 29368 6 ss[8]
-port 29 nsew signal output
+port 27 nsew signal output
 rlabel metal3 s 26665 12928 27465 13048 6 ss[9]
-port 30 nsew signal output
+port 28 nsew signal output
+rlabel metal4 s 4095 2128 4415 27248 6 vccd1
+port 29 nsew power bidirectional
+rlabel metal4 s 10397 2128 10717 27248 6 vccd1
+port 29 nsew power bidirectional
+rlabel metal4 s 16699 2128 17019 27248 6 vccd1
+port 29 nsew power bidirectional
+rlabel metal4 s 23001 2128 23321 27248 6 vccd1
+port 29 nsew power bidirectional
+rlabel metal4 s 7246 2128 7566 27248 6 vssd1
+port 30 nsew ground bidirectional
+rlabel metal4 s 13548 2128 13868 27248 6 vssd1
+port 30 nsew ground bidirectional
+rlabel metal4 s 19850 2128 20170 27248 6 vssd1
+port 30 nsew ground bidirectional
+rlabel metal4 s 26152 2128 26472 27248 6 vssd1
+port 30 nsew ground bidirectional
 << properties >>
 string FIXED_BBOX 0 0 27465 29609
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 2511184
-string GDS_FILE /home/designer-25/CUP/openlane/calculator/runs/23_09_04_11_57/results/signoff/calculator.magic.gds
+string GDS_END 2511204
+string GDS_FILE /home/designer-05/work/Caravel_STARS_2023/openlane/calculator/runs/23_09_05_10_59/results/signoff/calculator.magic.gds
 string GDS_START 652982
 << end >>
 

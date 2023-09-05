@@ -1,5 +1,5 @@
 `ifndef NUMFLAGS
-`include "source/param_file.sv"
+`include "../param_file.sv"
 `endif
 module decoder (
     input  logic [7:0] opcode,

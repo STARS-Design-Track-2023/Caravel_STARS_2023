@@ -7,46 +7,6 @@ MACRO synth
   FOREIGN synth ;
   ORIGIN 0.000 0.000 ;
   SIZE 179.365 BY 190.085 ;
-  PIN VGND
-    DIRECTION INOUT ;
-    USE GROUND ;
-    PORT
-      LAYER met4 ;
-        RECT 46.690 10.640 48.290 177.040 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 88.660 10.640 90.260 177.040 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 130.630 10.640 132.230 177.040 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 172.600 10.640 174.200 177.040 ;
-    END
-  END VGND
-  PIN VPWR
-    DIRECTION INOUT ;
-    USE POWER ;
-    PORT
-      LAYER met4 ;
-        RECT 25.705 10.640 27.305 177.040 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 67.675 10.640 69.275 177.040 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 109.645 10.640 111.245 177.040 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 151.615 10.640 153.215 177.040 ;
-    END
-  END VPWR
   PIN clk
     DIRECTION INPUT ;
     USE SIGNAL ;
@@ -254,6 +214,46 @@ MACRO synth
         RECT 175.365 71.440 179.365 72.040 ;
     END
   END sound_series[3]
+  PIN vccd1
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 25.705 10.640 27.305 177.040 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 67.675 10.640 69.275 177.040 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 109.645 10.640 111.245 177.040 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 151.615 10.640 153.215 177.040 ;
+    END
+  END vccd1
+  PIN vssd1
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 46.690 10.640 48.290 177.040 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 88.660 10.640 90.260 177.040 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 130.630 10.640 132.230 177.040 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 172.600 10.640 174.200 177.040 ;
+    END
+  END vssd1
   OBS
       LAYER li1 ;
         RECT 5.520 10.795 173.420 176.885 ;

@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1693855228
+timestamp 1693931981
 << viali >>
 rect 1501 35241 1535 35275
 rect 27169 35241 27203 35275
@@ -86519,70 +86519,70 @@ timestamp 1688980957
 transform 1 0 32016 0 1 34816
 box -38 -48 130 592
 << labels >>
-flabel metal4 s 9338 2128 9658 35408 0 FreeSans 1920 90 0 0 VGND
-port 0 nsew ground bidirectional
-flabel metal4 s 17732 2128 18052 35408 0 FreeSans 1920 90 0 0 VGND
-port 0 nsew ground bidirectional
-flabel metal4 s 26126 2128 26446 35408 0 FreeSans 1920 90 0 0 VGND
-port 0 nsew ground bidirectional
-flabel metal4 s 34520 2128 34840 35408 0 FreeSans 1920 90 0 0 VGND
-port 0 nsew ground bidirectional
-flabel metal4 s 5141 2128 5461 35408 0 FreeSans 1920 90 0 0 VPWR
-port 1 nsew power bidirectional
-flabel metal4 s 13535 2128 13855 35408 0 FreeSans 1920 90 0 0 VPWR
-port 1 nsew power bidirectional
-flabel metal4 s 21929 2128 22249 35408 0 FreeSans 1920 90 0 0 VPWR
-port 1 nsew power bidirectional
-flabel metal4 s 30323 2128 30643 35408 0 FreeSans 1920 90 0 0 VPWR
-port 1 nsew power bidirectional
 flabel metal3 s 35073 34688 35873 34808 0 FreeSans 480 0 0 0 clk
-port 2 nsew signal input
+port 0 nsew signal input
 flabel metal3 s 0 32648 800 32768 0 FreeSans 480 0 0 0 en
-port 3 nsew signal input
+port 1 nsew signal input
 flabel metal2 s 30930 0 30986 800 0 FreeSans 224 90 0 0 keypad_i[0]
-port 4 nsew signal input
+port 2 nsew signal input
 flabel metal3 s 0 6128 800 6248 0 FreeSans 480 0 0 0 keypad_i[10]
-port 5 nsew signal input
+port 3 nsew signal input
 flabel metal3 s 0 19728 800 19848 0 FreeSans 480 0 0 0 keypad_i[11]
-port 6 nsew signal input
+port 4 nsew signal input
 flabel metal2 s 7746 37217 7802 38017 0 FreeSans 224 90 0 0 keypad_i[12]
-port 7 nsew signal input
+port 5 nsew signal input
 flabel metal2 s 13542 37217 13598 38017 0 FreeSans 224 90 0 0 keypad_i[13]
-port 8 nsew signal input
+port 6 nsew signal input
 flabel metal2 s 32862 37217 32918 38017 0 FreeSans 224 90 0 0 keypad_i[14]
-port 9 nsew signal input
+port 7 nsew signal input
 flabel metal3 s 35073 8168 35873 8288 0 FreeSans 480 0 0 0 keypad_i[1]
-port 10 nsew signal input
+port 8 nsew signal input
 flabel metal2 s 24490 0 24546 800 0 FreeSans 224 90 0 0 keypad_i[2]
-port 11 nsew signal input
+port 9 nsew signal input
 flabel metal2 s 18 0 74 800 0 FreeSans 224 90 0 0 keypad_i[3]
-port 12 nsew signal input
+port 10 nsew signal input
 flabel metal2 s 5814 0 5870 800 0 FreeSans 224 90 0 0 keypad_i[4]
-port 13 nsew signal input
+port 11 nsew signal input
 flabel metal3 s 0 12928 800 13048 0 FreeSans 480 0 0 0 keypad_i[5]
-port 14 nsew signal input
+port 12 nsew signal input
 flabel metal3 s 35073 1368 35873 1488 0 FreeSans 480 0 0 0 keypad_i[6]
-port 15 nsew signal input
+port 13 nsew signal input
 flabel metal2 s 12254 0 12310 800 0 FreeSans 224 90 0 0 keypad_i[7]
-port 16 nsew signal input
+port 14 nsew signal input
 flabel metal3 s 35073 21088 35873 21208 0 FreeSans 480 0 0 0 keypad_i[8]
-port 17 nsew signal input
+port 15 nsew signal input
 flabel metal3 s 35073 27888 35873 28008 0 FreeSans 480 0 0 0 keypad_i[9]
-port 18 nsew signal input
+port 16 nsew signal input
 flabel metal2 s 19982 37217 20038 38017 0 FreeSans 224 90 0 0 n_rst
-port 19 nsew signal input
+port 17 nsew signal input
 flabel metal2 s 26422 37217 26478 38017 0 FreeSans 224 90 0 0 pwm_o
-port 20 nsew signal tristate
+port 18 nsew signal tristate
 flabel metal2 s 18694 0 18750 800 0 FreeSans 224 90 0 0 sound_series[0]
-port 21 nsew signal tristate
+port 19 nsew signal tristate
 flabel metal3 s 0 25848 800 25968 0 FreeSans 480 0 0 0 sound_series[1]
-port 22 nsew signal tristate
+port 20 nsew signal tristate
 flabel metal2 s 1306 37217 1362 38017 0 FreeSans 224 90 0 0 sound_series[2]
-port 23 nsew signal tristate
+port 21 nsew signal tristate
 flabel metal3 s 35073 14288 35873 14408 0 FreeSans 480 0 0 0 sound_series[3]
-port 24 nsew signal tristate
-rlabel via1 17972 34816 17972 34816 0 VGND
-rlabel metal1 17894 35360 17894 35360 0 VPWR
+port 22 nsew signal tristate
+flabel metal4 s 5141 2128 5461 35408 0 FreeSans 1920 90 0 0 vccd1
+port 23 nsew power bidirectional
+flabel metal4 s 13535 2128 13855 35408 0 FreeSans 1920 90 0 0 vccd1
+port 23 nsew power bidirectional
+flabel metal4 s 21929 2128 22249 35408 0 FreeSans 1920 90 0 0 vccd1
+port 23 nsew power bidirectional
+flabel metal4 s 30323 2128 30643 35408 0 FreeSans 1920 90 0 0 vccd1
+port 23 nsew power bidirectional
+flabel metal4 s 9338 2128 9658 35408 0 FreeSans 1920 90 0 0 vssd1
+port 24 nsew ground bidirectional
+flabel metal4 s 17732 2128 18052 35408 0 FreeSans 1920 90 0 0 vssd1
+port 24 nsew ground bidirectional
+flabel metal4 s 26126 2128 26446 35408 0 FreeSans 1920 90 0 0 vssd1
+port 24 nsew ground bidirectional
+flabel metal4 s 34520 2128 34840 35408 0 FreeSans 1920 90 0 0 vssd1
+port 24 nsew ground bidirectional
+rlabel metal1 17894 35360 17894 35360 0 vccd1
+rlabel via1 17972 34816 17972 34816 0 vssd1
 rlabel metal2 4094 15810 4094 15810 0 SS_FSM.count\[0\]
 rlabel metal1 3266 16558 3266 16558 0 SS_FSM.count\[1\]
 rlabel metal1 4324 20434 4324 20434 0 SS_FSM.count\[2\]

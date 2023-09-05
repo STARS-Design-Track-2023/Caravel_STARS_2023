@@ -7,26 +7,6 @@ MACRO silly_synthesizer
   FOREIGN silly_synthesizer ;
   ORIGIN 0.000 0.000 ;
   SIZE 231.685 BY 242.405 ;
-  PIN VGND
-    DIRECTION INOUT ;
-    USE GROUND ;
-    PORT
-      LAYER met4 ;
-        RECT 97.840 10.640 99.440 231.440 ;
-    END
-  END VGND
-  PIN VPWR
-    DIRECTION INOUT ;
-    USE POWER ;
-    PORT
-      LAYER met4 ;
-        RECT 21.040 10.640 22.640 231.440 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 174.640 10.640 176.240 231.440 ;
-    END
-  END VPWR
   PIN clk
     DIRECTION INPUT ;
     USE SIGNAL ;
@@ -216,6 +196,26 @@ MACRO silly_synthesizer
         RECT 227.685 81.640 231.685 82.240 ;
     END
   END pwm
+  PIN vccd1
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 21.040 10.640 22.640 231.440 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 174.640 10.640 176.240 231.440 ;
+    END
+  END vccd1
+  PIN vssd1
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 97.840 10.640 99.440 231.440 ;
+    END
+  END vssd1
   OBS
       LAYER li1 ;
         RECT 5.520 10.795 225.860 231.285 ;
