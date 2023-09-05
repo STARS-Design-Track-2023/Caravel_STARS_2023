@@ -1,5 +1,5 @@
 `default_nettype none
-`include "/home/designer-25/CUP/openlane/z23/src/control_unit/cu_pkg.sv"
+`include "cu_pkg.sv"
 
 `define MAP_TO_REG(SEL, TO)                                     \
     case ((SEL))                                                \
