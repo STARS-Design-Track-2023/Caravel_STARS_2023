@@ -14,6 +14,8 @@
     "CLOCK_PERIOD": 100,
     "CLOCK_PORT": "clk",
     "DESIGN_IS_CORE": 0,
+    "VDD_NETS": "vccd1",
+    "GND_NETS": "vssd1",
     "FP_PDN_CORE_RING": 0,
     "GLB_RT_MAXLAYER": 5,
     "pdk::sky130*": {

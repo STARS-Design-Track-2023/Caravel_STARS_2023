@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1693855940
+timestamp 1693930250
 << obsli1 >>
 rect 1104 2159 53820 54961
 << obsm1 >>
@@ -366,300 +366,300 @@ rect 50688 2211 52381 54229
 << obsm5 >>
 rect 6740 13780 48460 44700
 << labels >>
-rlabel metal4 s 19568 2128 19888 54992 6 VGND
-port 1 nsew ground bidirectional
-rlabel metal4 s 50288 2128 50608 54992 6 VGND
-port 1 nsew ground bidirectional
-rlabel metal4 s 4208 2128 4528 54992 6 VPWR
-port 2 nsew power bidirectional
-rlabel metal4 s 34928 2128 35248 54992 6 VPWR
-port 2 nsew power bidirectional
 rlabel metal2 s 15474 0 15530 800 6 clk
-port 3 nsew signal input
+port 1 nsew signal input
 rlabel metal2 s 48318 0 48374 800 6 interrupt_gpio_in
-port 4 nsew signal input
+port 2 nsew signal input
 rlabel metal2 s 16762 0 16818 800 6 keypad_input[0]
-port 5 nsew signal input
+port 3 nsew signal input
 rlabel metal3 s 54176 688 54976 808 6 keypad_input[10]
-port 6 nsew signal input
+port 4 nsew signal input
 rlabel metal3 s 0 27888 800 28008 6 keypad_input[11]
-port 7 nsew signal input
+port 5 nsew signal input
 rlabel metal2 s 52182 56320 52238 57120 6 keypad_input[12]
-port 8 nsew signal input
+port 6 nsew signal input
 rlabel metal2 s 27710 0 27766 800 6 keypad_input[13]
-port 9 nsew signal input
+port 7 nsew signal input
 rlabel metal3 s 54176 15648 54976 15768 6 keypad_input[14]
-port 10 nsew signal input
+port 8 nsew signal input
 rlabel metal3 s 0 12928 800 13048 6 keypad_input[15]
-port 11 nsew signal input
+port 9 nsew signal input
 rlabel metal3 s 0 6128 800 6248 6 keypad_input[1]
-port 12 nsew signal input
+port 10 nsew signal input
 rlabel metal3 s 0 55768 800 55888 6 keypad_input[2]
-port 13 nsew signal input
+port 11 nsew signal input
 rlabel metal2 s 38014 56320 38070 57120 6 keypad_input[3]
-port 14 nsew signal input
+port 12 nsew signal input
 rlabel metal3 s 0 19728 800 19848 6 keypad_input[4]
-port 15 nsew signal input
+port 13 nsew signal input
 rlabel metal3 s 0 1368 800 1488 6 keypad_input[5]
-port 16 nsew signal input
+port 14 nsew signal input
 rlabel metal2 s 23846 56320 23902 57120 6 keypad_input[6]
-port 17 nsew signal input
+port 15 nsew signal input
 rlabel metal3 s 54176 10208 54976 10328 6 keypad_input[7]
-port 18 nsew signal input
+port 16 nsew signal input
 rlabel metal3 s 54176 35368 54976 35488 6 keypad_input[8]
-port 19 nsew signal input
+port 17 nsew signal input
 rlabel metal2 s 47030 56320 47086 57120 6 keypad_input[9]
-port 20 nsew signal input
+port 18 nsew signal input
 rlabel metal2 s 53470 56320 53526 57120 6 memory_address_out[0]
-port 21 nsew signal output
+port 19 nsew signal output
 rlabel metal2 s 17406 56320 17462 57120 6 memory_address_out[10]
-port 22 nsew signal output
+port 20 nsew signal output
 rlabel metal2 s 28354 56320 28410 57120 6 memory_address_out[11]
-port 23 nsew signal output
+port 21 nsew signal output
 rlabel metal3 s 54176 40128 54976 40248 6 memory_address_out[12]
-port 24 nsew signal output
+port 22 nsew signal output
 rlabel metal2 s 50250 56320 50306 57120 6 memory_address_out[13]
-port 25 nsew signal output
+port 23 nsew signal output
 rlabel metal3 s 54176 7488 54976 7608 6 memory_address_out[14]
-port 26 nsew signal output
+port 24 nsew signal output
 rlabel metal2 s 45742 56320 45798 57120 6 memory_address_out[15]
-port 27 nsew signal output
+port 25 nsew signal output
 rlabel metal2 s 7746 0 7802 800 6 memory_address_out[1]
-port 28 nsew signal output
+port 26 nsew signal output
 rlabel metal3 s 54176 43528 54976 43648 6 memory_address_out[2]
-port 29 nsew signal output
+port 27 nsew signal output
 rlabel metal2 s 5170 56320 5226 57120 6 memory_address_out[3]
-port 30 nsew signal output
+port 28 nsew signal output
 rlabel metal2 s 31574 56320 31630 57120 6 memory_address_out[4]
-port 31 nsew signal output
+port 29 nsew signal output
 rlabel metal3 s 0 8168 800 8288 6 memory_address_out[5]
-port 32 nsew signal output
+port 30 nsew signal output
 rlabel metal2 s 34150 0 34206 800 6 memory_address_out[6]
-port 33 nsew signal output
+port 31 nsew signal output
 rlabel metal3 s 54176 17008 54976 17128 6 memory_address_out[7]
-port 34 nsew signal output
+port 32 nsew signal output
 rlabel metal3 s 0 22448 800 22568 6 memory_address_out[8]
-port 35 nsew signal output
+port 33 nsew signal output
 rlabel metal2 s 46386 0 46442 800 6 memory_address_out[9]
-port 36 nsew signal output
+port 34 nsew signal output
 rlabel metal3 s 54176 25168 54976 25288 6 memory_data_in[0]
-port 37 nsew signal input
+port 35 nsew signal input
 rlabel metal3 s 0 32648 800 32768 6 memory_data_in[1]
-port 38 nsew signal input
+port 36 nsew signal input
 rlabel metal2 s 24490 0 24546 800 6 memory_data_in[2]
-port 39 nsew signal input
+port 37 nsew signal input
 rlabel metal2 s 6458 56320 6514 57120 6 memory_data_in[3]
-port 40 nsew signal input
+port 38 nsew signal input
 rlabel metal3 s 0 37408 800 37528 6 memory_data_in[4]
-port 41 nsew signal input
+port 39 nsew signal input
 rlabel metal2 s 36082 56320 36138 57120 6 memory_data_in[5]
-port 42 nsew signal input
+port 40 nsew signal input
 rlabel metal2 s 27066 56320 27122 57120 6 memory_data_in[6]
-port 43 nsew signal input
+port 41 nsew signal input
 rlabel metal3 s 54176 38768 54976 38888 6 memory_data_in[7]
-port 44 nsew signal input
+port 42 nsew signal input
 rlabel metal3 s 54176 45568 54976 45688 6 memory_data_out[0]
-port 45 nsew signal output
+port 43 nsew signal output
 rlabel metal3 s 0 44208 800 44328 6 memory_data_out[1]
-port 46 nsew signal output
+port 44 nsew signal output
 rlabel metal3 s 54176 23808 54976 23928 6 memory_data_out[2]
-port 47 nsew signal output
+port 45 nsew signal output
 rlabel metal2 s 35438 0 35494 800 6 memory_data_out[3]
-port 48 nsew signal output
+port 46 nsew signal output
 rlabel metal2 s 29642 0 29698 800 6 memory_data_out[4]
-port 49 nsew signal output
+port 47 nsew signal output
 rlabel metal2 s 21914 0 21970 800 6 memory_data_out[5]
-port 50 nsew signal output
+port 48 nsew signal output
 rlabel metal3 s 54176 2048 54976 2168 6 memory_data_out[6]
-port 51 nsew signal output
+port 49 nsew signal output
 rlabel metal3 s 0 31288 800 31408 6 memory_data_out[7]
-port 52 nsew signal output
+port 50 nsew signal output
 rlabel metal3 s 54176 30608 54976 30728 6 memory_wr
-port 53 nsew signal output
+port 51 nsew signal output
 rlabel metal2 s 44454 56320 44510 57120 6 nrst
-port 54 nsew signal input
+port 52 nsew signal input
 rlabel metal3 s 0 52368 800 52488 6 programmable_gpio_in[0]
-port 55 nsew signal input
+port 53 nsew signal input
 rlabel metal3 s 0 39448 800 39568 6 programmable_gpio_in[1]
-port 56 nsew signal input
+port 54 nsew signal input
 rlabel metal2 s 13542 0 13598 800 6 programmable_gpio_in[2]
-port 57 nsew signal input
+port 55 nsew signal input
 rlabel metal3 s 54176 50328 54976 50448 6 programmable_gpio_in[3]
-port 58 nsew signal input
+port 56 nsew signal input
 rlabel metal3 s 54176 19048 54976 19168 6 programmable_gpio_in[4]
-port 59 nsew signal input
+port 57 nsew signal input
 rlabel metal2 s 16118 56320 16174 57120 6 programmable_gpio_in[5]
-port 60 nsew signal input
+port 58 nsew signal input
 rlabel metal2 s 54758 0 54814 800 6 programmable_gpio_in[6]
-port 61 nsew signal input
+port 59 nsew signal input
 rlabel metal3 s 0 21088 800 21208 6 programmable_gpio_in[7]
-port 62 nsew signal input
+port 60 nsew signal input
 rlabel metal2 s 22558 56320 22614 57120 6 programmable_gpio_out[0]
-port 63 nsew signal output
+port 61 nsew signal output
 rlabel metal2 s 41878 0 41934 800 6 programmable_gpio_out[1]
-port 64 nsew signal output
+port 62 nsew signal output
 rlabel metal3 s 54176 46928 54976 47048 6 programmable_gpio_out[2]
-port 65 nsew signal output
+port 63 nsew signal output
 rlabel metal3 s 54176 12248 54976 12368 6 programmable_gpio_out[3]
-port 66 nsew signal output
+port 64 nsew signal output
 rlabel metal2 s 23202 0 23258 800 6 programmable_gpio_out[4]
-port 67 nsew signal output
+port 65 nsew signal output
 rlabel metal3 s 0 36048 800 36168 6 programmable_gpio_out[5]
-port 68 nsew signal output
+port 66 nsew signal output
 rlabel metal2 s 1306 0 1362 800 6 programmable_gpio_out[6]
-port 69 nsew signal output
+port 67 nsew signal output
 rlabel metal3 s 0 24488 800 24608 6 programmable_gpio_out[7]
-port 70 nsew signal output
+port 68 nsew signal output
 rlabel metal2 s 40590 0 40646 800 6 programmable_gpio_wr[0]
-port 71 nsew signal output
+port 69 nsew signal output
 rlabel metal3 s 54176 34008 54976 34128 6 programmable_gpio_wr[1]
-port 72 nsew signal output
+port 70 nsew signal output
 rlabel metal2 s 11610 56320 11666 57120 6 programmable_gpio_wr[2]
-port 73 nsew signal output
+port 71 nsew signal output
 rlabel metal3 s 0 10888 800 11008 6 programmable_gpio_wr[3]
-port 74 nsew signal output
+port 72 nsew signal output
 rlabel metal3 s 54176 53728 54976 53848 6 programmable_gpio_wr[4]
-port 75 nsew signal output
+port 73 nsew signal output
 rlabel metal2 s 25134 56320 25190 57120 6 programmable_gpio_wr[5]
-port 76 nsew signal output
+port 74 nsew signal output
 rlabel metal2 s 1950 56320 2006 57120 6 programmable_gpio_wr[6]
-port 77 nsew signal output
+port 75 nsew signal output
 rlabel metal3 s 0 40808 800 40928 6 programmable_gpio_wr[7]
-port 78 nsew signal output
+port 76 nsew signal output
 rlabel metal2 s 19338 56320 19394 57120 6 ss0[0]
-port 79 nsew signal output
+port 77 nsew signal output
 rlabel metal2 s 12898 56320 12954 57120 6 ss0[1]
-port 80 nsew signal output
+port 78 nsew signal output
 rlabel metal2 s 8390 56320 8446 57120 6 ss0[2]
-port 81 nsew signal output
+port 79 nsew signal output
 rlabel metal3 s 54176 20408 54976 20528 6 ss0[3]
-port 82 nsew signal output
+port 80 nsew signal output
 rlabel metal3 s 54176 55088 54976 55208 6 ss0[4]
-port 83 nsew signal output
+port 81 nsew signal output
 rlabel metal2 s 4526 0 4582 800 6 ss0[5]
-port 84 nsew signal output
+port 82 nsew signal output
 rlabel metal3 s 54176 4088 54976 4208 6 ss0[6]
-port 85 nsew signal output
+port 83 nsew signal output
 rlabel metal3 s 54176 21768 54976 21888 6 ss0[7]
-port 86 nsew signal output
+port 84 nsew signal output
 rlabel metal2 s 34794 56320 34850 57120 6 ss1[0]
-port 87 nsew signal output
+port 85 nsew signal output
 rlabel metal2 s 3238 56320 3294 57120 6 ss1[1]
-port 88 nsew signal output
+port 86 nsew signal output
 rlabel metal2 s 51538 0 51594 800 6 ss1[2]
-port 89 nsew signal output
+port 87 nsew signal output
 rlabel metal3 s 0 29248 800 29368 6 ss1[3]
-port 90 nsew signal output
+port 88 nsew signal output
 rlabel metal3 s 0 9528 800 9648 6 ss1[4]
-port 91 nsew signal output
+port 89 nsew signal output
 rlabel metal2 s 54758 56320 54814 57120 6 ss1[5]
-port 92 nsew signal output
+port 90 nsew signal output
 rlabel metal2 s 12254 0 12310 800 6 ss1[6]
-port 93 nsew signal output
+port 91 nsew signal output
 rlabel metal3 s 0 25848 800 25968 6 ss1[7]
-port 94 nsew signal output
+port 92 nsew signal output
 rlabel metal2 s 32218 0 32274 800 6 ss2[0]
-port 95 nsew signal output
+port 93 nsew signal output
 rlabel metal2 s 52826 0 52882 800 6 ss2[1]
-port 96 nsew signal output
+port 94 nsew signal output
 rlabel metal2 s 20626 56320 20682 57120 6 ss2[2]
-port 97 nsew signal output
+port 95 nsew signal output
 rlabel metal2 s 43810 0 43866 800 6 ss2[3]
-port 98 nsew signal output
+port 96 nsew signal output
 rlabel metal2 s 5814 0 5870 800 6 ss2[4]
-port 99 nsew signal output
+port 97 nsew signal output
 rlabel metal2 s 19982 0 20038 800 6 ss2[5]
-port 100 nsew signal output
+port 98 nsew signal output
 rlabel metal3 s 54176 5448 54976 5568 6 ss2[6]
-port 101 nsew signal output
+port 99 nsew signal output
 rlabel metal3 s 54176 42168 54976 42288 6 ss2[7]
-port 102 nsew signal output
+port 100 nsew signal output
 rlabel metal3 s 54176 28568 54976 28688 6 ss3[0]
-port 103 nsew signal output
+port 101 nsew signal output
 rlabel metal2 s 45098 0 45154 800 6 ss3[1]
-port 104 nsew signal output
+port 102 nsew signal output
 rlabel metal3 s 0 34008 800 34128 6 ss3[2]
-port 105 nsew signal output
+port 103 nsew signal output
 rlabel metal3 s 54176 13608 54976 13728 6 ss3[3]
-port 106 nsew signal output
+port 104 nsew signal output
 rlabel metal3 s 0 45568 800 45688 6 ss3[4]
-port 107 nsew signal output
+port 105 nsew signal output
 rlabel metal3 s 54176 31968 54976 32088 6 ss3[5]
-port 108 nsew signal output
+port 106 nsew signal output
 rlabel metal3 s 54176 48288 54976 48408 6 ss3[6]
-port 109 nsew signal output
+port 107 nsew signal output
 rlabel metal2 s 49606 0 49662 800 6 ss3[7]
-port 110 nsew signal output
+port 108 nsew signal output
 rlabel metal3 s 54176 51688 54976 51808 6 ss4[0]
-port 111 nsew signal output
+port 109 nsew signal output
 rlabel metal3 s 0 47608 800 47728 6 ss4[1]
-port 112 nsew signal output
+port 110 nsew signal output
 rlabel metal3 s 0 2728 800 2848 6 ss4[2]
-port 113 nsew signal output
+port 111 nsew signal output
 rlabel metal3 s 0 17688 800 17808 6 ss4[3]
-port 114 nsew signal output
+port 112 nsew signal output
 rlabel metal2 s 18 0 74 800 6 ss4[4]
-port 115 nsew signal output
+port 113 nsew signal output
 rlabel metal2 s 37370 0 37426 800 6 ss4[5]
-port 116 nsew signal output
+port 114 nsew signal output
 rlabel metal3 s 0 54408 800 54528 6 ss4[6]
-port 117 nsew signal output
+port 115 nsew signal output
 rlabel metal2 s 14186 56320 14242 57120 6 ss4[7]
-port 118 nsew signal output
+port 116 nsew signal output
 rlabel metal2 s 33506 56320 33562 57120 6 ss5[0]
-port 119 nsew signal output
+port 117 nsew signal output
 rlabel metal3 s 0 42848 800 42968 6 ss5[1]
-port 120 nsew signal output
+port 118 nsew signal output
 rlabel metal2 s 9034 0 9090 800 6 ss5[2]
-port 121 nsew signal output
+port 119 nsew signal output
 rlabel metal2 s 2594 0 2650 800 6 ss5[3]
-port 122 nsew signal output
+port 120 nsew signal output
 rlabel metal2 s 42522 56320 42578 57120 6 ss5[4]
-port 123 nsew signal output
+port 121 nsew signal output
 rlabel metal2 s 30286 56320 30342 57120 6 ss5[5]
-port 124 nsew signal output
+port 122 nsew signal output
 rlabel metal2 s 26422 0 26478 800 6 ss5[6]
-port 125 nsew signal output
+port 123 nsew signal output
 rlabel metal2 s 48962 56320 49018 57120 6 ss5[7]
-port 126 nsew signal output
+port 124 nsew signal output
 rlabel metal3 s 54176 8848 54976 8968 6 ss6[0]
-port 127 nsew signal output
+port 125 nsew signal output
 rlabel metal3 s 0 51008 800 51128 6 ss6[1]
-port 128 nsew signal output
+port 126 nsew signal output
 rlabel metal3 s 0 16328 800 16448 6 ss6[2]
-port 129 nsew signal output
+port 127 nsew signal output
 rlabel metal2 s 10966 0 11022 800 6 ss6[3]
-port 130 nsew signal output
+port 128 nsew signal output
 rlabel metal2 s 18694 0 18750 800 6 ss6[4]
-port 131 nsew signal output
+port 129 nsew signal output
 rlabel metal3 s 0 4768 800 4888 6 ss6[5]
-port 132 nsew signal output
+port 130 nsew signal output
 rlabel metal3 s 54176 36728 54976 36848 6 ss6[6]
-port 133 nsew signal output
+port 131 nsew signal output
 rlabel metal2 s 30930 0 30986 800 6 ss6[7]
-port 134 nsew signal output
+port 132 nsew signal output
 rlabel metal2 s 41234 56320 41290 57120 6 ss7[0]
-port 135 nsew signal output
+port 133 nsew signal output
 rlabel metal2 s 39302 56320 39358 57120 6 ss7[1]
-port 136 nsew signal output
+port 134 nsew signal output
 rlabel metal2 s 662 56320 718 57120 6 ss7[2]
-port 137 nsew signal output
+port 135 nsew signal output
 rlabel metal2 s 9678 56320 9734 57120 6 ss7[3]
-port 138 nsew signal output
+port 136 nsew signal output
 rlabel metal2 s 38658 0 38714 800 6 ss7[4]
-port 139 nsew signal output
+port 137 nsew signal output
 rlabel metal3 s 0 14288 800 14408 6 ss7[5]
-port 140 nsew signal output
+port 138 nsew signal output
 rlabel metal3 s 0 48968 800 49088 6 ss7[6]
-port 141 nsew signal output
+port 139 nsew signal output
 rlabel metal3 s 54176 27208 54976 27328 6 ss7[7]
-port 142 nsew signal output
+port 140 nsew signal output
+rlabel metal4 s 4208 2128 4528 54992 6 vccd1
+port 141 nsew power bidirectional
+rlabel metal4 s 34928 2128 35248 54992 6 vccd1
+port 141 nsew power bidirectional
+rlabel metal4 s 19568 2128 19888 54992 6 vssd1
+port 142 nsew ground bidirectional
+rlabel metal4 s 50288 2128 50608 54992 6 vssd1
+port 142 nsew ground bidirectional
 << properties >>
 string FIXED_BBOX 0 0 54976 57120
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 13773614
-string GDS_FILE /home/designer-25/CUP/openlane/z23/runs/23_09_04_12_19/results/signoff/z23.magic.gds
+string GDS_END 13773626
+string GDS_FILE /home/designer-05/work/Caravel_STARS_2023/openlane/z23/runs/23_09_05_08_58/results/signoff/z23.magic.gds
 string GDS_START 1374044
 << end >>
 
