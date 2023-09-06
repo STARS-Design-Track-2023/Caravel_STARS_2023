@@ -129,14 +129,14 @@
         "dir::../../spef/multicorner/z23.max.spef"
     ],
     "VSRC_LOC_FILES": [
-        "vccd1 /home/instructor-07/Caravel_STARS_2023/openlane/user_project_wrapper/vsrc/upw_vccd1_vsrc.loc",
-        "vccd2 /home/instructor-07/Caravel_STARS_2023/openlane/user_project_wrapper/vsrc/upw_vccd2_vsrc.loc",
-        "vdda1 /home/instructor-07/Caravel_STARS_2023/openlane/user_project_wrapper/vsrc/upw_vdda1_vsrc.loc",
-        "vdda2 /home/instructor-07/Caravel_STARS_2023/openlane/user_project_wrapper/vsrc/upw_vdda2_vsrc.loc",
-        "vssa1 /home/instructor-07/Caravel_STARS_2023/openlane/user_project_wrapper/vsrc/upw_vssa1_vsrc.loc",
-        "vssa2 /home/instructor-07/Caravel_STARS_2023/openlane/user_project_wrapper/vsrc/upw_vssa2_vsrc.loc",
-        "vssd1 /home/instructor-07/Caravel_STARS_2023/openlane/user_project_wrapper/vsrc/upw_vssd1_vsrc.loc",
-        "vssd2 /home/instructor-07/Caravel_STARS_2023/openlane/user_project_wrapper/vsrc/upw_vssd2_vsrc.loc"
+        "vccd1 ../../openlane/user_project_wrapper/vsrc/upw_vccd1_vsrc.loc",
+        "vccd2 ../../openlane/user_project_wrapper/vsrc/upw_vccd2_vsrc.loc",
+        "vdda1 ../../openlane/user_project_wrapper/vsrc/upw_vdda1_vsrc.loc",
+        "vdda2 ../../openlane/user_project_wrapper/vsrc/upw_vdda2_vsrc.loc",
+        "vssa1 ../../openlane/user_project_wrapper/vsrc/upw_vssa1_vsrc.loc",
+        "vssa2 ../../openlane/user_project_wrapper/vsrc/upw_vssa2_vsrc.loc",
+        "vssd1 ../../openlane/user_project_wrapper/vsrc/upw_vssd1_vsrc.loc",
+        "vssd2 ../../openlane/user_project_wrapper/vsrc/upw_vssd2_vsrc.loc"
     ],
     "BASE_SDC_FILE": "dir::base_user_project_wrapper.sdc",
     "IO_SYNC": 1,
