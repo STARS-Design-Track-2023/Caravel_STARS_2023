@@ -17,6 +17,10 @@ module EightyTwos_Wrapper (
     wire store_en;
 
     Eighty_Twos DESIGN (
+`ifdef USE_POWER_PINS
+	.vccd1(vccd1),	// User area 1 1.8V power
+	.vssd1(vssd1),	// User area 1 digital ground
+`endif
         .clk(clk),
         .nrst(n_rst),
         .cs(ncs),

@@ -22,6 +22,10 @@ module Geriatrics_Wrapper (
 
     // DESIGN
     z23 DESIGN (
+`ifdef USE_POWER_PINS
+	.vccd1(vccd1),	// User area 1 1.8V power
+	.vssd1(vssd1),	// User area 1 digital ground
+`endif
         .clk(clk),
         .nrst(n_rst),
         .memory_data_in(gpio_in[23:16]),
