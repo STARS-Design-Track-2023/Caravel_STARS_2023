@@ -22,19 +22,9 @@
     "CLOCK_PERIOD": 100,
     "CLOCK_PORT": "wb_clk_i",
     "CLOCK_NET": "mprj.clk",
+    "FP_PDN_CFG": "dir::/pdn_cfg.tcl",
     "FP_PDN_MACRO_HOOKS": [
-        "mprj.design_1.DESIGN vccd1 vssd1 vccd1 vssd1",
-        "mprj.design_2.DESIGN vccd1 vssd1 vccd1 vssd1",
-        "mprj.design_3.DESIGN vccd1 vssd1 vccd1 vssd1",
-        "mprj.design_4.DESIGN vccd1 vssd1 vccd1 vssd1",
-        "mprj.design_5.DESIGN vccd1 vssd1 vccd1 vssd1",
-        "mprj.design_6.DESIGN vccd1 vssd1 vccd1 vssd1",
-        "mprj.design_7.DESIGN vccd1 vssd1 vccd1 vssd1",
-        "mprj.design_8.DESIGN vccd1 vssd1 vccd1 vssd1",
-        "mprj.design_9.synth vccd1 vssd1 vccd1 vssd1",
-        "mprj.design_10.DESIGN vccd1 vssd1 vccd1 vssd1",
-        "mprj.design_11.DESIGN vccd1 vssd1 vccd1 vssd1",
-        "mprj.design_12.DUT vccd1 vssd1 vccd1 vssd1"
+        "mprj.* vccd1 vssd1 vccd1 vssd1"
     ],
     "MACRO_PLACEMENT_CFG": "dir::macro.cfg",
     "MAGIC_DEF_LABELS": 0,
@@ -161,8 +151,8 @@
     "GRT_REPAIR_ANTENNAS": 1,
     "RUN_FILL_INSERTION": 1,
     "RUN_TAP_DECAP_INSERTION": 1,
-    "FP_PDN_VPITCH": 180,
-    "FP_PDN_HPITCH": 180,
+    "FP_PDN_VPITCH": 60,
+    "FP_PDN_HPITCH": 60,
     "RUN_CTS": 1,
     "RUN_IRDROP_REPORT": 0,
     "FP_PDN_VOFFSET": 5,
@@ -173,10 +163,16 @@
     "RUN_KLAYOUT_XOR": 0,
     "UNIT": 2.4,
     "VDD_NETS": [
-        "vccd1"
+        "vccd1",
+        "vccd2",
+        "vdda1",
+        "vdda2"
     ],
     "GND_NETS": [
-        "vssd1"
+        "vssd1",
+        "vssd2",
+        "vssa1",
+        "vssa2"
     ],
     "FP_IO_VEXTEND": "expr::2 * $UNIT",
     "FP_IO_HEXTEND": "expr::2 * $UNIT",
@@ -201,17 +197,5 @@
         "RT_MAX_LAYER": "met4",
         "DIE_AREA": "0 0 2920 3520",
         "FP_DEF_TEMPLATE": "dir::fixed_dont_change/user_project_wrapper.def"
-        }
-    },
-    "pdk::gf180mcuC": {
-        "STD_CELL_LIBRARY": "gf180mcu_fd_sc_mcu7t5v0",
-        "FP_PDN_CHECK_NODES": 0,
-        "FP_PDN_ENABLE_RAILS": 0,
-        "RT_MAX_LAYER": "Metal4",
-        "DIE_AREA": "0 0 3000 3000",
-        "FP_DEF_TEMPLATE": "dir::fixed_dont_change/user_project_wrapper_gf180mcu.def",
-        "PL_OPENPHYSYN_OPTIMIZATIONS": 0,
-        "DIODE_INSERTION_STRATEGY": 0,
-        "MAGIC_WRITE_FULL_LEF": 0
     }
 }
