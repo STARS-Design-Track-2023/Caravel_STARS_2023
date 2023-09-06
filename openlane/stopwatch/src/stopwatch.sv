@@ -1,4 +1,10 @@
 module stopwatch (
+
+
+`ifdef USE_POWER_PINS
+    inout vccd1,	// User area 1 1.8V supply
+    inout vssd1,	// User area 1 digital ground
+`endif
     input logic clk, nrst, pb_0, pb_1,
     output logic [6:0] out_0, out_1, out_2, out_3,
     output logic time_done

@@ -1,4 +1,9 @@
-module sass_synth (input logic [14:0] piano_keys,
+module sass_synth (
+`ifdef USE_POWER_PINS
+    inout vccd1,	// User area 1 1.8V supply
+    inout vssd1,	// User area 1 digital ground
+`endif
+    input logic [14:0] piano_keys,
                    input logic cs,
                    input logic n_rst, hwclk,
                    input logic tempo_select, seq_power, seq_play,

@@ -2,6 +2,12 @@
 
 module top_asic 
 (
+
+
+`ifdef USE_POWER_PINS
+    inout vccd1,	// User area 1 1.8V supply
+    inout vssd1,	// User area 1 digital ground
+`endif
   // I/O ports
   input  logic clk, reset,
   input  logic [14:0] pb,

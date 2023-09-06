@@ -4,7 +4,14 @@ Author - Diego Lopez
 Date   - June 22, 2023 
 TB Passed!
 *************************************************************************/
-module Synthia(input logic [12:0] pb, input logic clk, reset, modes, octaves, output logic PWM_o);
+module Synthia(
+      
+
+`ifdef USE_POWER_PINS
+    inout vccd1,	// User area 1 1.8V supply
+    inout vssd1,	// User area 1 digital ground
+`endif
+      input logic [12:0] pb, input logic clk, reset, modes, octaves, output logic PWM_o);
 logic oct_down, wave_next;
 logic [1:0] octave, wave_type;
 logic [7:0] s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13; 

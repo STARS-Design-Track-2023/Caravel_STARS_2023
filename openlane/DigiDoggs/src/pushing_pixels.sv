@@ -9,6 +9,11 @@
 
 
 module pushing_pixels (
+
+`ifdef USE_POWER_PINS
+    inout vccd1,	// User area 1 1.8V supply
+    inout vssd1,	// User area 1 digital ground
+`endif
     input logic cs, // Chip Select (Active Low)
     input logic clk, nrst, spi_clk, spi_en,
     input logic spi_data,
