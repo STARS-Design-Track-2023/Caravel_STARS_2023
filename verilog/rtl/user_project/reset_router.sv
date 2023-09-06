@@ -123,7 +123,7 @@ module async_reset_sync (
         end 
         else begin
             n_rst <= next_n_rst;
-            rff <= asyncrst_n;
+            rff <= 1'b1;
         end
     end
 endmodule

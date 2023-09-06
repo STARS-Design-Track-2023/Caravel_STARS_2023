@@ -2,4 +2,6 @@
 # yaml file contain general design information that would mostly need to be updated in the first run only 
 includes: 
     - DigiDoggs/DigiDoggs.yaml
+    - GuitarVillains/GuitarVillains.yaml
+    - MatrixMonSTARS/MatrixMonSTARS.yaml
     - outel8227/outel8227.yaml
