@@ -173,10 +173,16 @@
     "RUN_KLAYOUT_XOR": 0,
     "UNIT": 2.4,
     "VDD_NETS": [
-        "vccd1"
+        "vccd1",
+        "vccd2",
+        "vdda1",
+        "vdda2"
     ],
     "GND_NETS": [
-        "vssd1"
+        "vssd1",
+        "vssd2",
+        "vssa1",
+        "vssa2"
     ],
     "FP_IO_VEXTEND": "expr::2 * $UNIT",
     "FP_IO_HEXTEND": "expr::2 * $UNIT",
