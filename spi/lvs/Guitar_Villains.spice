@@ -176,6 +176,10 @@
 .subckt sky130_fd_sc_hd__o211a_1 A1 A2 B1 C1 VGND VNB VPB VPWR X
 .ends
 
+* Black-box entry subcircuit for sky130_fd_sc_hd__diode_2 abstract view
+.subckt sky130_fd_sc_hd__diode_2 DIODE VGND VNB VPB VPWR
+.ends
+
 * Black-box entry subcircuit for sky130_fd_sc_hd__and3b_1 abstract view
 .subckt sky130_fd_sc_hd__and3b_1 A_N B C VGND VNB VPB VPWR X
 .ends
@@ -596,10 +600,6 @@
 .subckt sky130_fd_sc_hd__o31a_4 A1 A2 A3 B1 VGND VNB VPB VPWR X
 .ends
 
-* Black-box entry subcircuit for sky130_fd_sc_hd__diode_2 abstract view
-.subckt sky130_fd_sc_hd__diode_2 DIODE VGND VNB VPB VPWR
-.ends
-
 * Black-box entry subcircuit for sky130_fd_sc_hd__o211a_4 abstract view
 .subckt sky130_fd_sc_hd__o211a_4 A1 A2 B1 C1 VGND VNB VPB VPWR X
 .ends
@@ -874,6 +874,7 @@ XFILLER_0_109_653 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_8
 XFILLER_0_108_141 vssd1 vssd1 vccd1 vccd1 sky130_ef_sc_hd__decap_12
 XFILLER_0_66_595 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__fill_1
 XFILLER_0_81_554 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_6
+XANTENNA_5 net22 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__diode_2
 XFILLER_0_111_306 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__fill_2
 XFILLER_0_22_643 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__fill_1
 XFILLER_0_104_391 vssd1 vssd1 vccd1 vccd1 sky130_ef_sc_hd__decap_12
@@ -1223,6 +1224,7 @@ XFILLER_0_81_500 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__fill_1
 XFILLER_0_66_585 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_3
 XFILLER_0_108_153 vssd1 vssd1 vccd1 vccd1 sky130_ef_sc_hd__decap_12
 XFILLER_0_108_197 vssd1 vssd1 vccd1 vccd1 sky130_ef_sc_hd__decap_12
+XANTENNA_6 net29 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__diode_2
 XFILLER_0_1_505 vssd1 vssd1 vccd1 vccd1 sky130_ef_sc_hd__decap_12
 XFILLER_0_6_29 vssd1 vssd1 vccd1 vccd1 sky130_ef_sc_hd__decap_12
 XFILLER_0_67_15 vssd1 vssd1 vccd1 vccd1 sky130_ef_sc_hd__decap_12
@@ -1876,6 +1878,7 @@ XFILLER_0_110_523 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_8
 XFILLER_0_97_69 vssd1 vssd1 vccd1 vccd1 sky130_ef_sc_hd__decap_12
 X_3452_ _0693_ vssd1 vssd1 vccd1 vccd1 _0815_ sky130_fd_sc_hd__inv_2
 XFILLER_0_40_657 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_6
+XFILLER_0_110_556 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__fill_1
 X_6171_ clknet_leaf_43_clk disp_song.um.drum.next_d1\[3\] net65 vssd1 vssd1 vccd1
 + vccd1 disp_song.display_note1\[3\] sky130_fd_sc_hd__dfrtp_1
 X_3383_ _0739_ _0745_ _0743_ vssd1 vssd1 vccd1 vccd1 _0746_ sky130_fd_sc_hd__a21oi_1
@@ -3036,9 +3039,10 @@ XFILLER_0_24_134 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_6
 XFILLER_0_52_443 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_8
 XFILLER_0_12_307 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__fill_1
 XFILLER_0_97_39 vssd1 vssd1 vccd1 vccd1 sky130_ef_sc_hd__decap_12
-XFILLER_0_110_548 vssd1 vssd1 vccd1 vccd1 sky130_ef_sc_hd__decap_12
+XFILLER_0_110_548 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_8
 X_3380_ _0741_ _0742_ vssd1 vssd1 vccd1 vccd1 _0743_ sky130_fd_sc_hd__nor2_1
 XFILLER_0_20_340 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__fill_1
+XFILLER_0_110_559 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__fill_2
 XFILLER_0_20_384 vssd1 vssd1 vccd1 vccd1 sky130_ef_sc_hd__decap_12
 X_5050_ _2666_ _2085_ _1982_ _2679_ vssd1 vssd1 vccd1 vccd1 _2141_ sky130_fd_sc_hd__o2bb2a_2
 X_4001_ _1289_ _1310_ _1312_ _1314_ vssd1 vssd1 vccd1 vccd1 game.scoring_button_2.next_num_misses\[1\]
@@ -3300,11 +3304,11 @@ X_4447_ game.addhits.a\[10\] _1653_ vssd1 vssd1 vccd1 vccd1 _1657_ sky130_fd_sc_
 Xhold155 game.addhits.a\[11\] vssd1 vssd1 vccd1 vccd1 net228 sky130_fd_sc_hd__dlygate4sd3_1
 Xhold188 game.padded_notes2\[16\] vssd1 vssd1 vccd1 vccd1 net261 sky130_fd_sc_hd__dlygate4sd3_1
 XFILLER_0_0_181 vssd1 vssd1 vccd1 vccd1 sky130_ef_sc_hd__decap_12
+X_6117_ clknet_leaf_40_clk disp_song.um.drum.next_note1\[29\] net66 vssd1 vssd1 vccd1
++ vccd1 disp_song.note1\[29\] sky130_fd_sc_hd__dfrtp_1
 X_4378_ _1602_ vssd1 vssd1 vccd1 vccd1 game.scoring_button_2.next_flash_counter_1\[18\]
 + sky130_fd_sc_hd__clkbuf_1
 XTAP_460 vssd1 vccd1 sky130_fd_sc_hd__tapvpwrvgnd_1
-X_6117_ clknet_leaf_40_clk disp_song.um.drum.next_note1\[29\] net66 vssd1 vssd1 vccd1
-+ vccd1 disp_song.note1\[29\] sky130_fd_sc_hd__dfrtp_1
 XTAP_471 vssd1 vccd1 sky130_fd_sc_hd__tapvpwrvgnd_1
 XTAP_482 vssd1 vccd1 sky130_fd_sc_hd__tapvpwrvgnd_1
 XTAP_493 vssd1 vccd1 sky130_fd_sc_hd__tapvpwrvgnd_1
@@ -9433,9 +9437,9 @@ XFILLER_0_45_254 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_3
 XFILLER_0_73_596 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__fill_1
 X_3888_ _0933_ _1221_ vssd1 vssd1 vccd1 vccd1 _1222_ sky130_fd_sc_hd__and2_1
 X_2839_ _0265_ _0266_ disp_song.note2\[0\] vssd1 vssd1 vccd1 vccd1 _0267_ sky130_fd_sc_hd__o21a_1
-XFILLER_0_14_641 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_3
 X_5627_ game.flash_counter\[21\] game.flash_counter\[20\] vssd1 vssd1 vccd1 vccd1
 + _2604_ sky130_fd_sc_hd__or2b_1
+XFILLER_0_14_641 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_3
 XFILLER_0_103_337 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_3
 X_5558_ disp_song.note1\[17\] game.padded_notes1\[16\] _2541_ vssd1 vssd1 vccd1 vccd1
 + _2564_ sky130_fd_sc_hd__mux2_1
@@ -12282,7 +12286,7 @@ XFILLER_0_53_657 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_6
 XFILLER_0_20_69 vssd1 vssd1 vccd1 vccd1 sky130_ef_sc_hd__decap_12
 XFILLER_0_33_370 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_3
 XFILLER_0_96_29 vssd1 vssd1 vccd1 vccd1 sky130_ef_sc_hd__decap_12
-XFILLER_0_0_426 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_4
+XFILLER_0_0_426 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__fill_2
 XTAP_705 vssd1 vccd1 sky130_fd_sc_hd__tapvpwrvgnd_1
 XTAP_716 vssd1 vccd1 sky130_fd_sc_hd__tapvpwrvgnd_1
 XTAP_727 vssd1 vccd1 sky130_fd_sc_hd__tapvpwrvgnd_1
@@ -12768,7 +12772,6 @@ XFILLER_0_31_105 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__fill_1
 X_4577_ net248 _1767_ vssd1 vssd1 vccd1 vccd1 _1769_ sky130_fd_sc_hd__nand2_1
 XFILLER_0_31_138 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_6
 XFILLER_0_97_51 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_4
-XFILLER_0_110_560 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__fill_1
 X_3528_ _0675_ _0890_ vssd1 vssd1 vccd1 vccd1 _0891_ sky130_fd_sc_hd__nor2_1
 X_3459_ _0752_ vssd1 vssd1 vccd1 vccd1 _0822_ sky130_fd_sc_hd__inv_2
 XFILLER_0_99_617 vssd1 vssd1 vccd1 vccd1 sky130_ef_sc_hd__decap_12
@@ -12801,9 +12804,9 @@ XFILLER_0_26_477 vssd1 vssd1 vccd1 vccd1 sky130_ef_sc_hd__decap_12
 X_4500_ game.addmisses.a\[1\] game.addmisses.a\[0\] game.addmisses.a\[2\] vssd1 vssd1
 + vccd1 vccd1 _1702_ sky130_fd_sc_hd__a21oi_1
 XFILLER_0_53_263 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_4
+XANTENNA_1 _1201_ vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__diode_2
 XFILLER_0_101_3 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_3
 XFILLER_0_13_149 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_4
-XANTENNA_1 net16 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__diode_2
 X_4431_ game.addhits.a\[7\] _1644_ vssd1 vssd1 vccd1 vccd1 _1645_ sky130_fd_sc_hd__nor2_1
 XFILLER_0_41_447 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__fill_1
 X_4362_ game.scoring_button_2.flash_counter_1\[13\] game.scoring_button_2.flash_counter_1\[12\]
@@ -13158,7 +13161,7 @@ X_2760_ modetrans.mode\[5\] _2658_ vssd1 vssd1 vccd1 vccd1 _0200_ sky130_fd_sc_h
 X_2691_ _2654_ _2664_ vssd1 vssd1 vccd1 vccd1 _2665_ sky130_fd_sc_hd__and2_1
 XFILLER_0_26_467 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_8
 XFILLER_0_26_489 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__fill_2
-XANTENNA_2 net18 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__diode_2
+XANTENNA_2 _1215_ vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__diode_2
 X_4430_ _1642_ _1643_ _1638_ vssd1 vssd1 vccd1 vccd1 _1644_ sky130_fd_sc_hd__or3_1
 X_6100_ clknet_leaf_37_clk disp_song.um.drum.next_note1\[12\] net67 vssd1 vssd1 vccd1
 + vccd1 disp_song.note1\[12\] sky130_fd_sc_hd__dfrtp_1
@@ -13512,7 +13515,7 @@ XFILLER_0_5_307 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_6
 X_2690_ disp_song.um.idx_note2\[1\] _2663_ vssd1 vssd1 vccd1 vccd1 _2664_ sky130_fd_sc_hd__xor2_2
 XFILLER_0_41_405 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__fill_2
 XFILLER_0_53_276 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_4
-XANTENNA_3 net22 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__diode_2
+XANTENNA_3 net16 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__diode_2
 XFILLER_0_41_449 vssd1 vssd1 vccd1 vccd1 sky130_ef_sc_hd__decap_12
 XFILLER_0_6_15 vssd1 vssd1 vccd1 vccd1 sky130_ef_sc_hd__decap_12
 X_4360_ net173 _1586_ _1589_ vssd1 vssd1 vccd1 vccd1 game.scoring_button_2.next_flash_counter_1\[13\]
@@ -13870,7 +13873,7 @@ XFILLER_0_66_572 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__decap_4
 XFILLER_0_26_447 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__fill_2
 XFILLER_0_14_609 vssd1 vssd1 vccd1 vccd1 sky130_ef_sc_hd__decap_12
 XFILLER_0_108_195 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__fill_1
-XANTENNA_4 net29 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__diode_2
+XANTENNA_4 net18 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__diode_2
 XFILLER_0_1_503 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__fill_1
 XFILLER_0_6_27 vssd1 vssd1 vccd1 vccd1 sky130_fd_sc_hd__fill_1
 X_3310_ _0671_ _0667_ _0668_ vssd1 vssd1 vccd1 vccd1 _0673_ sky130_fd_sc_hd__or3_1

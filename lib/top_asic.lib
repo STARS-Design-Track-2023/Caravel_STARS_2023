@@ -47,7 +47,7 @@ library (top_asic) {
   cell ("top_asic") {
     pin("clk") {
       direction : input;
-      capacitance : 0.0687;
+      capacitance : 0.0686;
     }
     pin("reset") {
       direction : input;
@@ -56,20 +56,20 @@ library (top_asic) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("0.73931");
+          values("0.72845");
 	}
 	fall_constraint(scalar) {
-          values("-0.94861");
+          values("-0.94614");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("6.16862");
+          values("6.17296");
 	}
 	fall_constraint(scalar) {
-          values("5.64663");
+          values("5.64954");
 	}
       }
     }
@@ -80,13 +80,13 @@ library (top_asic) {
         related_pin : "clk";
         timing_type : rising_edge;
 	cell_rise(template_1) {
-          values("1.62981,1.63481,1.64685,1.67631,1.75677,1.98995,2.67456");
+          values("1.63203,1.63702,1.64907,1.67852,1.75898,1.99217,2.67677");
 	}
 	rise_transition(template_1) {
           values("0.01731,0.02174,0.03422,0.07132,0.18448,0.52122,1.50682");
 	}
 	cell_fall(template_1) {
-          values("1.68823,1.69297,1.70325,1.72426,1.76964,1.88574,2.22004");
+          values("1.69045,1.69518,1.70547,1.72648,1.77185,1.88796,2.22226");
 	}
 	fall_transition(template_1) {
           values("0.01770,0.02064,0.02791,0.04578,0.09396,0.24255,0.69524");
@@ -104,16 +104,16 @@ library (top_asic) {
         related_pin : "clk";
         timing_type : rising_edge;
 	cell_rise(template_1) {
-          values("1.87048,1.87524,1.88738,1.91557,1.98902,2.21213,2.92625");
+          values("1.87553,1.88029,1.89245,1.92065,1.99411,2.21721,2.93142");
 	}
 	rise_transition(template_1) {
-          values("0.02675,0.02974,0.03896,0.06695,0.16222,0.48211,1.50579");
+          values("0.02682,0.02980,0.03902,0.06698,0.16223,0.48211,1.50581");
 	}
 	cell_fall(template_1) {
-          values("1.88334,1.88736,1.89782,1.92095,1.97505,2.12755,2.60836");
+          values("1.88751,1.89153,1.90200,1.92512,1.97923,2.13172,2.61255");
 	}
 	fall_transition(template_1) {
-          values("0.02126,0.02372,0.03096,0.05024,0.10905,0.30687,0.94864");
+          values("0.02127,0.02373,0.03097,0.05025,0.10905,0.30687,0.94865");
 	}
       }
     }
@@ -124,16 +124,16 @@ library (top_asic) {
         related_pin : "clk";
         timing_type : rising_edge;
 	cell_rise(template_1) {
-          values("1.90178,1.90666,1.91901,1.94739,2.02094,2.24399,2.95951");
+          values("1.90861,1.91349,1.92587,1.95427,2.02783,2.25087,2.96654");
 	}
 	rise_transition(template_1) {
-          values("0.02779,0.03068,0.03980,0.06745,0.16229,0.48215,1.50600");
+          values("0.02790,0.03078,0.03989,0.06750,0.16230,0.48216,1.50602");
 	}
 	cell_fall(template_1) {
-          values("1.90504,1.90908,1.91953,1.94269,1.99688,2.14936,2.63038");
+          values("1.91078,1.91482,1.92527,1.94842,2.00262,2.15510,2.63614");
 	}
 	fall_transition(template_1) {
-          values("0.02154,0.02399,0.03119,0.05041,0.10913,0.30693,0.94900");
+          values("0.02157,0.02402,0.03121,0.05043,0.10914,0.30694,0.94904");
 	}
       }
     }
@@ -149,20 +149,20 @@ library (top_asic) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("0.85426");
+          values("0.85743");
 	}
 	fall_constraint(scalar) {
-          values("0.87619");
+          values("0.87946");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("-0.82806");
+          values("-0.83125");
 	}
 	fall_constraint(scalar) {
-          values("-0.80464");
+          values("-0.80792");
 	}
       }
     }
@@ -173,20 +173,20 @@ library (top_asic) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("1.08954");
+          values("1.08648");
 	}
 	fall_constraint(scalar) {
-          values("1.09702");
+          values("1.09364");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("-1.06451");
+          values("-1.06146");
 	}
 	fall_constraint(scalar) {
-          values("-1.02900");
+          values("-1.02563");
 	}
       }
     }
@@ -197,20 +197,20 @@ library (top_asic) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("0.97050");
+          values("0.97353");
 	}
 	fall_constraint(scalar) {
-          values("0.97630");
+          values("0.97943");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("-0.94171");
+          values("-0.94476");
 	}
 	fall_constraint(scalar) {
-          values("-0.90353");
+          values("-0.90667");
 	}
       }
     }
@@ -221,20 +221,20 @@ library (top_asic) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("0.17703");
+          values("0.16770");
 	}
 	fall_constraint(scalar) {
-          values("0.00259");
+          values("-0.00524");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("5.03435");
+          values("5.02397");
 	}
 	fall_constraint(scalar) {
-          values("4.93419");
+          values("4.92393");
 	}
       }
     }
@@ -245,20 +245,20 @@ library (top_asic) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("0.15211");
+          values("0.15517");
 	}
 	fall_constraint(scalar) {
-          values("0.07753");
+          values("0.07945");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("5.12005");
+          values("5.10865");
 	}
 	fall_constraint(scalar) {
-          values("5.00305");
+          values("4.99225");
 	}
       }
     }
@@ -269,20 +269,20 @@ library (top_asic) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("0.03486");
+          values("0.01362");
 	}
 	fall_constraint(scalar) {
-          values("-0.11519");
+          values("-0.12908");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("5.05714");
+          values("5.06339");
 	}
 	fall_constraint(scalar) {
-          values("4.88071");
+          values("4.88572");
 	}
       }
     }
@@ -293,20 +293,20 @@ library (top_asic) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("0.14338");
+          values("0.15026");
 	}
 	fall_constraint(scalar) {
-          values("0.20762");
+          values("0.21291");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("5.18019");
+          values("5.15377");
 	}
 	fall_constraint(scalar) {
-          values("4.87060");
+          values("4.85042");
 	}
       }
     }
@@ -317,20 +317,20 @@ library (top_asic) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("0.03942");
+          values("0.02759");
 	}
 	fall_constraint(scalar) {
-          values("-0.13016");
+          values("-0.14088");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("5.22746");
+          values("5.21812");
 	}
 	fall_constraint(scalar) {
-          values("4.73528");
+          values("4.72734");
 	}
       }
     }
@@ -341,20 +341,20 @@ library (top_asic) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("0.29064");
+          values("0.29761");
 	}
 	fall_constraint(scalar) {
-          values("0.24099");
+          values("0.24730");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("4.73506");
+          values("4.70194");
 	}
 	fall_constraint(scalar) {
-          values("4.66990");
+          values("4.64257");
 	}
       }
     }
@@ -365,20 +365,20 @@ library (top_asic) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("0.14070");
+          values("0.13184");
 	}
 	fall_constraint(scalar) {
-          values("-0.03639");
+          values("-0.03463");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("4.77405");
+          values("4.76414");
 	}
 	fall_constraint(scalar) {
-          values("4.61559");
+          values("4.60623");
 	}
       }
     }
@@ -389,20 +389,20 @@ library (top_asic) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("0.43891");
+          values("0.44124");
 	}
 	fall_constraint(scalar) {
-          values("0.38806");
+          values("0.39039");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("4.72007");
+          values("4.69563");
 	}
 	fall_constraint(scalar) {
-          values("4.60634");
+          values("4.59215");
 	}
       }
     }
@@ -413,20 +413,20 @@ library (top_asic) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("0.01969");
+          values("0.01267");
 	}
 	fall_constraint(scalar) {
-          values("-0.14450");
+          values("-0.13574");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("4.40739");
+          values("4.38166");
 	}
 	fall_constraint(scalar) {
-          values("4.41158");
+          values("4.39596");
 	}
       }
     }
@@ -437,20 +437,20 @@ library (top_asic) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("0.07934");
+          values("0.08228");
 	}
 	fall_constraint(scalar) {
-          values("0.01770");
+          values("0.02053");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("3.64089");
+          values("3.63553");
 	}
 	fall_constraint(scalar) {
-          values("3.74302");
+          values("3.75024");
 	}
       }
     }
@@ -461,20 +461,20 @@ library (top_asic) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("0.14528");
+          values("0.13809");
 	}
 	fall_constraint(scalar) {
-          values("0.03097");
+          values("0.01675");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("5.52209");
+          values("5.52786");
 	}
 	fall_constraint(scalar) {
-          values("4.85082");
+          values("4.86860");
 	}
       }
     }
@@ -485,20 +485,20 @@ library (top_asic) {
         related_pin : "clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("0.21616");
+          values("0.22121");
 	}
 	fall_constraint(scalar) {
-          values("0.10105");
+          values("0.10438");
 	}
       }
       timing() {
         related_pin : "clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("5.20007");
+          values("5.20468");
 	}
 	fall_constraint(scalar) {
-          values("4.96014");
+          values("4.96326");
 	}
       }
     }

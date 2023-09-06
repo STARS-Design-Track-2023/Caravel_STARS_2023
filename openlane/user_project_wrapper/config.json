@@ -146,7 +146,7 @@
         "vssd1 /home/instructor-07/Caravel_STARS_2023/openlane/user_project_wrapper/vsrc/upw_vssd1_vsrc.loc"
     ],
     "BASE_SDC_FILE": "dir::base_user_project_wrapper.sdc",
-    "IO_SYNC": 1,
+    "IO_SYNC": 0,
     "MAX_TRANSITION_CONSTRAINT": 1.5,
     "RUN_LINTER": 0,
     "QUIT_ON_SYNTH_CHECKS": 0,
@@ -197,26 +197,10 @@
     "FP_PDN_HSPACING": "expr::(5 * $FP_PDN_CORE_RING_HWIDTH)",
     "SYNTH_USE_PG_PINS_DEFINES": "USE_POWER_PINS",
     "pdk::sky130*": {
-        "FP_CORE_UTIL": 20,
         "PL_TARGET_DENSITY": 0.05,
         "RT_MAX_LAYER": "met4",
         "DIE_AREA": "0 0 2920 3520",
-        "FP_DEF_TEMPLATE": "dir::fixed_dont_change/user_project_wrapper.def",
-        "scl::sky130_fd_sc_hd": {
-            "CLOCK_PERIOD": 100
-        },
-        "scl::sky130_fd_sc_hdll": {
-            "CLOCK_PERIOD": 10
-        },
-        "scl::sky130_fd_sc_hs": {
-            "CLOCK_PERIOD": 8
-        },
-        "scl::sky130_fd_sc_ls": {
-            "CLOCK_PERIOD": 10,
-            "SYNTH_MAX_FANOUT": 5
-        },
-        "scl::sky130_fd_sc_ms": {
-            "CLOCK_PERIOD": 10
+        "FP_DEF_TEMPLATE": "dir::fixed_dont_change/user_project_wrapper.def"
         }
     },
     "pdk::gf180mcuC": {

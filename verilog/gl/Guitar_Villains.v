@@ -3841,22 +3841,32 @@ module Guitar_Villains (chip_select,
  wire \pulseout.fin_pulse[4] ;
  wire \pulseout.fin_pulse[5] ;
 
- sky130_fd_sc_hd__diode_2 ANTENNA_1 (.DIODE(net16),
+ sky130_fd_sc_hd__diode_2 ANTENNA_1 (.DIODE(_1201_),
     .VGND(vssd1),
     .VNB(vssd1),
     .VPB(vccd1),
     .VPWR(vccd1));
- sky130_fd_sc_hd__diode_2 ANTENNA_2 (.DIODE(net18),
+ sky130_fd_sc_hd__diode_2 ANTENNA_2 (.DIODE(_1215_),
     .VGND(vssd1),
     .VNB(vssd1),
     .VPB(vccd1),
     .VPWR(vccd1));
- sky130_fd_sc_hd__diode_2 ANTENNA_3 (.DIODE(net22),
+ sky130_fd_sc_hd__diode_2 ANTENNA_3 (.DIODE(net16),
     .VGND(vssd1),
     .VNB(vssd1),
     .VPB(vccd1),
     .VPWR(vccd1));
- sky130_fd_sc_hd__diode_2 ANTENNA_4 (.DIODE(net29),
+ sky130_fd_sc_hd__diode_2 ANTENNA_4 (.DIODE(net18),
+    .VGND(vssd1),
+    .VNB(vssd1),
+    .VPB(vccd1),
+    .VPWR(vccd1));
+ sky130_fd_sc_hd__diode_2 ANTENNA_5 (.DIODE(net22),
+    .VGND(vssd1),
+    .VNB(vssd1),
+    .VPB(vccd1),
+    .VPWR(vccd1));
+ sky130_fd_sc_hd__diode_2 ANTENNA_6 (.DIODE(net29),
     .VGND(vssd1),
     .VNB(vssd1),
     .VPB(vccd1),
@@ -4021,7 +4031,7 @@ module Guitar_Villains (chip_select,
     .VNB(vssd1),
     .VPB(vccd1),
     .VPWR(vccd1));
- sky130_fd_sc_hd__decap_4 FILLER_0_0_426 (.VGND(vssd1),
+ sky130_fd_sc_hd__fill_2 FILLER_0_0_426 (.VGND(vssd1),
     .VNB(vssd1),
     .VPB(vccd1),
     .VPWR(vccd1));
@@ -6965,11 +6975,15 @@ module Guitar_Villains (chip_select,
     .VNB(vssd1),
     .VPB(vccd1),
     .VPWR(vccd1));
- sky130_ef_sc_hd__decap_12 FILLER_0_110_548 (.VGND(vssd1),
+ sky130_fd_sc_hd__decap_8 FILLER_0_110_548 (.VGND(vssd1),
     .VNB(vssd1),
     .VPB(vccd1),
     .VPWR(vccd1));
- sky130_fd_sc_hd__fill_1 FILLER_0_110_560 (.VGND(vssd1),
+ sky130_fd_sc_hd__fill_1 FILLER_0_110_556 (.VGND(vssd1),
+    .VNB(vssd1),
+    .VPB(vccd1),
+    .VPWR(vccd1));
+ sky130_fd_sc_hd__fill_2 FILLER_0_110_559 (.VGND(vssd1),
     .VNB(vssd1),
     .VPB(vccd1),
     .VPWR(vccd1));
