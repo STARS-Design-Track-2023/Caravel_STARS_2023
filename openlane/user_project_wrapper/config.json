@@ -22,7 +22,20 @@
     "CLOCK_PERIOD": 100,
     "CLOCK_PORT": "wb_clk_i",
     "CLOCK_NET": "mprj.clk",
-    "FP_PDN_MACRO_HOOKS": "mprj vccd1 vssd1 vccd1 vssd1",
+    "FP_PDN_MACRO_HOOKS": [
+        "mprj.design_1.DESIGN vccd1 vssd1 vccd1 vssd1",
+        "mprj.design_2.DESIGN vccd1 vssd1 vccd1 vssd1",
+        "mprj.design_3.DESIGN vccd1 vssd1 vccd1 vssd1",
+        "mprj.design_4.DESIGN vccd1 vssd1 vccd1 vssd1",
+        "mprj.design_5.DESIGN vccd1 vssd1 vccd1 vssd1",
+        "mprj.design_6.DESIGN vccd1 vssd1 vccd1 vssd1",
+        "mprj.design_7.DESIGN vccd1 vssd1 vccd1 vssd1",
+        "mprj.design_8.DESIGN vccd1 vssd1 vccd1 vssd1",
+        "mprj.design_9.synth vccd1 vssd1 vccd1 vssd1",
+        "mprj.design_10.DESIGN vccd1 vssd1 vccd1 vssd1",
+        "mprj.design_11.DESIGN vccd1 vssd1 vccd1 vssd1",
+        "mprj.design_12.DUT vccd1 vssd1 vccd1 vssd1"
+    ],
     "MACRO_PLACEMENT_CFG": "dir::macro.cfg",
     "MAGIC_DEF_LABELS": 0,
     "VERILOG_FILES_BLACKBOX": [
@@ -157,6 +170,7 @@
     "MAGIC_ZEROIZE_ORIGIN": 0,
     "FP_SIZING": "absolute",
     "RUN_CVC": 0,
+    "RUN_KLAYOUT_XOR": 0,
     "UNIT": 2.4,
     "VDD_NETS": [
         "vccd1"
