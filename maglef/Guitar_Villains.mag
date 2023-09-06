@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1693934062
+timestamp 1693969151
 << obsli1 >>
 rect 1104 2159 62376 63121
 << obsm1 >>
@@ -202,7 +202,7 @@ string FIXED_BBOX 0 0 63565 65709
 string LEFclass BLOCK
 string LEFview TRUE
 string GDS_END 10107498
-string GDS_FILE /home/designer-05/work/Caravel_STARS_2023/openlane/GuitarVillans/runs/23_09_05_10_08/results/signoff/Guitar_Villains.magic.gds
+string GDS_FILE /home/designer-25/CUP/openlane/GuitarVillans/runs/23_09_05_19_52/results/signoff/Guitar_Villains.magic.gds
 string GDS_START 1091252
 << end >>
 

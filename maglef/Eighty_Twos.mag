@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1693936653
+timestamp 1693969000
 << obsli1 >>
 rect 1104 2159 38272 39185
 << obsm1 >>
@@ -330,7 +330,7 @@ string FIXED_BBOX 0 0 39418 41562
 string LEFclass BLOCK
 string LEFview TRUE
 string GDS_END 5076314
-string GDS_FILE /home/designer-05/work/Caravel_STARS_2023/openlane/Eighty_Twos/runs/23_09_05_10_53/results/signoff/Eighty_Twos.magic.gds
+string GDS_FILE /home/designer-25/CUP/openlane/Eighty_Twos/runs/23_09_05_19_52/results/signoff/Eighty_Twos.magic.gds
 string GDS_START 1114424
 << end >>
 
