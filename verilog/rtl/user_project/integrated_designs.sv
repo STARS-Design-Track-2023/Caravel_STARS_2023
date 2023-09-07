@@ -135,7 +135,7 @@ Absentees_Wrapper design_1
     .gpio_oeb(designs_gpio_oeb[1])
 );
 
-DigiDoggs_Wrapper design_2
+Absentees_Wrapper design_2
 (
 
 `ifdef USE_POWER_PINS
