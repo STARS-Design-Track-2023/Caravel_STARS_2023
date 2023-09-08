@@ -1,6 +1,6 @@
 `default_nettype none
 
-`include "/home/designer-25/CUP/openlane/z23/src/interrupt_handler/ih_pkg.sv"
+`include "interrupt_handler/ih_pkg.sv"
 
 module interrupt_handler(
     input logic clk, nrst,

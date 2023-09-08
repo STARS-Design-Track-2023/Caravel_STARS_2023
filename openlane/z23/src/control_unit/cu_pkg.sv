@@ -1,7 +1,7 @@
 `ifndef CONTROL_UNIT_PKG
 `define CONTROL_UNIT_PKG
 
-`include "/home/designer-25/CUP/openlane/z23/src/alu/alu_pkg.sv"
+`include "../alu/alu_pkg.sv"
 
 `default_nettype none
 package cu_pkg;

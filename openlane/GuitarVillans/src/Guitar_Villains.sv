@@ -1,4 +1,10 @@
 module Guitar_Villains(
+
+
+`ifdef USE_POWER_PINS
+    inout vccd1,	// User area 1 1.8V supply
+    inout vssd1,	// User area 1 digital ground
+`endif
     input logic clk,
     input logic n_rst,
     input logic [3:0]button,

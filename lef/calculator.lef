@@ -7,46 +7,6 @@ MACRO calculator
   FOREIGN calculator ;
   ORIGIN 0.000 0.000 ;
   SIZE 137.325 BY 148.045 ;
-  PIN VGND
-    DIRECTION INOUT ;
-    USE GROUND ;
-    PORT
-      LAYER met4 ;
-        RECT 36.230 10.640 37.830 136.240 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 67.740 10.640 69.340 136.240 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 99.250 10.640 100.850 136.240 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 130.760 10.640 132.360 136.240 ;
-    END
-  END VGND
-  PIN VPWR
-    DIRECTION INOUT ;
-    USE POWER ;
-    PORT
-      LAYER met4 ;
-        RECT 20.475 10.640 22.075 136.240 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 51.985 10.640 53.585 136.240 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 83.495 10.640 85.095 136.240 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 115.005 10.640 116.605 136.240 ;
-    END
-  END VPWR
   PIN blue
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
@@ -299,6 +259,46 @@ MACRO calculator
         RECT 133.325 64.640 137.325 65.240 ;
     END
   END ss[9]
+  PIN vccd1
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 20.475 10.640 22.075 136.240 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 51.985 10.640 53.585 136.240 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 83.495 10.640 85.095 136.240 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 115.005 10.640 116.605 136.240 ;
+    END
+  END vccd1
+  PIN vssd1
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 36.230 10.640 37.830 136.240 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 67.740 10.640 69.340 136.240 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 99.250 10.640 100.850 136.240 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 130.760 10.640 132.360 136.240 ;
+    END
+  END vssd1
   OBS
       LAYER li1 ;
         RECT 5.520 10.795 131.560 136.085 ;

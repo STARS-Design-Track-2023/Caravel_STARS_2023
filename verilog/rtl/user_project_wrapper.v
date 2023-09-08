@@ -40,7 +40,7 @@ module user_project_wrapper #(
     inout vccd1,	// User area 1 1.8V supply
     inout vccd2,	// User area 2 1.8v supply
     inout vssd1,	// User area 1 digital ground
-    inout vssd2,	// User area 2 digital ground
+    inout vssd2,	// User area 2 digital ground`endif
 `endif
 
     // Wishbone Slave ports (WB MI A)

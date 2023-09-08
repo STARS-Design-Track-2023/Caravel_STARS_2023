@@ -1,4 +1,10 @@
 module TMNT_Wrapper (
+
+`ifdef USE_POWER_PINS
+    inout vccd1,	// User area 1 1.8V supply
+    inout vssd1,	// User area 1 digital ground
+`endif
+
     input wire clk, n_rst,
     
     // Wrapper
@@ -10,6 +16,10 @@ module TMNT_Wrapper (
 
     top_asic DUT
     (
+`ifdef USE_POWER_PINS
+	.vccd1(vccd1),	// User area 1 1.8V power
+	.vssd1(vssd1),	// User area 1 digital ground
+`endif
         .clk(clk),
         .reset(n_rst),
         .sigout(gpio_out[15]),

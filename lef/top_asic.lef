@@ -7,38 +7,6 @@ MACRO top_asic
   FOREIGN top_asic ;
   ORIGIN 0.000 0.000 ;
   SIZE 436.300 BY 447.020 ;
-  PIN VGND
-    DIRECTION INOUT ;
-    USE GROUND ;
-    PORT
-      LAYER met4 ;
-        RECT 97.840 10.640 99.440 435.440 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 251.440 10.640 253.040 435.440 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 405.040 10.640 406.640 435.440 ;
-    END
-  END VGND
-  PIN VPWR
-    DIRECTION INOUT ;
-    USE POWER ;
-    PORT
-      LAYER met4 ;
-        RECT 21.040 10.640 22.640 435.440 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 174.640 10.640 176.240 435.440 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 328.240 10.640 329.840 435.440 ;
-    END
-  END VPWR
   PIN clk
     DIRECTION INPUT ;
     USE SIGNAL ;
@@ -219,6 +187,38 @@ MACRO top_asic
         RECT 432.300 173.440 436.300 174.040 ;
     END
   END sigout
+  PIN vccd1
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 21.040 10.640 22.640 435.440 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 174.640 10.640 176.240 435.440 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 328.240 10.640 329.840 435.440 ;
+    END
+  END vccd1
+  PIN vssd1
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 97.840 10.640 99.440 435.440 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 251.440 10.640 253.040 435.440 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 405.040 10.640 406.640 435.440 ;
+    END
+  END vssd1
   OBS
       LAYER li1 ;
         RECT 5.520 10.795 430.560 435.285 ;
@@ -257,13 +257,11 @@ MACRO top_asic
         RECT 3.990 81.240 431.900 82.640 ;
         RECT 3.990 10.715 432.300 81.240 ;
       LAYER met4 ;
-        RECT 50.895 37.575 97.440 428.225 ;
-        RECT 99.840 37.575 174.240 428.225 ;
-        RECT 176.640 37.575 251.040 428.225 ;
-        RECT 253.440 37.575 327.840 428.225 ;
-        RECT 330.240 37.575 402.665 428.225 ;
-      LAYER met5 ;
-        RECT 122.940 252.500 255.180 301.700 ;
+        RECT 52.735 36.895 97.440 428.225 ;
+        RECT 99.840 36.895 174.240 428.225 ;
+        RECT 176.640 36.895 251.040 428.225 ;
+        RECT 253.440 36.895 327.840 428.225 ;
+        RECT 330.240 36.895 403.585 428.225 ;
   END
 END top_asic
 END LIBRARY

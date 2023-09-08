@@ -1,5 +1,5 @@
 `ifndef NUMFLAGS
-`include "source/param_file.sv"
+`include "../param_file.sv"
 `endif
 module demux(
     input logic [5:0] preFFInstructionCode,
