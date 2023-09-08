@@ -7,46 +7,6 @@ MACRO stopwatch
   FOREIGN stopwatch ;
   ORIGIN 0.000 0.000 ;
   SIZE 152.905 BY 163.625 ;
-  PIN VGND
-    DIRECTION INOUT ;
-    USE GROUND ;
-    PORT
-      LAYER met4 ;
-        RECT 40.130 10.640 41.730 152.560 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 75.545 10.640 77.145 152.560 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 110.960 10.640 112.560 152.560 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 146.375 10.640 147.975 152.560 ;
-    END
-  END VGND
-  PIN VPWR
-    DIRECTION INOUT ;
-    USE POWER ;
-    PORT
-      LAYER met4 ;
-        RECT 22.425 10.640 24.025 152.560 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 57.840 10.640 59.440 152.560 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 93.255 10.640 94.855 152.560 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 128.670 10.640 130.270 152.560 ;
-    END
-  END VPWR
   PIN clk
     DIRECTION INPUT ;
     USE SIGNAL ;
@@ -344,6 +304,46 @@ MACRO stopwatch
         RECT 148.905 71.440 152.905 72.040 ;
     END
   END time_done
+  PIN vccd1
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 22.425 10.640 24.025 152.560 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 57.840 10.640 59.440 152.560 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 93.255 10.640 94.855 152.560 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 128.670 10.640 130.270 152.560 ;
+    END
+  END vccd1
+  PIN vssd1
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 40.130 10.640 41.730 152.560 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 75.545 10.640 77.145 152.560 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 110.960 10.640 112.560 152.560 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 146.375 10.640 147.975 152.560 ;
+    END
+  END vssd1
   OBS
       LAYER li1 ;
         RECT 5.520 10.795 147.200 152.405 ;

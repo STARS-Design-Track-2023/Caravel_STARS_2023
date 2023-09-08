@@ -12,3 +12,6 @@
 /dependencies
 /mgmt_core_wrapper
 /logs
+def/user_project_wrapper.def
+gds/user_project_wrapper.gds
+mag/user_project_wrapper.mag

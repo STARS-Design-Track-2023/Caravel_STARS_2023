@@ -7,34 +7,6 @@ MACRO sass_synth
   FOREIGN sass_synth ;
   ORIGIN 0.000 0.000 ;
   SIZE 367.785 BY 378.505 ;
-  PIN VGND
-    DIRECTION INOUT ;
-    USE GROUND ;
-    PORT
-      LAYER met4 ;
-        RECT 97.840 10.640 99.440 367.440 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 251.440 10.640 253.040 367.440 ;
-    END
-  END VGND
-  PIN VPWR
-    DIRECTION INOUT ;
-    USE POWER ;
-    PORT
-      LAYER met4 ;
-        RECT 21.040 10.640 22.640 367.440 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 174.640 10.640 176.240 367.440 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 328.240 10.640 329.840 367.440 ;
-    END
-  END VPWR
   PIN beat_led[0]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
@@ -119,7 +91,7 @@ MACRO sass_synth
   PIN hwclk
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.426000 ;
+    ANTENNAGATEAREA 0.247500 ;
     PORT
       LAYER met3 ;
         RECT 363.785 44.240 367.785 44.840 ;
@@ -511,11 +483,39 @@ MACRO sass_synth
         RECT 363.785 159.840 367.785 160.440 ;
     END
   END tempo_select
+  PIN vccd1
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 21.040 10.640 22.640 367.440 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 174.640 10.640 176.240 367.440 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 328.240 10.640 329.840 367.440 ;
+    END
+  END vccd1
+  PIN vssd1
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 97.840 10.640 99.440 367.440 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 251.440 10.640 253.040 367.440 ;
+    END
+  END vssd1
   OBS
       LAYER li1 ;
         RECT 5.520 10.795 362.020 367.285 ;
       LAYER met1 ;
-        RECT 0.070 10.240 362.870 367.440 ;
+        RECT 0.070 10.640 362.870 367.440 ;
       LAYER met2 ;
         RECT 0.100 374.225 22.350 377.245 ;
         RECT 23.190 374.225 51.330 377.245 ;
@@ -600,12 +600,10 @@ MACRO sass_synth
         RECT 3.990 13.240 363.385 14.640 ;
         RECT 3.990 10.715 363.785 13.240 ;
       LAYER met4 ;
-        RECT 77.575 51.175 97.440 359.545 ;
-        RECT 99.840 51.175 174.240 359.545 ;
-        RECT 176.640 51.175 251.040 359.545 ;
-        RECT 253.440 51.175 296.865 359.545 ;
-      LAYER met5 ;
-        RECT 95.340 160.700 228.500 175.900 ;
+        RECT 82.175 47.775 97.440 359.545 ;
+        RECT 99.840 47.775 174.240 359.545 ;
+        RECT 176.640 47.775 251.040 359.545 ;
+        RECT 253.440 47.775 295.945 359.545 ;
   END
 END sass_synth
 END LIBRARY

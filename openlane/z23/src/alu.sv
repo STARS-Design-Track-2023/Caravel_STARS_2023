@@ -1,6 +1,6 @@
 `default_nettype none
-`include "/home/designer-25/CUP/openlane/z23/src/alu/alu_pkg.sv"
-`include "/home/designer-25/CUP/openlane/z23/src/control_unit/cu_pkg.sv"
+`include "alu/alu_pkg.sv"
+`include "control_unit/cu_pkg.sv"
 
 module alu (input logic Cin,
             input alu_pkg::alu_op alu_op,

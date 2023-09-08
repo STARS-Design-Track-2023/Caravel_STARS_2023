@@ -1,4 +1,10 @@
 module SyntheSTARS_Wrapper (
+
+`ifdef USE_POWER_PINS
+    inout vccd1,	// User area 1 1.8V supply
+    inout vssd1,	// User area 1 digital ground
+`endif
+
     input wire clk, n_rst,
     
     // Wrapper
@@ -9,6 +15,10 @@ module SyntheSTARS_Wrapper (
 );
 
     Synthia DESIGN (
+`ifdef USE_POWER_PINS
+	.vccd1(vccd1),	// User area 1 1.8V power
+	.vssd1(vssd1),	// User area 1 digital ground
+`endif
         .clk(clk),
         .reset(n_rst),
         .pb(gpio_in[12:0]),

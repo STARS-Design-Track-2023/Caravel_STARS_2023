@@ -1,5 +1,10 @@
 module SaSS_wrapper (
 
+`ifdef USE_POWER_PINS
+    inout vccd1,	// User area 1 1.8V supply
+    inout vssd1,	// User area 1 digital ground
+`endif
+
     input wire clk, n_rst,
     
     // Wrapper
@@ -10,6 +15,10 @@ module SaSS_wrapper (
 );
 
     sass_synth DESIGN (
+`ifdef USE_POWER_PINS
+	.vccd1(vccd1),	// User area 1 1.8V power
+	.vssd1(vssd1),	// User area 1 digital ground
+`endif
         .hwclk(clk),
         .n_rst(n_rst),
         .cs(ncs),

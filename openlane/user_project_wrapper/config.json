@@ -6,7 +6,7 @@
         "dir::../../verilog/rtl/user_project/reset_router.sv",
         "dir::../../verilog/rtl/user_project_wrapper.v",
         "dir::../../verilog/rtl/user_project/Absentees/Absentees_Wrapper.sv",
-
+        "dir::../../verilog/rtl/user_project/DigiDoggs/DigiDoggs_Wrapper.sv",
         "dir::../../verilog/rtl/user_project/EightyTwos/EightyTwos_Wrapper.sv",
         "dir::../../verilog/rtl/user_project/Geriatrics/Geriatrics_Wrapper.sv",
         "dir::../../verilog/rtl/user_project/GuitarVillains/GuitarVillains_wrapper.sv",
@@ -20,9 +20,15 @@
     ],
     "ROUTING_CORES": 8,
     "CLOCK_PERIOD": 100,
+    "SYNTH_CLOCK_UNCERTAINTY": 0.2,
+    "PL_RESIZER_HOLD_SLACK_MARGIN": 1.0,
+    "GLB_RESIZER_HOLD_SLACK_MARGIN": 1.0,
     "CLOCK_PORT": "wb_clk_i",
     "CLOCK_NET": "mprj.clk",
-    "FP_PDN_MACRO_HOOKS": "mprj vccd1 vssd1 vccd1 vssd1",
+    "FP_PDN_CFG": "dir::/pdn_cfg.tcl",
+    "FP_PDN_MACRO_HOOKS": [
+        "mprj.* vccd1 vssd1 vccd1 vssd1"
+    ],
     "MACRO_PLACEMENT_CFG": "dir::macro.cfg",
     "MAGIC_DEF_LABELS": 0,
     "VERILOG_FILES_BLACKBOX": [
@@ -95,6 +101,10 @@
         "dir::../../spef/multicorner/Guitar_Villains.min.spef", 
         "dir::../../spef/multicorner/Guitar_Villains.nom.spef", 
         "dir::../../spef/multicorner/Guitar_Villains.max.spef",
+        "pushing_pixels", 
+        "dir::../../spef/multicorner/pushing_pixels.max.spef", 
+        "dir::../../spef/multicorner/pushing_pixels.nom.spef", 
+        "dir::../../spef/multicorner/pushing_pixels.max.spef",
         "sass_synth", 
         "dir::../../spef/multicorner/sass_synth.min.spef", 
         "dir::../../spef/multicorner/sass_synth.nom.spef", 
@@ -139,7 +149,7 @@
         "vssd2 ../../openlane/user_project_wrapper/vsrc/upw_vssd2_vsrc.loc"
     ],
     "BASE_SDC_FILE": "dir::base_user_project_wrapper.sdc",
-    "IO_SYNC": 1,
+    "IO_SYNC": 0,
     "MAX_TRANSITION_CONSTRAINT": 1.5,
     "RUN_LINTER": 0,
     "QUIT_ON_SYNTH_CHECKS": 0,
@@ -154,15 +164,17 @@
     "GRT_REPAIR_ANTENNAS": 1,
     "RUN_FILL_INSERTION": 1,
     "RUN_TAP_DECAP_INSERTION": 1,
-    "FP_PDN_VPITCH": 180,
-    "FP_PDN_HPITCH": 180,
-    "RUN_CTS": 1,
-    "RUN_IRDROP_REPORT": 0,
+    "RUN_HEURISTIC_DIODE_INSERTION": true,
+    "FP_PDN_VPITCH": 60,
+    "FP_PDN_HPITCH": 60,
     "FP_PDN_VOFFSET": 5,
     "FP_PDN_HOFFSET": 5,
     "MAGIC_ZEROIZE_ORIGIN": 0,
     "FP_SIZING": "absolute",
+    "RUN_CTS": 1,
     "RUN_CVC": 0,
+    "RUN_IRDROP_REPORT": 0,
+    "RUN_KLAYOUT_XOR": 0,
     "UNIT": 2.4,
     "VDD_NETS": [
         "vccd1",
@@ -195,37 +207,9 @@
     "FP_PDN_HSPACING": "expr::(5 * $FP_PDN_CORE_RING_HWIDTH)",
     "SYNTH_USE_PG_PINS_DEFINES": "USE_POWER_PINS",
     "pdk::sky130*": {
-        "FP_CORE_UTIL": 20,
-        "PL_TARGET_DENSITY": 0.05,
+        "PL_TARGET_DENSITY": 0.60,
         "RT_MAX_LAYER": "met4",
         "DIE_AREA": "0 0 2920 3520",
-        "FP_DEF_TEMPLATE": "dir::fixed_dont_change/user_project_wrapper.def",
-        "scl::sky130_fd_sc_hd": {
-            "CLOCK_PERIOD": 100
-        },
-        "scl::sky130_fd_sc_hdll": {
-            "CLOCK_PERIOD": 10
-        },
-        "scl::sky130_fd_sc_hs": {
-            "CLOCK_PERIOD": 8
-        },
-        "scl::sky130_fd_sc_ls": {
-            "CLOCK_PERIOD": 10,
-            "SYNTH_MAX_FANOUT": 5
-        },
-        "scl::sky130_fd_sc_ms": {
-            "CLOCK_PERIOD": 10
-        }
-    },
-    "pdk::gf180mcuC": {
-        "STD_CELL_LIBRARY": "gf180mcu_fd_sc_mcu7t5v0",
-        "FP_PDN_CHECK_NODES": 0,
-        "FP_PDN_ENABLE_RAILS": 0,
-        "RT_MAX_LAYER": "Metal4",
-        "DIE_AREA": "0 0 3000 3000",
-        "FP_DEF_TEMPLATE": "dir::fixed_dont_change/user_project_wrapper_gf180mcu.def",
-        "PL_OPENPHYSYN_OPTIMIZATIONS": 0,
-        "DIODE_INSERTION_STRATEGY": 0,
-        "MAGIC_WRITE_FULL_LEF": 0
+        "FP_DEF_TEMPLATE": "dir::fixed_dont_change/user_project_wrapper.def"
     }
 }

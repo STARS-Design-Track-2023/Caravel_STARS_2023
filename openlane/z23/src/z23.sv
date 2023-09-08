@@ -1,9 +1,15 @@
 `default_nettype none
-`include "/home/designer-25/CUP/openlane/z23/src/control_unit/cu_pkg.sv"
-`include "/home/designer-25/CUP/openlane/z23/src/interrupt_handler/ih_pkg.sv"
-`include "/home/designer-25/CUP/openlane/z23/src/alu/alu_pkg.sv"
+`include "control_unit/cu_pkg.sv"
+`include "interrupt_handler/ih_pkg.sv"
+`include "alu/alu_pkg.sv"
 
 module z23(
+
+
+`ifdef USE_POWER_PINS
+    inout vccd1,	// User area 1 1.8V supply
+    inout vssd1,	// User area 1 digital ground
+`endif
     input logic clk, nrst,
     input logic [7:0] memory_data_in,
     input logic [7:0] programmable_gpio_in,

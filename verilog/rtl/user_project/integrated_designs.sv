@@ -99,6 +99,12 @@ assign designs_cs[12] = !(design_select == 4'd12);
 /* design reset logic */
 
 reset_router design_reset (
+
+`ifdef USE_POWER_PINS
+	.vccd1(vccd1),	// User area 1 1.8V power
+	.vssd1(vssd1),	// User area 1 digital ground
+`endif
+
     .clk(clk),
     .n_rst(n_rst),
     .designs_cs(designs_cs),
@@ -117,6 +123,12 @@ Then you can uncomment and make sure the module name matches
 
 Absentees_Wrapper design_1
 (
+
+`ifdef USE_POWER_PINS
+	.vccd1(vccd1),	// User area 1 1.8V power
+	.vssd1(vssd1),	// User area 1 digital ground
+`endif
+
     .clk(clk),
     .n_rst(designs_n_rst[1]),
     .ncs(designs_cs[1]), 
@@ -126,8 +138,14 @@ Absentees_Wrapper design_1
     .gpio_oeb(designs_gpio_oeb[1])
 );
 
-Absentees_Wrapper design_2
+DigiDoggs_Wrapper design_2
 (
+
+`ifdef USE_POWER_PINS
+	.vccd1(vccd1),	// User area 1 1.8V power
+	.vssd1(vssd1),	// User area 1 digital ground
+`endif
+
     .clk(clk),
     .n_rst(designs_n_rst[2]),
     .ncs(designs_cs[2]), 
@@ -139,6 +157,10 @@ Absentees_Wrapper design_2
 
 // DigiDoggs_Wrapper design_2
 // (
+// `ifdef USE_POWER_PINS
+// 	.vccd1(vccd1),	// User area 1 1.8V power
+// 	.vssd1(vssd1),	// User area 1 digital ground
+// `endif
 //     .clk(clk),
 //     .n_rst(designs_n_rst[2]),
 //     .ncs(designs_cs[2]), 
@@ -150,6 +172,12 @@ Absentees_Wrapper design_2
 
 EightyTwos_Wrapper design_3
 (
+
+`ifdef USE_POWER_PINS
+	.vccd1(vccd1),	// User area 1 1.8V power
+	.vssd1(vssd1),	// User area 1 digital ground
+`endif
+
     .clk(clk),
     .n_rst(designs_n_rst[3]),
     .ncs(designs_cs[3]), 
@@ -161,6 +189,12 @@ EightyTwos_Wrapper design_3
 
 Geriatrics_Wrapper design_4
 (
+
+`ifdef USE_POWER_PINS
+	.vccd1(vccd1),	// User area 1 1.8V power
+	.vssd1(vssd1),	// User area 1 digital ground
+`endif
+
     .clk(clk),
     .n_rst(designs_n_rst[4]),
     .ncs(designs_cs[4]), 
@@ -172,6 +206,12 @@ Geriatrics_Wrapper design_4
     
 GuitarVillains_wrapper design_5
 (
+
+`ifdef USE_POWER_PINS
+	.vccd1(vccd1),	// User area 1 1.8V power
+	.vssd1(vssd1),	// User area 1 digital ground
+`endif
+
     .clk(clk),
     .n_rst(designs_n_rst[5]),
     .ncs(designs_cs[5]), 
@@ -183,6 +223,12 @@ GuitarVillains_wrapper design_5
 
 MatrixMonSTARS_Wrapper design_6
 (
+
+`ifdef USE_POWER_PINS
+	.vccd1(vccd1),	// User area 1 1.8V power
+	.vssd1(vssd1),	// User area 1 digital ground
+`endif
+
     .clk(clk),
     .n_rst(designs_n_rst[6]),
     .ncs(designs_cs[6]), 
@@ -194,6 +240,12 @@ MatrixMonSTARS_Wrapper design_6
 
 Outel_Wrapper design_7
 (
+
+`ifdef USE_POWER_PINS
+	.vccd1(vccd1),	// User area 1 1.8V power
+	.vssd1(vssd1),	// User area 1 digital ground
+`endif
+
     .clk(clk),
     .n_rst(designs_n_rst[7]),
     .ncs(designs_cs[7]), 
@@ -205,6 +257,12 @@ Outel_Wrapper design_7
 
 SaSS_wrapper design_8
 (
+
+`ifdef USE_POWER_PINS
+	.vccd1(vccd1),	// User area 1 1.8V power
+	.vssd1(vssd1),	// User area 1 digital ground
+`endif
+
     .clk(clk),
     .n_rst(designs_n_rst[8]),
     .ncs(designs_cs[8]), 
@@ -216,6 +274,12 @@ SaSS_wrapper design_8
 
 silly_synth_wrapper design_9
 (
+
+`ifdef USE_POWER_PINS
+	.vccd1(vccd1),	// User area 1 1.8V power
+	.vssd1(vssd1),	// User area 1 digital ground
+`endif
+
     .clk(clk),
     .n_rst(designs_n_rst[9]),
     .ncs(designs_cs[9]),
@@ -227,6 +291,12 @@ silly_synth_wrapper design_9
 
 SyntheSTARS_Wrapper design_10
 (
+
+`ifdef USE_POWER_PINS
+	.vccd1(vccd1),	// User area 1 1.8V power
+	.vssd1(vssd1),	// User area 1 digital ground
+`endif
+
     .clk(clk),
     .n_rst(designs_n_rst[10]),
     .ncs(designs_cs[10]), 
@@ -238,6 +308,12 @@ SyntheSTARS_Wrapper design_10
 
 SynthSurgeons_Wrapper design_11
 (
+
+`ifdef USE_POWER_PINS
+	.vccd1(vccd1),	// User area 1 1.8V power
+	.vssd1(vssd1),	// User area 1 digital ground
+`endif
+
     .clk(clk),
     .n_rst(designs_n_rst[11]),
     .ncs(designs_cs[11]), 
@@ -249,6 +325,12 @@ SynthSurgeons_Wrapper design_11
 
 TMNT_Wrapper design_12
 (
+
+`ifdef USE_POWER_PINS
+	.vccd1(vccd1),	// User area 1 1.8V power
+	.vssd1(vssd1),	// User area 1 digital ground
+`endif
+
     .clk(clk),
     .n_rst(designs_n_rst[12]),
     .ncs(designs_cs[12]), 
