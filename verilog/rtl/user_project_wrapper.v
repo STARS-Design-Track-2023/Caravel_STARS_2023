@@ -90,11 +90,11 @@ integrated_designs mprj (
 `endif
 
     .clk(wb_clk_i),
-    .n_rst(wb_rst_i),
-    .design_select(io_in[37:34]),
-    .gpio_in(io_in[33:0]),
-    .gpio_oeb(io_oeb[33:0]),
-    .gpio_out(io_out[33:0])
+    .rst(wb_rst_i),
+    .design_select(la_data_in[3:0]),
+    .gpio_in({io_in[37:5], io_in[0]}),
+    .gpio_oeb({io_oeb[37:5], io_oeb[0]}),
+    .gpio_out({io_out[37:5], io_out[0]})
 );
 
 /*

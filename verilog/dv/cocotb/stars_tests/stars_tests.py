@@ -8,7 +8,9 @@ from designs_tests.MatrixMonSTARS_test import MatrixMonSTARS_test
 @report_test # wrapper for configure test reporting files
 async def stars_tests(dut):
     cocotb.log.info("[TB_TOP] Start configuration")
-    caravelEnv = await test_configure(dut)
+    caravelEnv = await test_configure(dut, timeout_cycles=2000000)
+    cocotb.log.info("[TB_TOP] Await mgmt_gpio")
+    await caravelEnv.release_csb()
     await caravelEnv.wait_mgmt_gpio(1)
     cocotb.log.info("[TB_TOP] Finish configuration")
 

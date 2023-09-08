@@ -6,7 +6,7 @@ module integrated_designs (
 `endif
 
     input wire clk, 
-    input wire n_rst,
+    input wire rst,
 
     input wire [3:0] design_select, 
     /* 
@@ -22,6 +22,8 @@ module integrated_designs (
     output wire [33:0] gpio_oeb,
     output wire [33:0] gpio_out
 );
+
+wire n_rst;
 
 wire [33:0] designs_gpio_out[1:12]; // start counting from 1 b/c of the design_select behavior
 wire [33:0] designs_gpio_oeb[1:12]; 
@@ -61,6 +63,7 @@ wire [12:1] designs_n_rst;  // active low reset for each design
     *
 
 */
+    assign n_rst = ~rst;  // invert reset to active low
 
     // in the case where the design_select value does not correspond to a particular design, set all IOs to be inputs and set gpio_out to be all 0s 
     assign gpio_out = (design_select > 4'd0 && design_select < 4'd13) ? designs_gpio_out[design_select] : 'b0; 

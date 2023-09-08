@@ -18,11 +18,11 @@ module TMNT_Wrapper (
     );
 
     assign gpio_out[14:0] = 'b0;
-    assign gpio_out[18:33] = 'b0;
+    assign gpio_out[33:18] = 'b0;
     
     assign gpio_oeb[14:0] = 'b1;
     assign gpio_oeb[17:15] = 'b0;
-    assign gpio_oeb[18:33] = 'b1;
+    assign gpio_oeb[33:18] = 'b1;
 
     
 endmodule

@@ -70,18 +70,18 @@
 #-v $(USER_PROJECT_VERILOG)/rtl/user_project/GuitarVillains/*.sv
 
 # MatrixMonSTARS
--v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/alu.sv
--v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/calculator.sv
--v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/keyencoder_binary.sv
--v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/MatrixMonSTARS_Wrapper.sv
--v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/neg_input.sv
--v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/new_operand_buffer.sv
--v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/opcode_encoder.sv
--v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/read_fsm.sv
--v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/reg_file.sv
--v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/register_decoder.sv
--v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/ssdec.sv
--v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/sync_edge_detector.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/alu.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/calculator.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/keyencoder_binary.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/MatrixMonSTARS_Wrapper.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/neg_input.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/new_operand_buffer.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/opcode_encoder.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/read_fsm.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/reg_file.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/register_decoder.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/ssdec.sv
+#-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/sync_edge_detector.sv
 
 # Outel
 #-v $(USER_PROJECT_VERILOG)/rtl/user_project/Outel/*.sv
@@ -105,4 +105,32 @@
 -v $(USER_PROJECT_VERILOG)/rtl/user_project/integrated_designs.sv
 -v $(USER_PROJECT_VERILOG)/rtl/user_project/reset_router.sv
 
- 
+# Design wrappers
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/Absentees/Absentees_Wrapper.sv
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/DigiDoggs/DigiDoggs_Wrapper.sv
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/EightyTwos/EightyTwos_Wrapper.sv
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/Geriatrics/Geriatrics_Wrapper.sv
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/GuitarVillains/GuitarVillains_wrapper.sv
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/MatrixMonSTARS/MatrixMonSTARS_Wrapper.sv
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/Outel/Outel_Wrapper.sv
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/SaSS/SaSS_wrapper.sv
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/SyntheSTARS/SyntheSTARS_Wrapper.sv
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/SynthSurgeons/SynthSurgeons_Wrapper.sv
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/TMNT/TMNT_Wrapper.sv
+-v $(USER_PROJECT_VERILOG)/rtl/user_project/Triple-SSS/silly_synth_wrapper.sv
+
+# GL netlists
+-v $(USER_PROJECT_VERILOG)/gl/Eighty_Twos.v
+-v $(USER_PROJECT_VERILOG)/gl/Guitar_Villains.v
+-v $(USER_PROJECT_VERILOG)/gl/Synthia.v
+-v $(USER_PROJECT_VERILOG)/gl/calculator.v
+-v $(USER_PROJECT_VERILOG)/gl/outel8227.v
+-v $(USER_PROJECT_VERILOG)/gl/pushing_pixels.v
+-v $(USER_PROJECT_VERILOG)/gl/sass_synth.v
+-v $(USER_PROJECT_VERILOG)/gl/silly_synthesizer.v
+-v $(USER_PROJECT_VERILOG)/gl/stopwatch.v
+-v $(USER_PROJECT_VERILOG)/gl/synth.v
+#-v $(USER_PROJECT_VERILOG)/gl/top8227.v
+-v $(USER_PROJECT_VERILOG)/gl/top_asic.v
+-v $(USER_PROJECT_VERILOG)/gl/z23.v
+
