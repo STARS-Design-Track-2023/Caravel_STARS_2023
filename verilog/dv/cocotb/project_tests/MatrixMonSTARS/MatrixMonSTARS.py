@@ -14,19 +14,27 @@ ss7_table = [0b1100111,
              0b1011011,
              0b0000110,
              0b0111111]
- 
+
 async def send_pb(val):
+    if val > 0: val += 4
     # negedge
-    await Timer(half_clk_period * 2, 'ns')
+    await cocotb.triggers.Timer(half_clk_period * 2, 'ns')
+    # await cocotb.triggers.FallingEdge(caravelEnv.clk)
     caravelEnv.drive_gpio_in(val, 0x1)
     # negedge
-    await Timer(half_clk_period * 2, 'ns')
+    await cocotb.triggers.Timer(half_clk_period * 2, 'ns')
     caravelEnv.drive_gpio_in(val, 0x0)
     # negedge
-    await Timer(half_clk_period * 2, 'ns')
+    await cocotb.triggers.Timer(half_clk_period * 2, 'ns')
 
 def check_output(ex_dig_1, ex_dig_2, ex_blue, ex_red):
-    gpio_value = caravelEnv.monitor_gpio(37, 0).integer
+    # gpio_value = caravelEnv.monitor_gpio(37, 0).integer
+    # gpio_value = caravelEnv.monitor_gpio(37, 0)
+    gpio_value = caravelEnv.monitor_gpio(25, 10)
+    cocotb.log.info(f"[6] read {gpio_value}")
+    # gpio_value = gpio_value.integer
+    gpio_value = (caravelEnv.monitor_gpio(37, 5).integer << 1) | (caravelEnv.monitor_gpio(0).integer)
+
     expected_gpio_value = ((ss7_table[ex_dig_1] & 0x7F) << 17) | ((ss7_table[ex_dig_2] & 0x7F) << 10) | ((ex_blue & 0x1) << 24) | ((ex_red & 0x1) << 25)
     if (gpio_value == expected_gpio_value):
         cocotb.log.info(f"[6] Correct output")
@@ -37,23 +45,26 @@ def check_output(ex_dig_1, ex_dig_2, ex_blue, ex_red):
 @report_test # wrapper for configure test reporting files
 async def MatrixMonSTARS(dut):
     cocotb.log.info("[6] Start configuration")
-    caravelEnv = await test_configure(dut, timeout_cycles=2000000)
+    global caravelEnv
+    caravelEnv = await test_configure(dut, timeout_cycles=2000000, start_up=True)
     cocotb.log.info("[6] Await mgmt_gpio")
     await caravelEnv.release_csb()
     await caravelEnv.wait_mgmt_gpio(1)
     cocotb.log.info("[6] Finish configuration")
-    half_clk_periodclk_period = caravelEnv.get_clock_period() / 2
+    global half_clk_period
+    half_clk_period = caravelEnv.get_clock_period() / 2
 
     cocotb.log.info(f"[6] T1: Power-on-reset")
     # reset design
-    caravelEnv.drive_gpio_in((9,0), 0x0)
+    caravelEnv.drive_gpio_in((37,0), 0x0)
+    # await caravelEnv.reset()
 
     cocotb.log.info(f"[6] T2: Simple addition")
     # reset design
-    caravelEnv.drive_gpio_in((9,0), 0x0)
+    caravelEnv.drive_gpio_in((37,0), 0x0)
     # wait 2 clk cycles
     await cocotb.triggers.ClockCycles(caravelEnv.clk,2)
-    await Timer(half_clk_period, 'ns')
+    await cocotb.triggers.Timer(half_clk_period, 'ns')
 
     # select write mode
     await send_pb(2)
@@ -69,14 +80,14 @@ async def MatrixMonSTARS(dut):
     await send_pb(1)
     # wait before check
     await cocotb.triggers.ClockCycles(caravelEnv.clk,2)
-    await Timer(half_clk_period, 'ns')
+    await cocotb.triggers.Timer(half_clk_period, 'ns')
     check_output(0, 1, 0, 0)
 
     # store value in a register
     await send_pb(6)
     # wait before check
     await cocotb.triggers.ClockCycles(caravelEnv.clk,2)
-    await Timer(half_clk_period, 'ns')
+    await cocotb.triggers.Timer(half_clk_period, 'ns')
     check_output(0, 0, 0, 0)
 
     # send second number
@@ -91,14 +102,14 @@ async def MatrixMonSTARS(dut):
     await send_pb(0)
     # wait before check
     await cocotb.triggers.ClockCycles(caravelEnv.clk,2)
-    await Timer(half_clk_period, 'ns')
+    await cocotb.triggers.Timer(half_clk_period, 'ns')
     check_output(0, 2, 0, 0)
 
     # store value in a register
     await send_pb(7)
     # wait before check
     await cocotb.triggers.ClockCycles(caravelEnv.clk,2)
-    await Timer(half_clk_period, 'ns')
+    await cocotb.triggers.Timer(half_clk_period, 'ns')
     check_output(0, 0, 0, 0)
 
     # select read mode
@@ -110,7 +121,7 @@ async def MatrixMonSTARS(dut):
     await send_pb(4)
     # wait before check
     await cocotb.triggers.ClockCycles(caravelEnv.clk,2)
-    await Timer(half_clk_period, 'ns')
+    await cocotb.triggers.Timer(half_clk_period, 'ns')
     check_output(0, 3, 0, 0)
 
     cocotb.log.info(f"[6] T3: Double digit addition")
@@ -118,7 +129,7 @@ async def MatrixMonSTARS(dut):
     caravelEnv.drive_gpio_in((9,0), 0x0)
     # wait 2 clk cycles
     await cocotb.triggers.ClockCycles(caravelEnv.clk,2)
-    await Timer(half_clk_period, 'ns')
+    await cocotb.triggers.Timer(half_clk_period, 'ns')
 
     # select write mode
     await send_pb(2)
@@ -134,14 +145,14 @@ async def MatrixMonSTARS(dut):
     await send_pb(0)
     # wait before check
     await cocotb.triggers.ClockCycles(caravelEnv.clk,2)
-    await Timer(half_clk_period, 'ns')
+    await cocotb.triggers.Timer(half_clk_period, 'ns')
     check_output(3, 4, 0, 0)
 
     # store value in a register
     await send_pb(6)
     # wait before check
     await cocotb.triggers.ClockCycles(caravelEnv.clk,2)
-    await Timer(half_clk_period, 'ns')
+    await cocotb.triggers.Timer(half_clk_period, 'ns')
     check_output(0, 0, 0, 0)
 
     # send second number
@@ -156,6 +167,6 @@ async def MatrixMonSTARS(dut):
     await send_pb(0)
     # wait before check
     await cocotb.triggers.ClockCycles(caravelEnv.clk,2)
-    await Timer(half_clk_period, 'ns')
+    await cocotb.triggers.Timer(half_clk_period, 'ns')
     check_output(2, 8, 0, 0)
 

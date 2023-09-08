@@ -1,7 +1,15 @@
 ---
 # yaml file contain general design information that would mostly need to be updated in the first run only 
-includes: 
+includes:
+    - Absentees/Absentees.yaml
     - DigiDoggs/DigiDoggs.yaml
+    - EightyTwos/EightyTwos.yaml
+    - Geriatrics/Geriatrics.yaml
     - GuitarVillains/GuitarVillains.yaml
     - MatrixMonSTARS/MatrixMonSTARS.yaml
-    - outel8227/outel8227.yaml
+    - outel-8227/outel8227.yaml
+    - SaSS/SaSS.yaml
+    - TripleSSS/TripleSSS.yaml
+    - SyntheSTARS/SyntheSTARS.yaml
+    - SynthSurgeons/SynthSurgeons.yaml
+    - TMNT/TMNT.yaml
