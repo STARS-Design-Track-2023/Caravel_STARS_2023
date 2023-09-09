@@ -121,7 +121,7 @@ Update your wrapper module to correctly map the pins according to the spreadshee
 Then you can uncomment and make sure the module name matches
 */
 
-Absentees_Wrapper design_1
+Reduced_Macro_Wrapper design_1
 (
 
 `ifdef USE_POWER_PINS
@@ -138,7 +138,7 @@ Absentees_Wrapper design_1
     .gpio_oeb(designs_gpio_oeb[1])
 );
 
-DigiDoggs_Wrapper design_2
+Reduced_Macro_Wrapper design_2
 (
 
 `ifdef USE_POWER_PINS
@@ -153,191 +153,6 @@ DigiDoggs_Wrapper design_2
     .gpio_in(gpio_in),
     .gpio_out(designs_gpio_out[2]), 
     .gpio_oeb(designs_gpio_oeb[2])
-);
-
-// DigiDoggs_Wrapper design_2
-// (
-// `ifdef USE_POWER_PINS
-// 	.vccd1(vccd1),	// User area 1 1.8V power
-// 	.vssd1(vssd1),	// User area 1 digital ground
-// `endif
-//     .clk(clk),
-//     .n_rst(designs_n_rst[2]),
-//     .ncs(designs_cs[2]), 
-
-//     .gpio_in(gpio_in),
-//     .gpio_out(designs_gpio_out[2]), 
-//     .gpio_oeb(designs_gpio_oeb[2])
-// );
-
-EightyTwos_Wrapper design_3
-(
-
-`ifdef USE_POWER_PINS
-	.vccd1(vccd1),	// User area 1 1.8V power
-	.vssd1(vssd1),	// User area 1 digital ground
-`endif
-
-    .clk(clk),
-    .n_rst(designs_n_rst[3]),
-    .ncs(designs_cs[3]), 
-
-    .gpio_in(gpio_in),
-    .gpio_out(designs_gpio_out[3]), 
-    .gpio_oeb(designs_gpio_oeb[3])
-);
-
-Geriatrics_Wrapper design_4
-(
-
-`ifdef USE_POWER_PINS
-	.vccd1(vccd1),	// User area 1 1.8V power
-	.vssd1(vssd1),	// User area 1 digital ground
-`endif
-
-    .clk(clk),
-    .n_rst(designs_n_rst[4]),
-    .ncs(designs_cs[4]), 
-
-    .gpio_in(gpio_in),
-    .gpio_out(designs_gpio_out[4]), 
-    .gpio_oeb(designs_gpio_oeb[4])
-);
-    
-GuitarVillains_wrapper design_5
-(
-
-`ifdef USE_POWER_PINS
-	.vccd1(vccd1),	// User area 1 1.8V power
-	.vssd1(vssd1),	// User area 1 digital ground
-`endif
-
-    .clk(clk),
-    .n_rst(designs_n_rst[5]),
-    .ncs(designs_cs[5]), 
-
-    .gpio_in(gpio_in),
-    .gpio_out(designs_gpio_out[5]), 
-    .gpio_oeb(designs_gpio_oeb[5])
-);
-
-MatrixMonSTARS_Wrapper design_6
-(
-
-`ifdef USE_POWER_PINS
-	.vccd1(vccd1),	// User area 1 1.8V power
-	.vssd1(vssd1),	// User area 1 digital ground
-`endif
-
-    .clk(clk),
-    .n_rst(designs_n_rst[6]),
-    .ncs(designs_cs[6]), 
-
-    .gpio_in(gpio_in),
-    .gpio_out(designs_gpio_out[6]), 
-    .gpio_oeb(designs_gpio_oeb[6])
-);
-
-Outel_Wrapper design_7
-(
-
-`ifdef USE_POWER_PINS
-	.vccd1(vccd1),	// User area 1 1.8V power
-	.vssd1(vssd1),	// User area 1 digital ground
-`endif
-
-    .clk(clk),
-    .n_rst(designs_n_rst[7]),
-    .ncs(designs_cs[7]), 
-
-    .gpio_in(gpio_in),
-    .gpio_out(designs_gpio_out[7]), 
-    .gpio_oeb(designs_gpio_oeb[7])
-);
-
-SaSS_wrapper design_8
-(
-
-`ifdef USE_POWER_PINS
-	.vccd1(vccd1),	// User area 1 1.8V power
-	.vssd1(vssd1),	// User area 1 digital ground
-`endif
-
-    .clk(clk),
-    .n_rst(designs_n_rst[8]),
-    .ncs(designs_cs[8]), 
-
-    .gpio_in(gpio_in),
-    .gpio_out(designs_gpio_out[8]), 
-    .gpio_oeb(designs_gpio_oeb[8])
-);
-
-silly_synth_wrapper design_9
-(
-
-`ifdef USE_POWER_PINS
-	.vccd1(vccd1),	// User area 1 1.8V power
-	.vssd1(vssd1),	// User area 1 digital ground
-`endif
-
-    .clk(clk),
-    .n_rst(designs_n_rst[9]),
-    .ncs(designs_cs[9]),
-
-    .gpio_in(gpio_in),
-    .gpio_out(designs_gpio_out[9]),
-    .gpio_oeb(designs_gpio_oeb[9])
-);
-
-SyntheSTARS_Wrapper design_10
-(
-
-`ifdef USE_POWER_PINS
-	.vccd1(vccd1),	// User area 1 1.8V power
-	.vssd1(vssd1),	// User area 1 digital ground
-`endif
-
-    .clk(clk),
-    .n_rst(designs_n_rst[10]),
-    .ncs(designs_cs[10]), 
-
-    .gpio_in(gpio_in),
-    .gpio_out(designs_gpio_out[10]), 
-    .gpio_oeb(designs_gpio_oeb[10])
-);
-
-SynthSurgeons_Wrapper design_11
-(
-
-`ifdef USE_POWER_PINS
-	.vccd1(vccd1),	// User area 1 1.8V power
-	.vssd1(vssd1),	// User area 1 digital ground
-`endif
-
-    .clk(clk),
-    .n_rst(designs_n_rst[11]),
-    .ncs(designs_cs[11]), 
-
-    .gpio_in(gpio_in),
-    .gpio_out(designs_gpio_out[11]), 
-    .gpio_oeb(designs_gpio_oeb[11])
-);
-
-TMNT_Wrapper design_12
-(
-
-`ifdef USE_POWER_PINS
-	.vccd1(vccd1),	// User area 1 1.8V power
-	.vssd1(vssd1),	// User area 1 digital ground
-`endif
-
-    .clk(clk),
-    .n_rst(designs_n_rst[12]),
-    .ncs(designs_cs[12]), 
-
-    .gpio_in(gpio_in),
-    .gpio_out(designs_gpio_out[12]), 
-    .gpio_oeb(designs_gpio_oeb[12])
 );
 
 endmodule

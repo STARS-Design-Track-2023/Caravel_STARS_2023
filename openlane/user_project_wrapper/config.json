@@ -5,6 +5,13 @@
         "dir::../../verilog/rtl/user_project/integrated_designs.sv",
         "dir::../../verilog/rtl/user_project/reset_router.sv",
         "dir::../../verilog/rtl/user_project_wrapper.v",
+        "dir::../../verilog/rtl/user_project/ReducedMacro/Reduced_Macro_Wrapper.sv"
+    ],
+    "COMMENT_VERILOG_FILES": [
+        "dir::../../verilog/rtl/defines.v",
+        "dir::../../verilog/rtl/user_project/integrated_designs.sv",
+        "dir::../../verilog/rtl/user_project/reset_router.sv",
+        "dir::../../verilog/rtl/user_project_wrapper.v",
         "dir::../../verilog/rtl/user_project/Absentees/Absentees_Wrapper.sv",
         "dir::../../verilog/rtl/user_project/DigiDoggs/DigiDoggs_Wrapper.sv",
         "dir::../../verilog/rtl/user_project/EightyTwos/EightyTwos_Wrapper.sv",
@@ -32,6 +39,9 @@
     "MACRO_PLACEMENT_CFG": "dir::macro.cfg",
     "MAGIC_DEF_LABELS": 0,
     "VERILOG_FILES_BLACKBOX": [
+        "dir::../../verilog/gl/reducedMacroMain.v"
+    ],
+    "COMMENT_VERILOG_FILES_BLACKBOX": [
         "dir::../../verilog/gl/calculator.v",
         "dir::../../verilog/gl/Eighty_Twos.v",
         "dir::../../verilog/gl/Guitar_Villains.v",
@@ -46,7 +56,7 @@
         "dir::../../verilog/gl/z23.v"
 
     ],
-    "EXTRA_LEFS": [
+    "COMMENT_EXTRA_LEFS": [
         "dir::../../lef/calculator.lef",
         "dir::../../lef/Eighty_Twos.lef",
         "dir::../../lef/Guitar_Villains.lef",
@@ -60,7 +70,10 @@
         "dir::../../lef/outel8227.lef",
         "dir::../../lef/z23.lef"
     ],
-    "EXTRA_GDS_FILES": [
+    "EXTRA_LEFS": [
+        "dir::../../lef/reducedMacroMain.lef"
+    ],
+    "COMMENT_EXTRA_GDS_FILES": [
         "dir::../../gds/calculator.gds",
         "dir::../../gds/Eighty_Twos.gds",
         "dir::../../gds/Guitar_Villains.gds",
@@ -74,7 +87,13 @@
         "dir::../../gds/outel8227.gds",
         "dir::../../gds/z23.gds"
     ],
+    "EXTRA_GDS_FILES": [
+        "dir::../../gds/reducedMacroMain.gds"
+    ],
     "EXTRA_LIBS": [
+        "dir::../../lib/reducedMacroMain.lib"
+    ],
+    "COMMENT_EXTRA_LIBS": [
         "dir::../../lib/calculator.lib",
         "dir::../../lib/Eighty_Twos.lib",
         "dir::../../lib/Guitar_Villains.lib",
@@ -88,7 +107,7 @@
         "dir::../../lib/outel8227.lib",
         "dir::../../lib/z23.lib"
     ],
-    "EXTRA_SPEFS": [
+    "COMMENT_EXTRA_SPEFS": [
         "calculator", 
         "dir::../../spef/multicorner/calculator.min.spef", 
         "dir::../../spef/multicorner/calculator.nom.spef", 
@@ -137,6 +156,12 @@
         "dir::../../spef/multicorner/z23.min.spef", 
         "dir::../../spef/multicorner/z23.nom.spef", 
         "dir::../../spef/multicorner/z23.max.spef"
+    ],
+    "EXTRA_SPEFS": [
+        "reducedMacroMain", 
+        "dir::../../spef/multicorner/reducedMacroMain.min.spef", 
+        "dir::../../spef/multicorner/reducedMacroMain.nom.spef", 
+        "dir::../../spef/multicorner/reducedMacroMain.max.spef"
     ],
     "VSRC_LOC_FILES": [
         "vccd1 ../../openlane/user_project_wrapper/vsrc/upw_vccd1_vsrc.loc",
