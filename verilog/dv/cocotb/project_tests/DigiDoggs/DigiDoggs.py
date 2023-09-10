@@ -9,12 +9,17 @@ async def DigiDoggs(dut):
 
     cocotb.log.info(f"[TEST] Start DigiDoggs test")  
     # wait for start of sending
+    caravelEnv.drive_gpio_in((37, 0), 0x0)
     await caravelEnv.release_csb()
     await caravelEnv.wait_mgmt_gpio(1)
-    cocotb.log.info(f"[TEST] finish configuration") 
+    cocotb.log.info(f"[TEST] finish configuration")
 
-    await caravelEnv.drive_gpio_in((34, 37), 0x1) # CHECK TO MAKE SURE ITS CORRECT
-    await cocotb.triggers.ClockCycles(caravelEnv.clk, 20)
+    caravelEnv.drive_gpio_in((37, 0), 0x0)
+    await cocotb.triggers.ClockCycles(caravelEnv.clk, 1)
+
+    # caravelEnv.drive_gpio_in((34, 37), 0x1) # CHECK TO MAKE SURE ITS CORRECT
+    caravelEnv.drive_gpio_in(5, 0x1)  # GPIO[1(+4)]
+    await cocotb.triggers.ClockCycles(caravelEnv.clk, 200)
 
     
 

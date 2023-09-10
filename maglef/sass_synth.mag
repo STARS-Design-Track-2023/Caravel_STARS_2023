@@ -1,11 +1,11 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1694135538
+timestamp 1694296955
 << obsli1 >>
 rect 1104 2159 72404 73457
 << obsm1 >>
-rect 14 2128 72574 73488
+rect 14 1980 72574 73488
 << metal2 >>
 rect 4526 74901 4582 75701
 rect 10322 74901 10378 75701
@@ -151,10 +151,9 @@ rect 34928 2128 35248 73488
 rect 50288 2128 50608 73488
 rect 65648 2128 65968 73488
 << obsm4 >>
-rect 16435 9555 19488 71909
-rect 19968 9555 34848 71909
-rect 35328 9555 50208 71909
-rect 50688 9555 59189 71909
+rect 15147 5475 19488 62797
+rect 19968 5475 34848 62797
+rect 35328 5475 48885 62797
 << labels >>
 rlabel metal2 s 16118 0 16174 800 6 beat_led[0]
 port 1 nsew signal output
@@ -276,8 +275,8 @@ port 55 nsew ground bidirectional
 string FIXED_BBOX 0 0 73557 75701
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 13914152
-string GDS_FILE /home/designer-25/CUP/openlane/SaSS/runs/23_09_07_17_58/results/signoff/sass_synth.magic.gds
-string GDS_START 1183268
+string GDS_END 14996586
+string GDS_FILE /home/designer-25/CUP/openlane/SaSS/runs/23_09_09_14_51/results/signoff/sass_synth.magic.gds
+string GDS_START 1226384
 << end >>
 
