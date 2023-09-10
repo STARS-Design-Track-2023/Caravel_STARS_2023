@@ -46,6 +46,7 @@ async def outel8227(dut):
 
     cocotb.log.info(f"[TEST] Start outel8227 test")  
     # wait for start of sending
+    caravelEnv.drive_gpio_in((37,0), 0x0)
     await caravelEnv.release_csb()
     await caravelEnv.wait_mgmt_gpio(1)
     cocotb.log.info(f"[TEST] finish configuration") 
