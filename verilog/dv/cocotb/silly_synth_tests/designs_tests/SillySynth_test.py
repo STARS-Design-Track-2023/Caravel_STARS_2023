@@ -4,17 +4,18 @@ import cocotb
 caravelEnv : Caravel_env = None
 half_clk_period : int = 0
 
-outputGPIO = 33 #Output signal to send to speaker
+outputGPIO = 33 + 4 #Output signal to send to speaker
  
 async def send_pb(val):
+    if val > 0: val += 4
     # negedge
-    await Timer(half_clk_period * 2, 'ns')
+    await cocotb.triggers.Timer(half_clk_period * 2, 'ns')
     caravelEnv.drive_gpio_in(val, 0x1)
     # negedge
-    await Timer(half_clk_period * 2, 'ns')
+    await cocotb.triggers.Timer(half_clk_period * 2, 'ns')
     caravelEnv.drive_gpio_in(val, 0x0)
     # negedge
-    await Timer(half_clk_period * 2, 'ns')
+    await cocotb.triggers.Timer(half_clk_period * 2, 'ns')
 
 async def synchronizeWithPWM():
     #A non-zero note MUST be playing
@@ -27,13 +28,13 @@ async def synchronizeWithPWM():
     #Wait for a low signal
     while (currentOutput != 0 and noNoteCheck < 20000):
         noNoteCheck = noNoteCheck + 1
-        await Timer(half_clk_period * 2, 'ns')
+        await cocotb.triggers.Timer(half_clk_period * 2, 'ns')
         currentOutput = caravelEnv.monitor_gpio(outputGPIO).integer
 
     #Wait for a high signal
     while (currentOutput != 1 and noNoteCheck < 20000):
         noNoteCheck = noNoteCheck + 1
-        await Timer(half_clk_period * 2, 'ns')
+        await cocotb.triggers.Timer(half_clk_period * 2, 'ns')
         currentOutput = caravelEnv.monitor_gpio(outputGPIO).integer
 
     assert noNoteCheck < 20000, "Tried to synchronize PWM with no note playing"
@@ -52,7 +53,7 @@ async def getNextPWM():
     #Count cycles while PWM is high
     while (currentOutput == 1):
         clockCycleCount = clockCycleCount + 1
-        await Timer(half_clk_period * 2, 'ns')
+        await cocotb.triggers.Timer(half_clk_period * 2, 'ns')
         currentOutput = caravelEnv.monitor_gpio(outputGPIO).integer
 
     pwmSignal = clockCycleCount
@@ -60,7 +61,7 @@ async def getNextPWM():
     #Make sure to run 256 clock cycles
     while (clockCycleCount < 256):
         clockCycleCount = clockCycleCount + 1
-        await Timer(half_clk_period * 2, 'ns')
+        await cocotb.triggers.Timer(half_clk_period * 2, 'ns')
 
     #clockCycleCount now contains the number of high clock cycles per cycle
     return pwmSignal
@@ -158,9 +159,9 @@ async def getNoteShape():
     waveType = 0 #default, no sound
     if(risingEdgeCounter == 10 and fallingEdgeCounter == 10):
         waveType = 3#Square
-    else if(risingEdgeCounter > 10 and fallingEdgeCounter > 10):
+    elif(risingEdgeCounter > 10 and fallingEdgeCounter > 10):
         waveType = 1#Triangle
-    else if(risingEdgeCounter > 10 and fallingEdgeCounter == 10):
+    elif(risingEdgeCounter > 10 and fallingEdgeCounter == 10):
         waveType = 2#Saw
 
     #10 cycles tracked, 256 clock cycles per PWM
@@ -170,7 +171,8 @@ async def testIfNotePlaying():
 
     currentOutput = caravelEnv.monitor_gpio(outputGPIO).integer
     
-    await Timer(half_clk_period * 2, 'ns')
+    await cocotb.triggers.Timer(half_clk_period * 2, 'ns')
+
 
 async def SillySynth_test(caravelEnv_pass : Caravel_env):
     caravelEnv = caravelEnv_pass
