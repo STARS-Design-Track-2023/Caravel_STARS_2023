@@ -83,17 +83,7 @@ class address_types:
 #     if(True):#addr_gpio_is_read = ~programmable_gpio_wr[address[2:0]];
 #         return address_types.addr_gpio_is_read
 
-@cocotb.test() # cocotb test marker
-@report_test # wrapper for configure test reporting files
-async def Geriatrics(dut):
-    global address_types, caravelEnv
-    cocotb.log.info("[4] Start configuration")
-    testName = "Management"
-    caravelEnv = await test_configure(dut, timeout_cycles=2000000)
-    cocotb.log.info("[4] Await mgmt_gpio")
-
-    # ensure to drive input pins BEFORE running firmware with release_csb()
-    #1,2,3,4,20-27,29-37
+async def resetDeviceLock():
     caravelEnv.drive_gpio_in(1, 0x0)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
     caravelEnv.drive_gpio_in(2, 0x0)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
     caravelEnv.drive_gpio_in(3, 0x0)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
@@ -101,7 +91,7 @@ async def Geriatrics(dut):
     caravelEnv.drive_gpio_in(20, 0x0)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
     caravelEnv.drive_gpio_in(21, 0x1)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
     caravelEnv.drive_gpio_in(22, 0x1)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
-    caravelEnv.drive_gpio_in(23, 0x1)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
+    caravelEnv.drive_gpio_in(23, 0x0)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
     caravelEnv.drive_gpio_in(24, 0x1)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
     caravelEnv.drive_gpio_in(25, 0x1)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
     caravelEnv.drive_gpio_in(26, 0x0)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
@@ -115,6 +105,42 @@ async def Geriatrics(dut):
     caravelEnv.drive_gpio_in(35, 0x0)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
     caravelEnv.drive_gpio_in(36, 0x0)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
     caravelEnv.drive_gpio_in(37, 0x0)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
+
+async def resetDeviceFree():
+    caravelEnv.drive_gpio_in(1, 0x0)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
+    caravelEnv.drive_gpio_in(2, 0x0)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
+    caravelEnv.drive_gpio_in(3, 0x0)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
+    caravelEnv.drive_gpio_in(4, 0x0)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
+    caravelEnv.release_gpio(20)
+    caravelEnv.release_gpio(21)
+    caravelEnv.release_gpio(22)
+    caravelEnv.release_gpio(23)
+    caravelEnv.release_gpio(24)
+    caravelEnv.release_gpio(25)
+    caravelEnv.release_gpio(26)
+    caravelEnv.release_gpio(27)
+    caravelEnv.drive_gpio_in(29, 0x0)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
+    caravelEnv.drive_gpio_in(30, 0x0)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
+    caravelEnv.drive_gpio_in(31, 0x0)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
+    caravelEnv.drive_gpio_in(32, 0x0)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
+    caravelEnv.drive_gpio_in(33, 0x0)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
+    caravelEnv.drive_gpio_in(34, 0x0)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
+    caravelEnv.drive_gpio_in(35, 0x0)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
+    caravelEnv.drive_gpio_in(36, 0x0)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
+    caravelEnv.drive_gpio_in(37, 0x0)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
+
+@cocotb.test() # cocotb test marker
+@report_test # wrapper for configure test reporting files
+async def Geriatrics(dut):
+    global address_types, caravelEnv
+    cocotb.log.info("[4] Start configuration")
+    testName = "Management"
+    caravelEnv = await test_configure(dut, timeout_cycles=2000000)
+    cocotb.log.info("[4] Await mgmt_gpio")
+
+    # ensure to drive input pins BEFORE running firmware with release_csb()
+    #1,2,3,4,20-27,29-37
+    await resetDeviceLock()
     
 
 
@@ -132,18 +158,10 @@ async def Geriatrics(dut):
     testName = "Test1"
     cocotb.log.info(f"[4] T1: Power-on-reset")
     # "reset" design
-    # caravelEnv.drive_gpio_in(pinMap.chip_select, 0x1)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
-    # caravelEnv.drive_gpio_in(pinMap.interrupt_gpio_in, 0x1)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
-    # caravelEnv.drive_gpio_in(pinMap.memory_data_in, 0x1)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
-    # caravelEnv.drive_gpio_in(pinMap.programmable_gpio_in, 0x1)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
+    await resetDeviceFree()
 
     testName = "Test 2"
     cocotb.log.info(f"[4] T2: Register Loading And Reading")
-    # "reset" design
-    # caravelEnv.drive_gpio_in(pinMap.chip_select, 0x1)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
-    # caravelEnv.drive_gpio_in(pinMap.interrupt_gpio_in, 0x1)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
-    # caravelEnv.drive_gpio_in(pinMap.memory_data_in, 0x1)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
-    # caravelEnv.drive_gpio_in(pinMap.programmable_gpio_in, 0x1)  # ONLY DRIVE TO INPUT/UNUSED PINS (NOT OUTPUTS!)
     # wait 2 clk cycles
     await cocotb.triggers.ClockCycles(caravelEnv.clk,2)
     await cocotb.triggers.Timer(half_clk_period, 'ns')
