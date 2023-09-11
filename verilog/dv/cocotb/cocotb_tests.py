@@ -17,3 +17,4 @@ from project_tests.TripleSSS.TripleSSS import TripleSSS
 from project_tests.SyntheSTARS.SyntheSTARS import SyntheSTARS
 from project_tests.SynthSurgeons.SynthSurgeons import SynthSurgeons
 from project_tests.TMNT.TMNT import TMNT
+from project_tests.outel8227.outel8227 import outel8227
