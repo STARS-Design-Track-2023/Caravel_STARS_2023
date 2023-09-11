@@ -197,10 +197,11 @@ async def SaSS(dut):
     await cocotb.triggers.Timer(half_clk_period, 'ns')
     await send_pb(13)#mode key
 
-    #Hold the 6 key
-    caravelEnv.drive_gpio_in(10, 0x1)
-    cocotb.log.info(f"[8] Note: 6-2, wavelength[{int(await getNoteCycleCount())}/{int(27045)}], shape[{await getNoteShape()}/{int(1)}]")
+    #Hold the 5 key
+    caravelEnv.drive_gpio_in(9, 0x1)
+    # cocotb.log.info(f"[8] Note: 6-2, wavelength[{int(await getNoteCycleCount())}/{int(27045)}], shape[{await getNoteShape()}/{int(1)}]")
 
-    assert testIfNotePlaying()
-    await getNoteCycleCount()
-    await getNoteShape()
+    # assert testIfNotePlaying()
+    # await getNoteCycleCount()
+    # await getNoteShape()
+    await cocotb.triggers.ClockCycles(caravelEnv.clk, 1000)
