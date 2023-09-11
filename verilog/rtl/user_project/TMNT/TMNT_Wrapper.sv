@@ -27,12 +27,16 @@ module TMNT_Wrapper (
         .pb(gpio_in[14:0])
     );
 
-    assign gpio_out[14:0] = 'b0;
-    assign gpio_out[33:18] = 'b0;
+    // assign gpio_out[14:0] = 15'b0;
+    // assign gpio_out[33:18] = 16'b0;
     
-    assign gpio_oeb[14:0] = 'b1;
-    assign gpio_oeb[17:15] = 'b0;
-    assign gpio_oeb[33:18] = 'b1;
+    // assign gpio_oeb[14:0] = 15'b1;
+    // assign gpio_oeb[17:15] = 3'b0;
+    // assign gpio_oeb[33:18] = 16'b1;
+
+    assign gpio_oeb = {{16{1'b1}}, {3{1'b0}}, {15{1'b1}}};
+
+    assign {gpio_out[33:18], gpio_out[14:0]} = {31{1'b0}};
 
     
 endmodule
