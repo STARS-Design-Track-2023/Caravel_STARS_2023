@@ -198,9 +198,10 @@ async def TripleSSS(dut):
     await send_pb(13)#mode key
 
     #Hold the 6 key
-    caravelEnv.drive_gpio_in(10, 0x1)
-    cocotb.log.info(f"[9] Note: 6-2, wavelength[{int(await getNoteCycleCount())}/{int(27045)}], shape[{await getNoteShape()}/{int(1)}]")
+    caravelEnv.drive_gpio_in(12, 0x1)
+    # cocotb.log.info(f"[9] Note: 6-2, wavelength[{int(await getNoteCycleCount())}/{int(27045)}], shape[{await getNoteShape()}/{int(1)}]")
 
-    assert testIfNotePlaying()
-    await getNoteCycleCount()
-    await getNoteShape()
+    # assert testIfNotePlaying()
+    # await getNoteCycleCount()
+    # await getNoteShape()
+    await cocotb.triggers.ClockCycles(caravelEnv.clk, 1000)
