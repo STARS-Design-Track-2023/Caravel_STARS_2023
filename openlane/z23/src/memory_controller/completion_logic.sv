@@ -12,7 +12,7 @@ module completion_logic(
         //completion logic
         if (mem_read_en & cmp_o) begin
             data_output = next_data;
-            ack = 1;
-        end else if (mem_write_en & cmp_o) ack = 1;
+            ack = 1'b1;
+        end else if (mem_write_en & cmp_o) ack = 1'b1;
     end
 endmodule

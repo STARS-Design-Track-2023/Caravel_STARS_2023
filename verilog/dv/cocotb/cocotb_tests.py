@@ -9,3 +9,4 @@ from gpio_test.gpio_test import gpio_test
 from project_tests.DigiDoggs.DigiDoggs import DigiDoggs
 from project_tests.GuitarVillains.GuitarVillains import GuitarVillains
 from project_tests.MatrixMonSTARS.MatrixMonSTARS import MatrixMonSTARS
+from project_tests.Geriatrics.Geriatrics import Geriatrics

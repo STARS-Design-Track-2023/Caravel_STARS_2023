@@ -14,7 +14,10 @@ module read_write(
     typedef enum logic [2:0] {idle, read8, write8, read16, write16, write16_2, read16_2} state_t;
 
     always_ff @(posedge clk, negedge nrst) begin : bandaidflop
-        if (~nrst) state <= idle;
+        if (~nrst) begin 
+            state <= idle;
+            cmp_o <= 0;
+        end
         else begin
             state <= next_state;
             cmp_o <= cmp_check;
@@ -31,7 +34,7 @@ module read_write(
             idle: begin
                 enable = 0;
                 wr = 0;
-                address_to_mem = 16'hzzzz;
+                address_to_mem = 16'h0000;
                 data_to_mem = 8'b0;
                 cmp_check = 0;
             end
