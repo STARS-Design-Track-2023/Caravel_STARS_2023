@@ -21,6 +21,10 @@ always_ff @(posedge clk, negedge nrst) begin
         signal_buffer <= 0;
         divider_buffer <= 0;
         scaled_buffer <= 0;
+        signal_buffer1 <= 0;
+        signal_buffer2 <= 0;
+        divider_buffer1 <= 0;
+        divider_buffer2 <= 0;
     end else if (pulse) begin
         signal_buffer <= signal_buffer2;
         signal_buffer1 <= signal;
