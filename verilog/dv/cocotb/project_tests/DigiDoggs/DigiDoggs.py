@@ -9,18 +9,36 @@ async def DigiDoggs(dut):
 
     cocotb.log.info(f"[TEST] Start DigiDoggs test")  
     # wait for start of sending
-    caravelEnv.drive_gpio_in((37, 0), 0x0)
+    caravelEnv.drive_gpio_in((7, 0), 0x0)
     await caravelEnv.release_csb()
     await caravelEnv.wait_mgmt_gpio(1)
     cocotb.log.info(f"[TEST] finish configuration")
 
-    caravelEnv.drive_gpio_in((37, 0), 0x0)
+    caravelEnv.drive_gpio_in((7, 0), 0x0)
     await cocotb.triggers.ClockCycles(caravelEnv.clk, 1)
 
     # caravelEnv.drive_gpio_in((34, 37), 0x1) # CHECK TO MAKE SURE ITS CORRECT
     caravelEnv.drive_gpio_in(5, 0x1)  # GPIO[1(+4)]
-    await cocotb.triggers.ClockCycles(caravelEnv.clk, 200)
+    await cocotb.triggers.ClockCycles(caravelEnv.clk, 10)
 
+    caravelEnv.drive_gpio_in(6, 0x1)
+
+    await cocotb.triggers.Timer(425/2, 'ns')
+    caravelEnv.drive_gpio_in(0, 0x1)  # GPIO[0]
+    await cocotb.triggers.Timer(425/2, 'ns')
+    caravelEnv.drive_gpio_in(0, 0x0)  # GPIO[0]
+
+    caravelEnv.drive_gpio_in(6, 0x0)
+
+    for i in range(0, 63):
+        await cocotb.triggers.Timer(425/2, 'ns')
+        caravelEnv.drive_gpio_in(0, 0x1)  # GPIO[0]
+        await cocotb.triggers.Timer(425/2, 'ns')
+        caravelEnv.drive_gpio_in(0, 0x0)  # GPIO[0]
+
+    await cocotb.triggers.ClockCycles(caravelEnv.clk, 2)
+    caravelEnv.drive_gpio_in(5, 0x0)  # GPIO[1(+4)]
+    await cocotb.triggers.ClockCycles(caravelEnv.clk, 400)
     
 
     # overwrite_val = 7 # value will be written to the counter by la 
