@@ -23,13 +23,13 @@ module EightyTwos_Wrapper (
 `endif
         .clk(clk),
         .nrst(n_rst),
-        .cs(ncs),
-        .gpi(gpio_in),  // CHECK gpi[23] function
+        .cs(~ncs),
+        .gpi(gpio_in),
         .gpo(gpio_out),
         .store_en(store_en)
     );
 
     // assign gpio_oeb outputs
-    assign gpio_oeb = {{26{1'b0}}, {8{~store_en}}};
+    assign gpio_oeb = {{10{1'b0}}, {1'b1}, {15{1'b0}}, {8{~store_en}}};  // gpi[23] is needed as input
 
 endmodule
