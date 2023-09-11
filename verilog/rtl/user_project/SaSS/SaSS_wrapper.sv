@@ -14,6 +14,8 @@ module SaSS_wrapper (
     output wire [33:0] gpio_oeb // Active Low Output Enable
 );
 
+    wire [3:0] note1, note2, note3, note4, multi;
+
     sass_synth DESIGN (
 `ifdef USE_POWER_PINS
 	.vccd1(vccd1),	// User area 1 1.8V power
@@ -32,7 +34,14 @@ module SaSS_wrapper (
         .beat_led(gpio_out[27:20]),
         .seq_led_on(gpio_out[28]),
 
-        .pwm_o(gpio_out[29])
+        .pwm_o(gpio_out[29]),
+
+        // unused
+        .note1(note1),
+        .note2(note2),
+        .note3(note3),
+        .note4(note4),
+        .multi(multi)
     );
 
     // correctly assign gpio_oeb outputs

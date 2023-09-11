@@ -181,6 +181,7 @@ async def SaSS(dut):
     caravelEnv = await test_configure(dut)
     cocotb.log.info("[8] Await mgmt_gpio")
     caravelEnv.drive_gpio_in((21,0), 0x0)
+    caravelEnv.drive_gpio_in((37,34), 0x0)
     await caravelEnv.release_csb()
     await caravelEnv.wait_mgmt_gpio(1)
     cocotb.log.info("[8] Finish configuration")
@@ -195,6 +196,8 @@ async def SaSS(dut):
 
     #Push buttons not on clk rising edge
     await cocotb.triggers.Timer(half_clk_period, 'ns')
+    await send_pb(13)#mode key
+    await cocotb.triggers.ClockCycles(caravelEnv.clk,2)
     await send_pb(13)#mode key
 
     #Hold the 5 key
