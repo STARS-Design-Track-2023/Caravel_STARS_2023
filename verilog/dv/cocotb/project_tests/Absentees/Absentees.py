@@ -33,8 +33,11 @@ async def Absentees(dut):
     # reset design
     caravelEnv.drive_gpio_in((5,0), 0x0)
 
-    await send_pb(0)
-    await cocotb.triggers.ClockCycles(caravelEnv.clk, 1000000)
-
     await send_pb(1)
-    await cocotb.triggers.ClockCycles(caravelEnv.clk, 500000)
+    await cocotb.triggers.ClockCycles(caravelEnv.clk, 10000)
+
+    await send_pb(0)
+    await cocotb.triggers.ClockCycles(caravelEnv.clk, 5000)
+
+    await send_pb(0)
+    await cocotb.triggers.ClockCycles(caravelEnv.clk, 10000)

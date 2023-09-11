@@ -15,4 +15,19 @@
 
 # Caravel user project includes	     
 -v $(USER_PROJECT_VERILOG)/gl/user_project_wrapper.v    
--v $(USER_PROJECT_VERILOG)/gl/user_proj_example.v
+# -v $(USER_PROJECT_VERILOG)/gl/user_proj_example.v
+
+# GL netlists
+-v $(USER_PROJECT_VERILOG)/gl/Eighty_Twos.v
+-v $(USER_PROJECT_VERILOG)/gl/Guitar_Villains.v
+-v $(USER_PROJECT_VERILOG)/gl/Synthia.v
+-v $(USER_PROJECT_VERILOG)/gl/calculator.v
+-v $(USER_PROJECT_VERILOG)/gl/outel8227.v
+-v $(USER_PROJECT_VERILOG)/gl/pushing_pixels.v
+-v $(USER_PROJECT_VERILOG)/gl/sass_synth.v
+-v $(USER_PROJECT_VERILOG)/gl/silly_synthesizer.v
+-v $(USER_PROJECT_VERILOG)/gl/stopwatch.v
+-v $(USER_PROJECT_VERILOG)/gl/synth.v
+#-v $(USER_PROJECT_VERILOG)/gl/top8227.v
+-v $(USER_PROJECT_VERILOG)/gl/top_asic.v
+-v $(USER_PROJECT_VERILOG)/gl/z23.v
