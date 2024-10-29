@@ -5,10 +5,11 @@ and Efabless Corporation (https://efabless.com)
 
 The initial Developer of all code marked Copyright Efabless Corporation is Efabless Corporation.
 
-The Initial Developer of the code in verilog/rtl/user_projects, openlane/ and gl/
+The Initial Developer of the code in verilog/rtl/user_projects, verilog/dv/cocotb/project_tests, openlane/ and gl/
 is Purdue University (https://www.purdue.edu) except for individual files marked as Copyright Efabless Corporation. 
 
 
+The following notice should be inserted at the top of all files for which the initial developer is identified as Purdue University.
 
 # SPDX-FileCopyrightText: 2023 Purdue University
 #
