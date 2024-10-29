@@ -1,10 +1,12 @@
 Portions of this project, Copyright 2023 Purdue University
 
-This product includes code developed at
-Purdue University (https://www.purdue.edu), and eFabless Corporation (https://efabless.com)
+This product includes code developed at Purdue University (https://www.purdue.edu), 
+and Efabless Corporation (https://efabless.com)
 
-The Initial Developer of the code in verilog/rtl/user_projects
-is Purdue University (https://www.purdue.edu)
+The initial Developer of all code marked Copyright Efabless Corporation is Efabless Corporation.
+
+The Initial Developer of the code in verilog/rtl/user_projects, openlane/ and gl/
+is Purdue University (https://www.purdue.edu) except for individual files marked as Copyright Efabless Corporation. 
 
 
 
